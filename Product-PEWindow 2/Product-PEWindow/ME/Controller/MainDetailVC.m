@@ -42,7 +42,21 @@
     }
 }
 - (void)loadProtocols {
-   
+    self.title = @"用户协议";
+    UIWebView * webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:webView];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"隐私权政策" ofType:@"html"];
+    
+    NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    NSString *basePath = [[NSBundle mainBundle] bundlePath];
+    
+    NSURL *baseURL = [NSURL fileURLWithPath:basePath];
+    
+    [webView loadHTMLString:htmlString baseURL:baseURL];
+    
+    
+    
 }
 - (void)loadFavoriteView
 {
@@ -70,7 +84,7 @@
 - (void)loadPhone
 {
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(0, 64, [[UIScreen mainScreen]bounds].size.width, 300)];
-    label.text = @"    本公司客服电话为15515034137,欢迎随时来电咨询!";
+    label.text = @"客户服务邮箱:iosxysina.com/n我们在收到邮件之后会尽快回复您!";
     label.textColor = [UIColor brownColor];
     label.numberOfLines = 0;
     [self.view addSubview:label];
@@ -98,6 +112,9 @@
     _sizeLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_sizeLabel];
     [self.view addSubview:button];
+    
+    
+    
     
 }
 - (float ) folderSizeAtPath:(NSString*) folderPath{

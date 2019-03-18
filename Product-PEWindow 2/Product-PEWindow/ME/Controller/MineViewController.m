@@ -35,9 +35,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 
-        [_photoImageView setTitle:@"" forState:UIControlStateNormal];
-        _photoImageView.enabled = NO;
-        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"headImg.jpg"] forState:UIControlStateNormal];
+//        [_photoImageView setTitle:@"" forState:UIControlStateNormal];
+//        _photoImageView.enabled = NO;
+//        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"headImg.jpg"] forState:UIControlStateNormal];
     
 }
 
