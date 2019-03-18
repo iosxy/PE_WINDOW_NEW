@@ -1,0 +1,41 @@
+//
+//  PE.pch
+//  Product-PEWindow
+//
+//  Created by qianfeng on 16/4/18.
+//  Copyright (c) 2016年 qianfeng. All rights reserved.
+//
+
+#ifndef Product_PEWindow_PE_pch
+#define Product_PEWindow_PE_pch
+
+#define YCOLOR_BROWNCOLOR [UIColor colorWithRed:(223/255.0) green:(118/255.0) blue:(69/255.0) alpha:1]
+#define YCOLOR_YELLOWCOLOR [UIColor colorWithRed:(209/255.0) green:(184/255.0) blue:(39/255.0) alpha:1]
+#define YCOLOR_BANANACOLOR [UIColor colorWithRed:(245/255.0) green:(224/255.0) blue:(133/255.0) alpha:1]
+#define YCOLOR_REDCOLOR [UIColor colorWithRed:(173/255.0) green:(0/255.0) blue:(24/255.0) alpha:1]
+
+//ScreenWidth
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+ #define SafeAreaTopHeight (SCREEN_HEIGHT == 812.0 ? 88 : 64)
+//通过屏幕尺寸判断手机型号
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhoneX (SCREEN_HEIGHT == 812.0 ? YES : NO)
+
+/// 第一个参数是当下的控制器适配iOS11 一下的，第二个参数表示scrollview或子类
+#define AdjustsScrollViewInsetNever(controller,view) if(@available(iOS 11.0, *)) {view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;} else if([controller isKindOfClass:[UIViewController class]]) {controller.automaticallyAdjustsScrollViewInsets = false;}
+
+#import "AFNetworking.h"
+#define YNEWS_RUL @"http://u1.tiyufeng.com/section/content_list?portalId=15&start=%d&id=351&limit=20&clientToken=7c98ddd1d8cb729bf66791a192b43748"
+#import "NSObject+YYModel.h"
+#import "YCHNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
+#import "GTMBase64.h"
+#import "UIView+AdjustFrame.h"
+
+#endif

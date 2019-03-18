@@ -1,0 +1,55 @@
+//
+//  PrefixHeader.pch
+//  DiscountStore
+//
+//  Created by 游成虎 on 16/4/15.
+//  Copyright © 2016年 qianfeng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+ 
+//首页：
+
+
+//#define dscrollViewurl @"http://api.liwushuo.com/v2/banners"
+#define dscrollViewurl @"http://app.api.repaiapp.com/sx/yangshijie/jiekou/new_bannar/yunying_zhuanti_change.php"
+ //上部scrollView图片：http://app.1zhe.com/ios/?act=search&keyword=%E6%9C%88%E9%A5%BC&sort=DESC&sort_name=&page=1%20HTTP/1.1
+
+//首页
+#define dMainurl @"http://zhekou.repai.com/jkjby/view/rp_b2c_list_v1.php?cid=%d&page=%d&limit=100&appkey=100071&app_oid=acbb7819796f4bf47e461e39d63026df&app_id=300401&app_version=1.5&app_channel=iphoneappstore&shce&show_cate=1"
+
+//分类collectionView
+#define dSorturl @"http://zhekou.repai.com/jkjby/view/rp_b2c_list_v2.php?&access_token=&appkey=100071&app_oid=acbb7819796f4bf47e461e39d63026df&app_id=300401&app_version=1.5&app_channel=iphoneappstore&shce=zhekoumai&pay=weixin&senddata=20150922&collect_pay=1"
+
+//场景collectionView
+#define dSenceurl @"http://zhekou.repai.com/jkjby/view/rp_b2c_update1.php"
+
+//热门分类 1 — 9  cid 2—10
+//女装:人气
+#define dRenqiurl @"http://zhekou.repai.com/jkjby/view/rp_b2c_category_list.php?cid=%@&access_token=&appkey=100071&app_oid=acbb7819796f4bf47e461e39d63026df&app_id=300401&app_version=1.5&app_channel=iphoneappstore&shce=zhekoumai&pay=weixin&senddata=20150922&collect_pay=1&page=%d&limit=100&type=1"
+//销量
+#define dXiaoliangurl @"http://zhekou.repai.com/jkjby/view/rp_b2c_category_list.php?cid=%@&access_token=&appkey=100071&app_oid=acbb7819796f4bf47e461e39d63026df&app_id=300401&app_version=1.5&app_channel=iphoneappstore&shce=zhekoumai&pay=weixin&senddata=20150922&collect_pay=1&page=%d&limit=100&type=2"
+//价格
+//升序
+#define dPriceascurl @"http://zhekou.repai.com/jkjby/view/rp_b2c_category_list.php?cid=%@&access_token=&appkey=100071&app_oid=acbb7819796f4bf47e461e39d63026df&app_id=300401&app_version=1.5&app_channel=iphoneappstore&shce=zhekoumai&pay=weixin&senddata=20150922&collect_pay=1&page=%d&limit=100&type=3&sort=asc"
+//降序
+#define dPricedescurl @"http://zhekou.repai.com/jkjby/view/rp_b2c_category_list.php?cid=%@&access_token=&appkey=100071&app_oid=acbb7819796f4bf47e461e39d63026df&app_id=300401&app_version=1.5&app_channel=iphoneappstore&shce=zhekoumai&pay=weixin&senddata=20150922&collect_pay=1&page=%d&limit=100&type=3&sort=desc"
+
+
+
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
+#import "HttpRequest.h"
+#import "NSObject+YYModel.h"
+#import "UIView+AdjustFrame.h"
+#import "UIImageView+WebCache.h"
+#import "FMDatabase.h"
+#import "YKPicScrollView.h"
+
+#define TAG_BEGIN 25256
+#define SELECTED_COLOR [UIColor colorWithRed:219 / 255.0 green:50 / 255.0 blue:54 / 255.0 alpha:1]
+
+
+#endif /* PrefixHeader_pch */
