@@ -162,6 +162,7 @@
   //  NSLog(@"%@",url);
     [YCHNetworking startRequestFromUrl:url andParamter:nil returnData:^(NSData *data, NSError *error) {
         if (error) {
+            [SVProgressHUD showErrorWithStatus:@"没有找到相关内容"];
             return;
         }
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
@@ -196,6 +197,10 @@
 
     vc.contentId = model.contentId;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (BOOL)hidesBottomBarWhenPushed{
+    return YES;
 }
 
 @end

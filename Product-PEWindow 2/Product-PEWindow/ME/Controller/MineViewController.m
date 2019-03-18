@@ -193,7 +193,7 @@
   if (indexPath.section == 0 && indexPath.row == 0) {
         //进入收藏
         MyFavoriteViewController * vc = [[MyFavoriteViewController alloc]init];
-      
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
         
         

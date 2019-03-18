@@ -278,7 +278,7 @@
 - (void)buidlShare
 {
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 30, 30);
+    button.frame = CGRectMake(0, 0, 25, 25);
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [button setBackgroundImage:[UIImage imageNamed:@"dianzan"] forState:UIControlStateNormal];
     [button setBackgroundImage:[UIImage imageNamed:@"dianzan_s"] forState:UIControlStateSelected];
@@ -288,6 +288,9 @@
 }
 - (void)buttonClicked:(UIButton *)button{
     button.selected = !button.selected;
+    if (button.selected) {
+        [SVProgressHUD showSuccessWithStatus:@"点赞成功"];
+    }
 }
 
 

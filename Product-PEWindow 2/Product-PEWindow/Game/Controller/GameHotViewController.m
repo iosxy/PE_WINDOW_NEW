@@ -69,8 +69,8 @@
 }
 - (void)createTableView
 {//创建表格视图
-    UITableView * table = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    table.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    UITableView * table = [[UITableView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, SCREEN_WIDTH, SCREEN_HEIGHT - SafeAreaTopHeight) style:UITableViewStyleGrouped];
+//    table.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     table.dataSource = self;
     table.delegate = self;
     [table registerNib:[UINib nibWithNibName:@"GameHotTableViewCell" bundle:nil] forCellReuseIdentifier:@"HOT"];
@@ -109,7 +109,7 @@
     //请求数据源，加载数据
     [SVProgressHUD showWithStatus:@"正在加载" maskType:1];
     self.dataSource = [[NSMutableArray alloc]init];
-    NSString * currentDate = [NSString stringWithFormat:@"2016-%.2d-%.2d",_currentMonth,_currentDay];
+    NSString * currentDate = [NSString stringWithFormat:@"2019-%.2d-%.2d",_currentMonth,_currentDay];
    [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:HotGame,currentDate] andParamter:nil returnData:^(NSData *data, NSError *error) {
        if (error) {
            return;
@@ -141,7 +141,7 @@
         _currentMonth--;
     }
     self.dataSource = [[NSMutableArray alloc]init];
-    NSString * currentDate = [NSString stringWithFormat:@"2016-%.2d-%.2d",_currentMonth,_currentDay];
+    NSString * currentDate = [NSString stringWithFormat:@"2019-%.2d-%.2d",_currentMonth,_currentDay];
     [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:HotGame,currentDate] andParamter:nil returnData:^(NSData *data, NSError *error) {
         if (error) {
             return;
