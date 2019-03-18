@@ -133,12 +133,14 @@
 {
     
     NSArray * array = @[@[
-                          @{@"title":@"我的收藏",@"icon":@"shoucang"},
-                          @{@"title":@"搜索",@"icon":@"search2"}
+                            @{@"title":@"我的收藏",@"icon":@"收藏"},
+                            @{@"title":@"搜索",@"icon":@"search2"}
                           ],
                         @[
-                          @{@"title":@"客服",@"icon":@"kefu"},
-                          @{@"title":@"设置",@"icon":@"shezhi"}
+                            @{@"title":@"联系客服",@"icon":@"kefu"},
+                            @{@"title":@"用户协议",@"icon":@"协议管理"},
+                            @{@"title":@"意见反馈",@"icon":@"意见反馈"},
+                            @{@"title":@"设置",@"icon":@"设置"}
                             ]
                           ];
     
@@ -193,7 +195,7 @@
   if (indexPath.section == 0 && indexPath.row == 0) {
         //进入收藏
         MyFavoriteViewController * vc = [[MyFavoriteViewController alloc]init];
-      
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
         
         
@@ -203,21 +205,37 @@
         //进入帖子
         MainDetailVC * vc = [[MainDetailVC alloc]init];
         vc.name = @"搜索";
-        [self.navigationController pushViewController:vc animated:YES];
+        [self.navigationController pushViewController:vc animated:NO];
         
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
         //进入客服
         MainDetailVC * vc = [[MainDetailVC alloc]init];
         vc.name = @"客服";
-        [self.navigationController pushViewController:vc animated:YES];
+        [self.navigationController pushViewController:vc animated:NO];
         
     }
-    else if (indexPath.section == 1 && indexPath.row == 1) {
+    else if (indexPath.section == 1 && indexPath.row == 3) {
         //进入设置
         MainDetailVC * vc = [[MainDetailVC alloc]init];
         vc.name = @"设置";
-        [self.navigationController pushViewController:vc animated:YES];    }
+        [self.navigationController pushViewController:vc animated:NO];
+        
+    }
+    else if (indexPath.section == 1 && indexPath.row == 1) {
+        //用户协议
+        MainDetailVC * vc = [[MainDetailVC alloc]init];
+        vc.name = @"用户协议";
+        [self.navigationController pushViewController:vc animated:NO];
+        
+    }
+    else if (indexPath.section == 1 && indexPath.row == 2) {
+        //意见反馈
+        MainDetailVC * vc = [[MainDetailVC alloc]init];
+        vc.name = @"意见反馈";
+        [self.navigationController pushViewController:vc animated:NO];
+        
+    }
  
     
     
