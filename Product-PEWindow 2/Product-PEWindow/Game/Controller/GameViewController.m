@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.basketBalldataSource = @[@"欧冠篮球",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@""];
+    self.basketBalldataSource = @[@"欧冠篮球",@"西蓝甲",@"土蓝超",@"希蓝甲",@"以蓝超",@"德蓝甲",@"法蓝甲",@"CBA",@"日蓝联",@"韩蓝联",@"澳蓝联",@"菲蓝联",@"女蓝亚洲杯",@"男蓝亚洲杯",@"NBA",@"WNBA",@"WNBA",@"NCAA",@"巴蓝甲",@"阿蓝甲",@"男篮美洲杯",@"男篮非洲杯"];
     
      self.view.frame = CGRectMake(0, SafeAreaTopHeight, self.view.frame.size.width, self.view.frame.size.height - SafeAreaTopHeight);
     [self createCollectionView];
@@ -55,6 +55,7 @@
 }
 - (void)loadData
 {
+    
     //获取网络数据
     [YCHNetworking startRequestFromUrl:GAME_URL andParamter:nil returnData:^(NSData *data, NSError *error) {
         if (error) {
@@ -62,13 +63,18 @@
         }
         NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
         NSArray * result = [NSArray modelArrayWithClass:[GameModel class] json:arr];
-     //   NSLog(@"%@",[result.firstObject logoPath]);
-        _dataSource.array = result;
-        
+  
+        NSMutableArray * newArr = [NSMutableArray arrayWithArray:result];
+        self.dataSource.array = result;
+        for (GameModel * model in newArr ) {
+             if ([self.basketBalldataSource containsObject:model.boardName]) {
+                   [_dataSource removeObject:model];
+             }
+        }
+       
         [_collectionView reloadData];
         
     }];
-    
     
     
     
@@ -103,16 +109,18 @@
     NSRange range = {6,4};
     NSString * str2 = [gameID substringWithRange:range];
     //    NSLog(@"%@",model.ID);
-    if ([model.sortNo isEqualToString:@"1"]||[model.sortNo isEqualToString:@"9"]||[str2 isEqualToString:@"4334"]) {
-        GameDetailViewController * vc = [[GameDetailViewController alloc]init];
- 
-    vc.gameID = str2;
-    vc.gametitle = model.boardName;
-    vc.sortNo = model.sortNo;
-        vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
     
+    
+    if ([self.basketBalldataSource containsObject:model.boardName]) {
+        GameDetailViewController * vc = [[GameDetailViewController alloc]init];
+        
+        vc.gameID = str2;
+        vc.gametitle = model.boardName;
+        vc.sortNo = model.sortNo;
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
+   
 else
     {
         FootBallDetailVC * fVC = [[FootBallDetailVC alloc]init];
