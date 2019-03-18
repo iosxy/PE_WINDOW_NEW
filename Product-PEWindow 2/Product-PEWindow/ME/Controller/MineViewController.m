@@ -44,6 +44,7 @@
     
     if (_isLogin == NO) {
         [_photoImageView setTitle:@"请先登录" forState:UIControlStateNormal];
+        [_photoImageView setBackgroundImage:[[UIImage alloc]init] forState:UIControlStateNormal];
         _photoImageView.enabled = YES;
     }else
     {

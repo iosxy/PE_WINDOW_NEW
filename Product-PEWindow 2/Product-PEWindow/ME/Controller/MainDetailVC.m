@@ -113,8 +113,18 @@
     [self.view addSubview:_sizeLabel];
     [self.view addSubview:button];
     
+    UIButton * outButton = [[UIButton alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_sizeLabel.frame) + 30, self.view.frame.size.width, 40)];
+    [outButton setTitle:@"退出登录" forState:UIControlStateNormal];
+    [self.view addSubview:outButton];
+    [outButton addTarget:self action:@selector(outClick) forControlEvents:UIControlEventTouchUpInside];
+    [outButton setBackgroundColor:[UIColor orangeColor]];
     
-    
+}
+- (void)outClick{
+    NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
+    [SVProgressHUD showSuccessWithStatus:@"退出成功!"];
+    [user setObject:@"noLogin" forKey:@"isLogin"];
+    [self.navigationController popViewControllerAnimated:true];
     
 }
 - (float ) folderSizeAtPath:(NSString*) folderPath{
