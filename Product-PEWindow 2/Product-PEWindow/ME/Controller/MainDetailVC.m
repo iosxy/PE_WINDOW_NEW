@@ -37,6 +37,12 @@
     }else if ([self.name isEqualToString:@"搜索"]){
         [self loadSearchData];
     }
+    else if ([self.name isEqualToString:@"用户协议"]){
+        [self loadProtocols];
+    }
+}
+- (void)loadProtocols {
+   
 }
 - (void)loadFavoriteView
 {
