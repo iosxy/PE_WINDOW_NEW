@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VTE-Qa-eeB">
-                    <rect key="frame" x="40" y="84" width="295" height="30"/>
+                    <rect key="frame" x="40" y="104" width="295" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="4uj-zA-vOm"/>
                     </constraints>
@@ -32,7 +32,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-7I-zRN">
-                    <rect key="frame" x="40" y="114" width="295" height="30"/>
+                    <rect key="frame" x="40" y="134" width="295" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="rYE-WM-Lma"/>
                     </constraints>
@@ -40,7 +40,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsc-fe-4bF">
-                    <rect key="frame" x="40" y="164" width="165" height="30"/>
+                    <rect key="frame" x="40" y="184" width="165" height="30"/>
                     <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="165" id="4ur-ld-n6R"/>
@@ -55,7 +55,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-xS-FFd">
-                    <rect key="frame" x="215" y="164" width="120" height="30"/>
+                    <rect key="frame" x="215" y="184" width="120" height="30"/>
                     <color key="backgroundColor" red="0.76747948232323226" green="0.35013932460833797" blue="0.4401797544640913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="GTw-VU-Gi3"/>
@@ -78,7 +78,7 @@
                 <constraint firstItem="Dsc-fe-4bF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="FbY-hm-iWg"/>
                 <constraint firstAttribute="trailing" secondItem="VTE-Qa-eeB" secondAttribute="trailing" constant="40" id="LKd-iJ-qrK"/>
                 <constraint firstItem="pYf-xS-FFd" firstAttribute="leading" secondItem="Dsc-fe-4bF" secondAttribute="trailing" constant="10" id="Ntw-k0-YUZ"/>
-                <constraint firstItem="VTE-Qa-eeB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="bte-kz-sgO"/>
+                <constraint firstItem="VTE-Qa-eeB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="104" id="bte-kz-sgO"/>
                 <constraint firstItem="pYf-xS-FFd" firstAttribute="top" secondItem="dZk-7I-zRN" secondAttribute="bottom" constant="20" id="ota-ch-mOb"/>
                 <constraint firstItem="VTE-Qa-eeB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="sYM-pp-vzg"/>
                 <constraint firstItem="Dsc-fe-4bF" firstAttribute="top" secondItem="dZk-7I-zRN" secondAttribute="bottom" constant="20" id="tf9-Q2-FkI"/>

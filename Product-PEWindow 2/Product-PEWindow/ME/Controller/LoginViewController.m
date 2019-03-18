@@ -33,7 +33,7 @@
     if ([[user objectForKey:_phoneTf.text] isEqualToString:_mimaTf.text]) {
         [SVProgressHUD showSuccessWithStatus:@"登陆成功"];
         [user setObject:@"isLogin" forKey:@"isLogin"];
-        [self.navigationController popoverPresentationController];
+        [self.navigationController popViewControllerAnimated:true];
     }else
     {
         [SVProgressHUD showErrorWithStatus:@"登陆失败"];

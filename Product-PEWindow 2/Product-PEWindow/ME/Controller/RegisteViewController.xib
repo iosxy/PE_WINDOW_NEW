@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-hc-Fc5">
-                    <rect key="frame" x="40" y="84" width="295" height="30"/>
+                    <rect key="frame" x="40" y="104" width="295" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="FR0-y2-L0W"/>
                     </constraints>
@@ -30,7 +30,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VD5-uV-uwT">
-                    <rect key="frame" x="40" y="114" width="295" height="30"/>
+                    <rect key="frame" x="40" y="134" width="295" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="op9-4n-omp"/>
                     </constraints>
@@ -38,7 +38,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okb-gM-HSN">
-                    <rect key="frame" x="40" y="164" width="295" height="38"/>
+                    <rect key="frame" x="40" y="184" width="295" height="38"/>
                     <color key="backgroundColor" red="0.61284722222222221" green="0.24524390124758347" blue="0.42127441726146042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="38" id="kaj-L2-jCS"/>
@@ -54,7 +54,7 @@
             </subviews>
             <color key="backgroundColor" red="0.86918008207070707" green="0.86918008207070707" blue="0.86918008207070707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="CEk-hc-Fc5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="1ta-mB-dNT"/>
+                <constraint firstItem="CEk-hc-Fc5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="104" id="1ta-mB-dNT"/>
                 <constraint firstAttribute="trailing" secondItem="CEk-hc-Fc5" secondAttribute="trailing" constant="40" id="65Q-9s-6gG"/>
                 <constraint firstItem="VD5-uV-uwT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="LFr-zb-M4O"/>
                 <constraint firstItem="Okb-gM-HSN" firstAttribute="top" secondItem="VD5-uV-uwT" secondAttribute="bottom" constant="20" id="TvJ-2N-Fjs"/>

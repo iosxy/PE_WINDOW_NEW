@@ -62,7 +62,7 @@
     
     
     NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
-    [user setObject:"123" forKey:"123"];
+    [user setObject:@"123" forKey:@"123"];
 
     return YES;
 }

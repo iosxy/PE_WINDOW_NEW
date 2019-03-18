@@ -18,6 +18,13 @@
 @implementation RegisteViewController
 - (IBAction)sendNum:(id)sender {
     
+    if ([_picTf.text isEqualToString:@""] || [_phoneTf.text isEqualToString:@""]){
+    
+        [SVProgressHUD showErrorWithStatus:@"请检查账号或者密码"];
+        
+        return;
+    }
+    
     NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
     [user setObject:_picTf.text forKey:_phoneTf.text];
     [SVProgressHUD showSuccessWithStatus:@"注册成功"];

@@ -35,10 +35,23 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 
-//        [_photoImageView setTitle:@"" forState:UIControlStateNormal];
-//        _photoImageView.enabled = NO;
-//        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"headImg.jpg"] forState:UIControlStateNormal];
+    NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
+    if ([[user objectForKey:@"isLogin"]isEqualToString:@"isLogin"]) {
+        _isLogin = YES;
+    }else{
+        _isLogin = NO;
+    }
     
+    if (_isLogin == NO) {
+        [_photoImageView setTitle:@"请先登录" forState:UIControlStateNormal];
+        _photoImageView.enabled = YES;
+    }else
+    {
+        [_photoImageView setTitle:@"" forState:UIControlStateNormal];
+        _photoImageView.enabled = NO;
+        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
+        _photoImageView.adjustsImageWhenDisabled = NO;
+    }
 }
 
 - (void)viewDidLoad {
