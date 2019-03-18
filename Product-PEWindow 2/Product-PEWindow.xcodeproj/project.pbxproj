@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		063B1F781CE0884A00BF7AC8 /* share.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 063B1F771CE0884A00BF7AC8 /* share.jpg */; };
-		0695B8E2223B82FF002AE010 /* shoucang.png in Resources */ = {isa = PBXBuildFile; fileRef = 0695B8DF223B82FE002AE010 /* shoucang.png */; };
 		0695B8E3223B82FF002AE010 /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0695B8E0223B82FE002AE010 /* search2.png */; };
-		0695B8E4223B82FF002AE010 /* shezhi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0695B8E1223B82FE002AE010 /* shezhi.png */; };
 		0695B900223B84D3002AE010 /* reportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695B8E7223B84D3002AE010 /* reportViewController.m */; };
 		0695B901223B84D3002AE010 /* CommentDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695B8E8223B84D3002AE010 /* CommentDetailVC.m */; };
 		0695B902223B84D3002AE010 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0695B8EB223B84D3002AE010 /* DetailVC.xib */; };
@@ -191,9 +189,7 @@
 
 /* Begin PBXFileReference section */
 		063B1F771CE0884A00BF7AC8 /* share.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share.jpg; sourceTree = "<group>"; };
-		0695B8DF223B82FE002AE010 /* shoucang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoucang.png; sourceTree = "<group>"; };
 		0695B8E0223B82FE002AE010 /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
-		0695B8E1223B82FE002AE010 /* shezhi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shezhi.png; sourceTree = "<group>"; };
 		0695B8E7223B84D3002AE010 /* reportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reportViewController.m; sourceTree = "<group>"; };
 		0695B8E8223B84D3002AE010 /* CommentDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentDetailVC.m; sourceTree = "<group>"; };
 		0695B8E9223B84D3002AE010 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
@@ -1122,9 +1118,7 @@
 				BCD2B1091CCF079800C92545 /* gengxin.png */,
 				BCD2B10C1CCF079800C92545 /* pengyou.png */,
 				0695B8E0223B82FE002AE010 /* search2.png */,
-				0695B8E1223B82FE002AE010 /* shezhi.png */,
 				0695B90E223B8926002AE010 /* kefu.png */,
-				0695B8DF223B82FE002AE010 /* shoucang.png */,
 				BCC418981CD0568B0006AF0F /* tableBack.jpg */,
 			);
 			path = Resource;
@@ -1221,7 +1215,6 @@
 			files = (
 				BC6ED4D11CC5A22500059B20 /* home_guess_a@2x.png in Resources */,
 				BCD2B1051CCEFAA000C92545 /* MineTableViewCell.xib in Resources */,
-				0695B8E4223B82FF002AE010 /* shezhi.png in Resources */,
 				BCD2B1121CCF079800C92545 /* pengyou.png in Resources */,
 				BC6ED4CC1CC5A22500059B20 /* home_guess_b@2x.png in Resources */,
 				BC3DCEC01CC8844000CE9DB8 /* RedYellowModelTableViewCell.xib in Resources */,
@@ -1257,7 +1250,6 @@
 				BC6371731CCC2CD200D740E5 /* ChinaBasketBall.jpg in Resources */,
 				BCC418A21CD05B280006AF0F /* LoginViewController.xib in Resources */,
 				BCCD66C41CCAEA7700AF4D52 /* rightUp.png in Resources */,
-				0695B8E2223B82FF002AE010 /* shoucang.png in Resources */,
 				BC1B802D1CCB0EE0007ED61C /* TalkCell.xib in Resources */,
 				BC6ED4CF1CC5A22500059B20 /* home_game_a@2x.png in Resources */,
 				BC6ED4CB1CC5A22500059B20 /* home_news_a@2x.png in Resources */,
@@ -1548,7 +1540,7 @@
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = club.shangche.geton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pewindow.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1580,7 +1572,7 @@
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = club.shangche.geton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pewindow.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

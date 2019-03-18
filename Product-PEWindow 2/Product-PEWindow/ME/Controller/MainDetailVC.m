@@ -28,27 +28,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    
-    if ([self.name isEqualToString:@"收藏"]) {
-        [self loadFavoriteView];
-    }
-    else if ([self.name isEqualToString:@"客服"]){
+    if ([self.name isEqualToString:@"客服"]){
         [self loadPhone];
     }else if ([self.name isEqualToString:@"设置"]){
         [self loadSetting];
-    }else if ([self.name isEqualToString:@"更新"]){
-        [self loadRefresh];
+    }else if ([self.name isEqualToString:@"意见反馈"]){
+        [self loadFavoriteView];
     }else if ([self.name isEqualToString:@"搜索"]){
         [self loadSearchData];
     }
 }
 - (void)loadFavoriteView
 {
+    UITextView * label = [[UITextView alloc]initWithFrame:CGRectMake(15, 90, [[UIScreen mainScreen]bounds].size.width - 30, 180)];
+    label.text = @"您的建议：";
+    label.layer.cornerRadius = 5.0;
+    label.layer.masksToBounds = YES;
+    label.layer.borderWidth = 0.5;
+    label.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    label.textColor = [UIColor brownColor];
+    [self.view addSubview:label];
     
-    
-    
-    
-    
+    UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - 80, 270, 60, 30)];
+    [button setTitle:@"提交" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(tijiaoClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+- (void)tijiaoClicked {
+    [SVProgressHUD showSuccessWithStatus:@"提交成功"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 - (void)loadPhone
 {
@@ -78,6 +89,7 @@
     NSLog(@"%@",NSHomeDirectory());
     _sizeLabel.textColor = [UIColor blackColor];
     _sizeLabel.backgroundColor = [UIColor redColor];
+    _sizeLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_sizeLabel];
     [self.view addSubview:button];
     
@@ -107,10 +119,7 @@
     }
     return 0;
 }
-- (void)loadRefresh
-{
-   
-}
+
 - (void)buttonClick
 { [[SDImageCache sharedImageCache]clearDisk];
     [SVProgressHUD showSuccessWithStatus:@"清空缓存成功"];

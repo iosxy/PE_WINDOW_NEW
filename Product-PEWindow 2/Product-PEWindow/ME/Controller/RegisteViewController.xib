@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisteViewController">
@@ -34,20 +39,20 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okb-gM-HSN">
                     <rect key="frame" x="40" y="164" width="295" height="38"/>
-                    <color key="backgroundColor" red="0.61284722222222221" green="0.24524390124758347" blue="0.42127441726146042" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.61284722222222221" green="0.24524390124758347" blue="0.42127441726146042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="38" id="kaj-L2-jCS"/>
                     </constraints>
                     <state key="normal" title="注册">
-                        <color key="titleColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="sendNum:" destination="-1" eventType="touchUpInside" id="JBH-ED-fQb"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.86918008207070707" green="0.86918008207070707" blue="0.86918008207070707" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.86918008207070707" green="0.86918008207070707" blue="0.86918008207070707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="CEk-hc-Fc5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="1ta-mB-dNT"/>
                 <constraint firstAttribute="trailing" secondItem="CEk-hc-Fc5" secondAttribute="trailing" constant="40" id="65Q-9s-6gG"/>
@@ -59,7 +64,6 @@
                 <constraint firstAttribute="trailing" secondItem="Okb-gM-HSN" secondAttribute="trailing" constant="40" id="jbD-91-CDj"/>
                 <constraint firstItem="Okb-gM-HSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="rpb-DP-nP5"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="410.5" y="227.5"/>
         </view>
     </objects>

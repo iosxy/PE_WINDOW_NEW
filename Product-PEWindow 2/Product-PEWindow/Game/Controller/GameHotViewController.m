@@ -69,7 +69,7 @@
 }
 - (void)createTableView
 {//创建表格视图
-    UITableView * table = [[UITableView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, SCREEN_WIDTH, SCREEN_HEIGHT - SafeAreaTopHeight) style:UITableViewStyleGrouped];
+    UITableView * table = [[UITableView alloc]initWithFrame:CGRectMake(0, (iPhoneX ? 84 : 0), SCREEN_WIDTH, SCREEN_HEIGHT - (iPhoneX ? 84 : 0)) style:UITableViewStyleGrouped];
 //    table.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     table.dataSource = self;
     table.delegate = self;
