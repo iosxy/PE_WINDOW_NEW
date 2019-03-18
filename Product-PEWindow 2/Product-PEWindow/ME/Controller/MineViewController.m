@@ -50,7 +50,7 @@
     {
         [_photoImageView setTitle:@"" forState:UIControlStateNormal];
         _photoImageView.enabled = NO;
-        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
+        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"headImg"] forState:UIControlStateNormal];
         _photoImageView.adjustsImageWhenDisabled = NO;
     }
 }
