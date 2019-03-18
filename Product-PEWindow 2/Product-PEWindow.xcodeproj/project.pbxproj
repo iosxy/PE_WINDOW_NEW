@@ -220,6 +220,7 @@
 		0695B90E223B8926002AE010 /* kefu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kefu.png; sourceTree = "<group>"; };
 		06C790E21CD7115C002BB0BF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1C1792EC31E085140B2A2103 /* Pods_Product_PEWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Product_PEWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F52B3A0223F4D28004B2D56 /* Product-PEWindow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Product-PEWindow.entitlements"; sourceTree = "<group>"; };
 		BC1B80261CCB0D90007ED61C /* TalkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkModel.h; sourceTree = "<group>"; };
 		BC1B80271CCB0D90007ED61C /* TalkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkModel.m; sourceTree = "<group>"; };
 		BC1B80291CCB0EE0007ED61C /* TalkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkCell.h; sourceTree = "<group>"; };
@@ -598,6 +599,7 @@
 		BC32C3BB1CC31227004BC24B /* Product-PEWindow */ = {
 			isa = PBXGroup;
 			children = (
+				1F52B3A0223F4D28004B2D56 /* Product-PEWindow.entitlements */,
 				0695B8E5223B84D3002AE010 /* Comment */,
 				BCAC9DE01CC53F9F00315007 /* Game */,
 				BCAC9DE41CC53F9F00315007 /* Library */,
@@ -1179,7 +1181,12 @@
 					BC32C3B81CC31227004BC24B = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = K96S8R47AN;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					BC32C3D11CC31227004BC24B = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -1523,8 +1530,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Product-PEWindow/Product-PEWindow.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Min Huang (286R9BTGNT)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = K96S8R47AN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1543,7 +1551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pewindow.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = pe_window_test;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1554,8 +1562,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Product-PEWindow/Product-PEWindow.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Min Huang (286R9BTGNT)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = K96S8R47AN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1574,7 +1583,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pewindow.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = pe_window_test;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
