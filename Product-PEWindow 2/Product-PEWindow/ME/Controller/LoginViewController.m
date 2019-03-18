@@ -23,7 +23,9 @@
     self.registe.layer.cornerRadius = 5;
     self.registe.clipsToBounds = YES;
 }
-
+- (BOOL)hidesBottomBarWhenPushed {
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -33,7 +35,7 @@
     if ([[user objectForKey:_phoneTf.text] isEqualToString:_mimaTf.text]) {
         [SVProgressHUD showSuccessWithStatus:@"登陆成功"];
         [user setObject:@"isLogin" forKey:@"isLogin"];
-        [self.navigationController popViewControllerAnimated:true];
+        [self.navigationController popViewControllerAnimated:YES];
     }else
     {
         [SVProgressHUD showErrorWithStatus:@"登陆失败"];

@@ -59,7 +59,7 @@
 - (void)createTableView
 {
     
-    UITableView * table = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    UITableView * table = [[UITableView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, SCREEN_WIDTH, SCREEN_HEIGHT - SafeAreaTopHeight) style:UITableViewStylePlain];
     table.dataSource = self;
     table.delegate = self;
     [table registerNib:[UINib nibWithNibName:@"MyFavoriteCell" bundle:nil] forCellReuseIdentifier:@"MYCELL"];

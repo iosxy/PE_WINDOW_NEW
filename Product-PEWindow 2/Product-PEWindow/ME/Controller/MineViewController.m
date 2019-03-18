@@ -116,7 +116,7 @@
     {
         [_photoImageView setTitle:@"" forState:UIControlStateNormal];
         _photoImageView.enabled = NO;
-        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
+        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"headImg"] forState:UIControlStateNormal];
     }
    
     [_photoImageView setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
@@ -208,6 +208,10 @@
     
   if (indexPath.section == 0 && indexPath.row == 0) {
         //进入收藏
+       if (_isLogin == NO) {
+           [SVProgressHUD showSuccessWithStatus:@"请先登录"];
+           return;
+       }
         MyFavoriteViewController * vc = [[MyFavoriteViewController alloc]init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
@@ -224,6 +228,10 @@
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
         //进入客服
+        if (_isLogin == NO) {
+            [SVProgressHUD showSuccessWithStatus:@"请先登录"];
+            return;
+        }
         MainDetailVC * vc = [[MainDetailVC alloc]init];
         vc.name = @"客服";
         [self.navigationController pushViewController:vc animated:NO];
@@ -245,6 +253,10 @@
     }
     else if (indexPath.section == 1 && indexPath.row == 2) {
         //意见反馈
+        if (_isLogin == NO) {
+            [SVProgressHUD showSuccessWithStatus:@"请先登录"];
+            return;
+        }
         MainDetailVC * vc = [[MainDetailVC alloc]init];
         vc.name = @"意见反馈";
         [self.navigationController pushViewController:vc animated:NO];

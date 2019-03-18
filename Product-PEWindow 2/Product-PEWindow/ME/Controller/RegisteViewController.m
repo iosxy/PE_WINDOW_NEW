@@ -28,7 +28,7 @@
     NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
     [user setObject:_picTf.text forKey:_phoneTf.text];
     [SVProgressHUD showSuccessWithStatus:@"注册成功"];
-    [self.navigationController popoverPresentationController];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
@@ -36,6 +36,9 @@
    
     
     
+}
+- (BOOL)hidesBottomBarWhenPushed {
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
