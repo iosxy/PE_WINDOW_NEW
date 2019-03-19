@@ -248,7 +248,7 @@
         
     TalkCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TALK"];
     TalkModel * model = self.dataSource[indexPath.row];
-    [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"headImg"]];
+    [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"head"]];
     cell.nickname.text = model.nickname;
     cell.createTime.text = model.createTime;
    // NSLog(@"%@",model.createTime);

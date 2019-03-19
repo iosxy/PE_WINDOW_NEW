@@ -236,7 +236,7 @@
         TalkModel * model = self.leftDataSource[indexPath.row];
         TalkCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TALK"];
 //        [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg]];
-        [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"headImg"]];
+        [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"head"]];
         cell.content.text = model.content;
        // NSLog(@"%@222222",model.content);
         cell.nickname.text = model.nickname;

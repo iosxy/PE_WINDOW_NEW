@@ -37,10 +37,12 @@
 }
 - (void)loadData
 {
+    
     [SVProgressHUD showWithStatus:@"正在加载中..."];
     //在网络数据未请求到的时候，提示正在加载中
     [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL,_currentNew] andParamter:nil returnData:^(NSData *data, NSError *error) {
         if (!error) {
+            [self.dataSource removeAllObjects];
             //YCHNetworking 是基于AFNetworking进行二次封装的数据请求类
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
             //讲二进制数据转化为字典
@@ -151,7 +153,7 @@
 {
     
     
-    [self.dataSource removeAllObjects];
+    
     [self loadData];
     if ( _tableView.mj_header.isRefreshing) {
         [_tableView.mj_header endRefreshing];
