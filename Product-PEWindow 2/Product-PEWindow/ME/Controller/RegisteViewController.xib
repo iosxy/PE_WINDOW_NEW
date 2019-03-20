@@ -22,26 +22,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-hc-Fc5">
-                    <rect key="frame" x="40" y="104" width="295" height="30"/>
+                    <rect key="frame" x="40" y="140" width="295" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="FR0-y2-L0W"/>
+                        <constraint firstAttribute="height" constant="40" id="FR0-y2-L0W"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VD5-uV-uwT">
-                    <rect key="frame" x="40" y="134" width="295" height="30"/>
+                    <rect key="frame" x="40" y="210" width="295" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="op9-4n-omp"/>
+                        <constraint firstAttribute="height" constant="40" id="op9-4n-omp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okb-gM-HSN">
-                    <rect key="frame" x="40" y="184" width="295" height="38"/>
+                    <rect key="frame" x="40" y="300" width="295" height="40"/>
                     <color key="backgroundColor" red="0.61284722222222221" green="0.24524390124758347" blue="0.42127441726146042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="38" id="kaj-L2-jCS"/>
+                        <constraint firstAttribute="height" constant="40" id="kaj-L2-jCS"/>
                     </constraints>
                     <state key="normal" title="注册">
                         <color key="titleColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,13 +54,13 @@
             </subviews>
             <color key="backgroundColor" red="0.86918008207070707" green="0.86918008207070707" blue="0.86918008207070707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="CEk-hc-Fc5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="104" id="1ta-mB-dNT"/>
+                <constraint firstItem="CEk-hc-Fc5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="1ta-mB-dNT"/>
                 <constraint firstAttribute="trailing" secondItem="CEk-hc-Fc5" secondAttribute="trailing" constant="40" id="65Q-9s-6gG"/>
                 <constraint firstItem="VD5-uV-uwT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="LFr-zb-M4O"/>
-                <constraint firstItem="Okb-gM-HSN" firstAttribute="top" secondItem="VD5-uV-uwT" secondAttribute="bottom" constant="20" id="TvJ-2N-Fjs"/>
+                <constraint firstItem="Okb-gM-HSN" firstAttribute="top" secondItem="VD5-uV-uwT" secondAttribute="bottom" constant="50" id="TvJ-2N-Fjs"/>
                 <constraint firstItem="CEk-hc-Fc5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="YYY-54-iBw"/>
                 <constraint firstAttribute="trailing" secondItem="VD5-uV-uwT" secondAttribute="trailing" constant="40" id="eQh-9E-Sdi"/>
-                <constraint firstItem="VD5-uV-uwT" firstAttribute="top" secondItem="CEk-hc-Fc5" secondAttribute="bottom" id="jKC-dg-LR7"/>
+                <constraint firstItem="VD5-uV-uwT" firstAttribute="top" secondItem="CEk-hc-Fc5" secondAttribute="bottom" constant="30" id="jKC-dg-LR7"/>
                 <constraint firstAttribute="trailing" secondItem="Okb-gM-HSN" secondAttribute="trailing" constant="40" id="jbD-91-CDj"/>
                 <constraint firstItem="Okb-gM-HSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="rpb-DP-nP5"/>
             </constraints>

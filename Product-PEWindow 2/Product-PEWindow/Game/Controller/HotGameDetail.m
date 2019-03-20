@@ -81,6 +81,11 @@
     _manager = [YCHDataBaseManager sharedManager];
 }
 - (void)clicked{
+    NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
+    if (![[user objectForKey:@"isLogin"]isEqualToString:@"isLogin"]) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
     NSDictionary * info = @{@"ID":self.model.ID, @"itemName":self.model.gameName,@"HomeName":self.model.homeName,@"GuestName":self.model.guestName,@"HomeScore":self.model.homeScore,@"GuestScore":self.model.guestScore,@"StartTime":self.model.startTime,@"HomePicUrl":self.model.homePicUrl,@"GuestPicUrl":self.model.guestPicUrl};
     if ([_manager isAlreadyFavorite:self.model.ID]) {
         [SVProgressHUD showErrorWithStatus:@"已收藏!"];
@@ -236,7 +241,7 @@
         TalkModel * model = self.leftDataSource[indexPath.row];
         TalkCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TALK"];
 //        [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg]];
-        [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"head"]];
+        [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"默认头像"]];
         cell.content.text = model.content;
        // NSLog(@"%@222222",model.content);
         cell.nickname.text = model.nickname;

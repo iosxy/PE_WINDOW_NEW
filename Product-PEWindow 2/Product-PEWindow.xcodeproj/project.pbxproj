@@ -37,7 +37,6 @@
 		BC1B802C1CCB0EE0007ED61C /* TalkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B802A1CCB0EE0007ED61C /* TalkCell.m */; };
 		BC1B802D1CCB0EE0007ED61C /* TalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1B802B1CCB0EE0007ED61C /* TalkCell.xib */; };
 		BC1B802F1CCB1913007ED61C /* h_good.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1B802E1CCB1913007ED61C /* h_good.png */; };
-		BC1B80311CCB1964007ED61C /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1B80301CCB1964007ED61C /* head.png */; };
 		BC1B80661CCB2631007ED61C /* GameSenceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B80651CCB2631007ED61C /* GameSenceModel.m */; };
 		BC1B806A1CCB2723007ED61C /* GameSenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B80681CCB2723007ED61C /* GameSenceCell.m */; };
 		BC1B806B1CCB2723007ED61C /* GameSenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1B80691CCB2723007ED61C /* GameSenceCell.xib */; };
@@ -173,7 +172,6 @@
 		BCCFBB341CC9843100E79D4A /* GameHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCFBB321CC9843100E79D4A /* GameHotTableViewCell.m */; };
 		BCCFBB351CC9843100E79D4A /* GameHotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFBB331CC9843100E79D4A /* GameHotTableViewCell.xib */; };
 		BCD2B0FE1CCEF84600C92545 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2B0FD1CCEF84600C92545 /* MineViewController.m */; };
-		BCD2B1001CCEFA0C00C92545 /* headImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD2B0FF1CCEFA0C00C92545 /* headImg.jpg */; };
 		BCD2B1041CCEFAA000C92545 /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2B1021CCEFAA000C92545 /* MineTableViewCell.m */; };
 		BCD2B1051CCEFAA000C92545 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD2B1031CCEFAA000C92545 /* MineTableViewCell.xib */; };
 		BCD2B1071CCF016D00C92545 /* backImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD2B1061CCF016D00C92545 /* backImg.jpg */; };
@@ -240,7 +238,6 @@
 		BC1B802A1CCB0EE0007ED61C /* TalkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkCell.m; sourceTree = "<group>"; };
 		BC1B802B1CCB0EE0007ED61C /* TalkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkCell.xib; sourceTree = "<group>"; };
 		BC1B802E1CCB1913007ED61C /* h_good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h_good.png; sourceTree = "<group>"; };
-		BC1B80301CCB1964007ED61C /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
 		BC1B80641CCB2631007ED61C /* GameSenceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSenceModel.h; sourceTree = "<group>"; };
 		BC1B80651CCB2631007ED61C /* GameSenceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSenceModel.m; sourceTree = "<group>"; };
 		BC1B80671CCB2723007ED61C /* GameSenceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSenceCell.h; sourceTree = "<group>"; };
@@ -482,7 +479,6 @@
 		BCCFBB331CC9843100E79D4A /* GameHotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameHotTableViewCell.xib; sourceTree = "<group>"; };
 		BCD2B0FC1CCEF84600C92545 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		BCD2B0FD1CCEF84600C92545 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		BCD2B0FF1CCEFA0C00C92545 /* headImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = headImg.jpg; sourceTree = "<group>"; };
 		BCD2B1011CCEFAA000C92545 /* MineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
 		BCD2B1021CCEFAA000C92545 /* MineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
 		BCD2B1031CCEFAA000C92545 /* MineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
@@ -1116,7 +1112,6 @@
 				1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */,
 				063B1F771CE0884A00BF7AC8 /* share.jpg */,
 				BCD2B1061CCF016D00C92545 /* backImg.jpg */,
-				BCD2B0FF1CCEFA0C00C92545 /* headImg.jpg */,
 				BC3AAB531CC7341C006C0E3C /* selected2.png */,
 				BC3AAB511CC73110006C0E3C /* selected.png */,
 				BC3AAB421CC6ED09006C0E3C /* nodata_wait.png */,
@@ -1131,7 +1126,6 @@
 				BCCD66C11CCAEA7300AF4D52 /* leftUp.png */,
 				BCCD66C31CCAEA7700AF4D52 /* rightUp.png */,
 				BC1B802E1CCB1913007ED61C /* h_good.png */,
-				BC1B80301CCB1964007ED61C /* head.png */,
 				BC63716F1CCC2CD200D740E5 /* ChinaBasketBall.jpg */,
 				BC6371701CCC2CD200D740E5 /* NBALogo.jpg */,
 				BC6371711CCC2CD200D740E5 /* ChinaFootBall.jpg */,
@@ -1284,8 +1278,6 @@
 				0695B8E3223B82FF002AE010 /* search2.png in Resources */,
 				BC3DCEAD1CC842DC00CE9DB8 /* GameWebTableViewCell.xib in Resources */,
 				BCC418A71CD05EFE0006AF0F /* RegisteViewController.xib in Resources */,
-				BCD2B1001CCEFA0C00C92545 /* headImg.jpg in Resources */,
-				BC1B80311CCB1964007ED61C /* head.png in Resources */,
 				BCCFBB351CC9843100E79D4A /* GameHotTableViewCell.xib in Resources */,
 				BC2D4B2A1CCBDFF600A7F903 /* FootSenceTableViewCell.xib in Resources */,
 				BCD2B10F1CCF079800C92545 /* gengxin.png in Resources */,

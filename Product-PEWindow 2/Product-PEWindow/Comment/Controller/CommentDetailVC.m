@@ -91,7 +91,7 @@
 }
 - (void)createTable
 {
-    UITableView * table = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
+    UITableView * table = [[UITableView alloc]initWithFrame:CGRectMake(0, (isOldHorizontalPhone ? 64 : 88), [[UIScreen mainScreen]bounds].size.width, [[UIScreen mainScreen]bounds].size.height - (isOldHorizontalPhone ? 64 : 88) - 50) style:UITableViewStyleGrouped];
     table.dataSource = self;
     table.delegate = self;
     [table registerNib:[UINib nibWithNibName:@"TalkCell" bundle:nil] forCellReuseIdentifier:@"TALK"];
@@ -125,6 +125,13 @@
 }
 - (void)loadData
 {
+    NSMutableArray * arrModelTemp = [NSKeyedUnarchiver unarchiveObjectWithFileName:self.model.ID];
+    if (arrModelTemp) {
+        [self.dataSource addObjectsFromArray:arrModelTemp];
+        [self.dataSource insertObject:@"" atIndex:0];
+        [self.tableView reloadData];
+        return;
+    }
     [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:TAKL,self.model.ID] andParamter:nil returnData:^(NSData *data, NSError *error) {
         if (error) {
             return;
@@ -268,7 +275,7 @@
         
     TalkCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TALK"];
     TalkModel * model = self.dataSource[indexPath.row];
-    [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"head"]];
+    [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"默认头像"]];
     cell.nickname.text = model.nickname;
     cell.createTime.text = model.createTime;
    // NSLog(@"%@",model.createTime);
@@ -331,7 +338,7 @@
         
         [self.view addSubview:_sendTextView];
         [_sendTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.view);
+            make.bottom.equalTo(self.view.mas_bottom).offset(isOldHorizontalPhone?0:-25);
             make.height.equalTo(@50);
             make.left.right.equalTo(self.view);
         }];
@@ -342,6 +349,12 @@
 //发送评论
 - (void) sendComment:(NSString*)text{
     [self.sendTextView.textView resignFirstResponder];
+    
+    NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
+    if (![[user objectForKey:@"isLogin"]isEqualToString:@"isLogin"]) {
+        [SVProgressHUD showErrorWithStatus:@"请先登录"];
+        return;
+    }
     TalkModel * model = [TalkModel new];
     model.nickname = @"用户3847892";
     model.createTime = [self getCurrentTimes];
@@ -350,6 +363,7 @@
     [self.dataSource addObject:model];
     [self.tableView reloadData];
     self.sendTextView.textView.text = nil;
+    [SVProgressHUD showSuccessWithStatus:@"评论成功"];
     [self cunDang];
 }
 //获取当前的时间
@@ -408,7 +422,7 @@
     self.tableView.scrollIndicatorInsets = contentInsets;
     [UIView animateWithDuration:duration animations:^{
         [self.sendTextView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.view);
+            make.bottom.equalTo(self.view.mas_bottom).offset(isOldHorizontalPhone?0:-25);
             make.height.equalTo(@50);
             make.left.right.equalTo(self.view);
         }];

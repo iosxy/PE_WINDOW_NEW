@@ -24,27 +24,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VTE-Qa-eeB">
-                    <rect key="frame" x="40" y="104" width="295" height="30"/>
+                    <rect key="frame" x="40" y="140" width="295" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="4uj-zA-vOm"/>
+                        <constraint firstAttribute="height" constant="40" id="4uj-zA-vOm"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-7I-zRN">
-                    <rect key="frame" x="40" y="134" width="295" height="30"/>
+                    <rect key="frame" x="40" y="210" width="295" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="rYE-WM-Lma"/>
+                        <constraint firstAttribute="height" constant="40" id="rYE-WM-Lma"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsc-fe-4bF">
-                    <rect key="frame" x="40" y="184" width="165" height="30"/>
+                    <rect key="frame" x="40" y="300" width="165" height="40"/>
                     <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="165" id="4ur-ld-n6R"/>
-                        <constraint firstAttribute="height" constant="30" id="smA-19-elA"/>
+                        <constraint firstAttribute="height" constant="40" id="smA-19-elA"/>
                     </constraints>
                     <state key="normal" title="登录">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,10 +55,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-xS-FFd">
-                    <rect key="frame" x="215" y="184" width="120" height="30"/>
+                    <rect key="frame" x="215" y="300" width="120" height="40"/>
                     <color key="backgroundColor" red="0.76747948232323226" green="0.35013932460833797" blue="0.4401797544640913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="GTw-VU-Gi3"/>
+                        <constraint firstAttribute="height" constant="40" id="GTw-VU-Gi3"/>
                     </constraints>
                     <state key="normal" title="注册">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,14 +74,14 @@
                 <constraint firstAttribute="trailing" secondItem="pYf-xS-FFd" secondAttribute="trailing" constant="40" id="0xs-2k-hzU"/>
                 <constraint firstItem="dZk-7I-zRN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="C0j-PY-yD0"/>
                 <constraint firstAttribute="trailing" secondItem="dZk-7I-zRN" secondAttribute="trailing" constant="40" id="C4k-r5-cXt"/>
-                <constraint firstItem="dZk-7I-zRN" firstAttribute="top" secondItem="VTE-Qa-eeB" secondAttribute="bottom" id="F0e-Em-6lq"/>
+                <constraint firstItem="dZk-7I-zRN" firstAttribute="top" secondItem="VTE-Qa-eeB" secondAttribute="bottom" constant="30" id="F0e-Em-6lq"/>
                 <constraint firstItem="Dsc-fe-4bF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="FbY-hm-iWg"/>
                 <constraint firstAttribute="trailing" secondItem="VTE-Qa-eeB" secondAttribute="trailing" constant="40" id="LKd-iJ-qrK"/>
                 <constraint firstItem="pYf-xS-FFd" firstAttribute="leading" secondItem="Dsc-fe-4bF" secondAttribute="trailing" constant="10" id="Ntw-k0-YUZ"/>
-                <constraint firstItem="VTE-Qa-eeB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="104" id="bte-kz-sgO"/>
-                <constraint firstItem="pYf-xS-FFd" firstAttribute="top" secondItem="dZk-7I-zRN" secondAttribute="bottom" constant="20" id="ota-ch-mOb"/>
+                <constraint firstItem="VTE-Qa-eeB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="bte-kz-sgO"/>
+                <constraint firstItem="pYf-xS-FFd" firstAttribute="top" secondItem="dZk-7I-zRN" secondAttribute="bottom" constant="50" id="ota-ch-mOb"/>
                 <constraint firstItem="VTE-Qa-eeB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="sYM-pp-vzg"/>
-                <constraint firstItem="Dsc-fe-4bF" firstAttribute="top" secondItem="dZk-7I-zRN" secondAttribute="bottom" constant="20" id="tf9-Q2-FkI"/>
+                <constraint firstItem="Dsc-fe-4bF" firstAttribute="top" secondItem="dZk-7I-zRN" secondAttribute="bottom" constant="50" id="tf9-Q2-FkI"/>
             </constraints>
             <point key="canvasLocation" x="226.5" y="207.5"/>
         </view>

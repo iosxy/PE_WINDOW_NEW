@@ -45,6 +45,7 @@
     }
     
     if (_isLogin == NO) {
+        _namelabel.hidden = YES;
         [_photoImageView setTitle:@"请先登录" forState:UIControlStateNormal];
         [_photoImageView setBackgroundImage:[[UIImage alloc]init] forState:UIControlStateNormal];
         _photoImageView.enabled = YES;
@@ -52,7 +53,9 @@
     {
         [_photoImageView setTitle:@"" forState:UIControlStateNormal];
         _photoImageView.enabled = NO;
-        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
+        _namelabel.hidden = NO;
+        _namelabel.text = @"用户3847892";
+        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"默认头像"] forState:UIControlStateNormal];
         _photoImageView.adjustsImageWhenDisabled = NO;
     }
 }
@@ -124,7 +127,7 @@
         _photoImageView.enabled = NO;
         _namelabel.hidden = NO;
         _namelabel.text = @"用户3847892";
-        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
+        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"默认头像"] forState:UIControlStateNormal];
     }
    
     [_photoImageView setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
@@ -135,9 +138,13 @@
     _photoImageView.clipsToBounds = YES;
     _photoImageView.size = CGSizeMake(80, 80);
     _photoImageView.center = _topImageView.center;
-    _photoImageView.centerX = _topImageView.centerX - 90;
+    _photoImageView.centerY = _topImageView.centerY - 40;
     //[_topImageView addSubview:_photoImageView];
-    _namelabel.frame = CGRectMake(_photoImageView.right + 10, _photoImageView.y + 40 - 20, 120, 40);
+//    _namelabel.frame = CGRectMake(_photoImageView.right + 10, _photoImageView.y + 40 - 20, 120, 40);
+    _namelabel.size = CGSizeMake(120, 30);
+    _namelabel.center = _topImageView.center;
+    _namelabel.textAlignment = NSTextAlignmentCenter;
+    _namelabel.centerY = _topImageView.centerY + 30;
     [_tableView addSubview:_namelabel];
     [_tableView addSubview:_photoImageView];
     
