@@ -1,0 +1,177 @@
+PODS:
+  - ActionPickerUtils (4.1.0):
+    - ActionSheetPicker-3.0
+  - ActionSheetPicker-3.0 (2.3.0)
+  - Alamofire (4.7.3)
+  - BetterSegmentedControl (0.9)
+  - Bugly (2.5.0)
+  - ESTabBarController-swift (2.6.4)
+  - EVReflection/Alamofire (5.8.0):
+    - Alamofire
+    - EVReflection/Core
+  - EVReflection/Core (5.8.0)
+  - EVReflection/Moya (5.8.0):
+    - EVReflection/Alamofire
+    - Moya
+  - HandyJSON (4.2.0)
+  - HooDatePicker (1.0)
+  - iCarousel (1.8.3)
+  - JCore (1.2.5)
+  - JLRoutes (2.1)
+  - JPush (3.1.1.1):
+    - JCore (~> 1.2.5)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.7)
+  - Moya (11.0.2):
+    - Moya/Core (= 11.0.2)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - MZAppearance (1.1.6)
+  - MZFormSheetPresentationController (2.4.3):
+    - MZAppearance
+  - NinaPagerView (1.6.3)
+  - PromiseKit (4.5.2):
+    - PromiseKit/Foundation (= 4.5.2)
+    - PromiseKit/QuartzCore (= 4.5.2)
+    - PromiseKit/UIKit (= 4.5.2)
+  - PromiseKit/CorePromise (4.5.2)
+  - PromiseKit/Foundation (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.5.2):
+    - PromiseKit/CorePromise
+  - Result (3.2.4)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (4.0.1)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (4.2.0)
+  - TYAttributedLabel (2.6.6)
+  - TZImagePickerController (1.9.8)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - ActionPickerUtils (from `https://github.com/APUtils/ActionPickerUtils.git`)
+  - ActionSheetPicker-3.0 (~> 2.3.0)
+  - Alamofire (~> 4.5)
+  - BetterSegmentedControl (~> 0.9)
+  - Bugly
+  - ESTabBarController-swift
+  - EVReflection/Moya
+  - HandyJSON
+  - HooDatePicker
+  - iCarousel
+  - JLRoutes
+  - JPush
+  - MBProgressHUD (~> 1.1.0)
+  - MJExtension (~> 3.0.13)
+  - MJRefresh
+  - MZFormSheetPresentationController
+  - NinaPagerView (from `https://github.com/RamWire/NinaPagerView.git`)
+  - PromiseKit (~> 4.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SDCycleScrollView
+  - SDWebImage (~> 3.8.2)
+  - SnapKit (~> 4.0.0)
+  - SVProgressHUD
+  - SwiftyJSON
+  - TYAttributedLabel (~> 2.6.6)
+  - TZImagePickerController (~> 1.9.8)
+  - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
+    - Alamofire
+    - BetterSegmentedControl
+    - Bugly
+    - ESTabBarController-swift
+    - EVReflection
+    - HandyJSON
+    - HooDatePicker
+    - iCarousel
+    - JCore
+    - JLRoutes
+    - JPush
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - Moya
+    - MZAppearance
+    - MZFormSheetPresentationController
+    - PromiseKit
+    - Result
+    - RxCocoa
+    - RxSwift
+    - SDCycleScrollView
+    - SDWebImage
+    - SnapKit
+    - SVProgressHUD
+    - SwiftyJSON
+    - TYAttributedLabel
+    - TZImagePickerController
+    - YYKit
+
+EXTERNAL SOURCES:
+  ActionPickerUtils:
+    :git: https://github.com/APUtils/ActionPickerUtils.git
+  NinaPagerView:
+    :git: https://github.com/RamWire/NinaPagerView.git
+
+CHECKOUT OPTIONS:
+  ActionPickerUtils:
+    :commit: 52a78d83e15f86d57a449566d0d234a16265fff3
+    :git: https://github.com/APUtils/ActionPickerUtils.git
+  NinaPagerView:
+    :commit: 4692f84defa428a8d3ab03a6afbce82fcddfb6fb
+    :git: https://github.com/RamWire/NinaPagerView.git
+
+SPEC CHECKSUMS:
+  ActionPickerUtils: a5e47fd84caedb072552e4779d013400419e0a0e
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  BetterSegmentedControl: 40b2b6a08bbc59663149624d1b5235efa8d43a3c
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  ESTabBarController-swift: 58cca4ab7de980657d99a02181c1ff310983e975
+  EVReflection: 1f1813b5d1e2c0dbafa2bbc2ec84f8dfb3b72f8b
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
+  HooDatePicker: a7125c55fd28c3361207bc326f441a7c119ae38c
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  JCore: 14706de2640b25fb77dbd02332696491407f37c9
+  JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
+  JPush: 25dd9013fbe106082c14f9f30a82364ee98852fb
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
+  MZFormSheetPresentationController: fbfdbad31884f16fac17fbe3c44c168306cc1095
+  NinaPagerView: 4a245c33df8c5212fbde3c32ce39a3765eb334bc
+  PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  TYAttributedLabel: cb8fc910d97eb5224936d4f692a78e042af691b2
+  TZImagePickerController: 3b9413ae5d049b1fdc5b0c720ad283f35b679a50
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: bf7615602402e97eff28ddbe00b535388d67fccb
+
+COCOAPODS: 1.5.3

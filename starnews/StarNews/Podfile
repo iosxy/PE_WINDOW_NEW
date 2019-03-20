@@ -1,0 +1,46 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+target 'StarNews' do
+  use_frameworks!
+  
+  pod 'SDWebImage', '~> 3.8.2'
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'Alamofire', '~> 4.5'
+  pod 'SwiftyJSON'
+  pod 'HandyJSON' 
+
+  pod 'PromiseKit', '~> 4.0'
+
+  pod 'ESTabBarController-swift'
+
+  pod 'MZFormSheetPresentationController'
+  pod 'iCarousel'
+  pod 'JPush'
+ 
+  pod 'MJRefresh'
+  pod 'SVProgressHUD'
+  pod 'JLRoutes'
+  pod 'HooDatePicker'
+  
+  pod 'RxSwift', '~> 4.0'
+  pod 'EVReflection/Moya'
+  pod 'RxCocoa', '~> 4.0'
+  pod 'BetterSegmentedControl', '~> 0.9'
+  
+ ## pod 'IQKeyboardManagerSwift', '5.0.0'
+
+  pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'MJExtension', '~> 3.0.13'
+  pod 'YYKit', '~> 1.0.9'
+  pod 'TYAttributedLabel', '~> 2.6.6'
+  pod 'ActionSheetPicker-3.0' , '~> 2.3.0'
+
+  pod 'SDCycleScrollView'
+  pod 'TZImagePickerController', '~> 1.9.8'
+  pod 'Bugly'
+  pod 'NinaPagerView', :git => 'https://github.com/RamWire/NinaPagerView.git'
+  pod 'ActionPickerUtils', :git => 'https://github.com/APUtils/ActionPickerUtils.git'
+
+end
+

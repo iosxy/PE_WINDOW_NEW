@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GuestView" customModule="Yuwan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TAw-Db-7am">
+                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="qb8-Vp-NrD"/>
+                        <constraint firstAttribute="height" constant="64" id="ua2-x8-w8B"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="啊啊啊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRV-DV-cG5">
+                    <rect key="frame" x="0.0" y="74" width="64" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vRV-DV-cG5" secondAttribute="trailing" id="6B3-iC-V9P"/>
+                <constraint firstAttribute="bottom" secondItem="vRV-DV-cG5" secondAttribute="bottom" id="AWp-c7-SMj"/>
+                <constraint firstItem="TAw-Db-7am" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BKZ-mh-6IN"/>
+                <constraint firstAttribute="trailing" secondItem="TAw-Db-7am" secondAttribute="trailing" id="MuS-Ri-bkJ"/>
+                <constraint firstItem="vRV-DV-cG5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZPQ-Ms-wXD"/>
+                <constraint firstItem="vRV-DV-cG5" firstAttribute="top" secondItem="TAw-Db-7am" secondAttribute="bottom" constant="10" id="bDt-6A-HE3"/>
+                <constraint firstItem="TAw-Db-7am" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="glO-8J-pOv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avatarImageView" destination="TAw-Db-7am" id="ebV-z2-7zD"/>
+                <outlet property="nameLabel" destination="vRV-DV-cG5" id="Uxp-2S-WL2"/>
+            </connections>
+            <point key="canvasLocation" x="-121" y="-217"/>
+        </view>
+    </objects>
+</document>

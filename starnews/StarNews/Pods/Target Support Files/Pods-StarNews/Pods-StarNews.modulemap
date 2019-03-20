@@ -1,0 +1,6 @@
+framework module Pods_StarNews {
+  umbrella header "Pods-StarNews-umbrella.h"
+
+  export *
+  module * { export * }
+}
