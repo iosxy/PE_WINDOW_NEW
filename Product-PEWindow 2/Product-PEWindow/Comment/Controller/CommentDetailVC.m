@@ -11,6 +11,9 @@
 #import "GTMBase64.h"
 #import "BCell.h"
 #import "reportViewController.h"
+#import "TCSendTextView.h"
+
+
 #define NEWS_DETAIL @"http://u1.tiyufeng.com/v2/post/detail?id=%@&portalId=15&clientToken=7c98ddd1d8cb729bf66791a192b43748"
 #define TAKL @"http://u1.tiyufeng.com/v2/post/reply_list?postId=%@&sort=2&start=0&limit=18&portalId=15&clientToken=7c98ddd1d8cb729bf66791a192b43748"
 @interface CommentDetailVC ()<UITableViewDataSource,UITableViewDelegate>
@@ -19,11 +22,16 @@
 /** 数据源*/
 @property(nonatomic,strong)NSMutableArray * dataSource;
 
+@property (nonatomic,strong) TCSendTextView *sendTextView;
+
 @end
 
 @implementation CommentDetailVC{
     NSString * _content ;
     NSArray * _picList;
+    UILabel * _label;
+    UILabel * _label2;
+    UILabel * _label3;
 }
 
 - (void)viewDidLoad {
@@ -34,16 +42,38 @@
     if (self.contentId == nil) {
         UIBarButtonItem * item = [[UIBarButtonItem alloc]initWithTitle:@"举报" style:UIBarButtonItemStyleDone target:self action:@selector(report)];
         self.navigationItem.rightBarButtonItem = item;
-        
+            [self createTable];
             [self loadData];
-         [self createTable];
+        
     }else
     {
+        [self createTable];
         [self loadNewsData];
         
     }
     [self buidlShare];
+    [self setReplay];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(myKeyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(myKeyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
   
+}
+- (void)dealloc{
+    [self.sendTextView.textView removeObserver:self forKeyPath:@"frame"];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void) setReplay{
+    self.sendTextView.textView.text = nil;
+    self.sendTextView.textView.placehold = @"发送评论";
 }
 - (void)report
 {
@@ -61,36 +91,37 @@
 }
 - (void)createTable
 {
-    
     UITableView * table = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
     table.dataSource = self;
     table.delegate = self;
     [table registerNib:[UINib nibWithNibName:@"TalkCell" bundle:nil] forCellReuseIdentifier:@"TALK"];
     [table registerNib:[UINib nibWithNibName:@"BCell" bundle:nil] forCellReuseIdentifier:@"B"];
-    UILabel * label = [[UILabel alloc]init];
-    label.frame = CGRectMake(0, 0,[[UIScreen mainScreen]bounds].size.width, 44);
-    label.text = self.model.title;
-    label.numberOfLines = 0;
-    label.font = [UIFont boldSystemFontOfSize:16];
-    label.textAlignment = NSTextAlignmentCenter;
+    _label = [[UILabel alloc]init];
+    _label.frame = CGRectMake(0, 0,[[UIScreen mainScreen]bounds].size.width, 44);
+    _label.numberOfLines = 0;
+    _label.font = [UIFont boldSystemFontOfSize:16];
+    _label.textAlignment = NSTextAlignmentCenter;
    
-    UILabel * label2 = [[UILabel alloc]init];
-    label2.frame = CGRectMake(10, 50,70, 30);
-    label2.text = self.model.nickName;
-    label2.font = [UIFont systemFontOfSize:12];
+    _label2 = [[UILabel alloc]init];
+    _label2.frame = CGRectMake(10, 50,70, 30);
+    _label2.font = [UIFont systemFontOfSize:12];
     
-    UILabel * label3 = [[UILabel alloc]init];
-    label3.frame = CGRectMake(70, 50,120, 30);
-    label3.text = self.model.createTime;
-   label3.font = [UIFont systemFontOfSize:12];
-    
+    _label3 = [[UILabel alloc]init];
+    _label3.frame = CGRectMake(70, 50,120, 30);
+   _label3.font = [UIFont systemFontOfSize:12];
+    [self refreshHeaderData];
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width, 80)];
-    [view addSubview:label];
-    [view addSubview:label2];
-    [view addSubview:label3];
+    [view addSubview:_label];
+    [view addSubview:_label2];
+    [view addSubview:_label3];
     table.tableHeaderView = view;
     [self.view addSubview:table];
     self.tableView = table;
+}
+- (void)refreshHeaderData {
+    _label.text = self.model.title;
+    _label2.text = self.model.nickName;
+    _label3.text = self.model.createTime;
 }
 - (void)loadData
 {
@@ -110,24 +141,11 @@
 }
 - (void)loadNewsData
 {
-    UITableView * table = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, [[UIScreen mainScreen]bounds].size.width, [[UIScreen mainScreen]bounds].size.height - 64 - 44) style:UITableViewStyleGrouped];
-    table.dataSource = self;
-    table.delegate = self;
-    [table registerNib:[UINib nibWithNibName:@"TalkCell" bundle:nil] forCellReuseIdentifier:@"TALK"];
-    [table registerNib:[UINib nibWithNibName:@"BCell" bundle:nil] forCellReuseIdentifier:@"B"];
-    
-    [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:TAKL,self.contentId] andParamter:nil returnData:^(NSData *data, NSError *error) {
-        if (error) {
-            return;
-        }
-        NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
-        NSArray * results = result[@"results"];
-        NSArray * models = [NSArray modelArrayWithClass:[TalkModel class] json:results];
-        [self.dataSource addObject:@""];
-        [self.dataSource addObjectsFromArray:models];
-        [self.tableView reloadData];
-       NSLog(@"%@", [NSString stringWithFormat:@"%@" , result]);
-    }];
+//    UITableView * table = [[UITableView alloc]initWithFrame:CGRectMake(0, (isOldHorizontalPhone ? 64 : 88), [[UIScreen mainScreen]bounds].size.width, [[UIScreen mainScreen]bounds].size.height - (isOldHorizontalPhone ? 64 : 88) - 50) style:UITableViewStyleGrouped];
+//    table.dataSource = self;
+//    table.delegate = self;
+//    [table registerNib:[UINib nibWithNibName:@"TalkCell" bundle:nil] forCellReuseIdentifier:@"TALK"];
+//    [table registerNib:[UINib nibWithNibName:@"BCell" bundle:nil] forCellReuseIdentifier:@"B"];
     [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:NEWS_DETAIL,self.contentId] andParamter:nil returnData:^(NSData *data, NSError *error) {
         if (error) {
             return;
@@ -138,35 +156,40 @@
         NSString * nickname = dict[@"nickname"];
         NSString * createTime = dict[@"createTime"];
         _picList = [[NSArray alloc]init];
-       _picList = dict[@"extParam"][@"picList"];
+        _picList = dict[@"extParam"][@"picList"];
+        self.model = [CommentModel new];
+        self.model.title = title;
+        self.model.ID = [NSString stringWithFormat:@"%@",dict[@"id"]];
+        self.model.content = _content;
+        self.model.nickName = nickname;
+        self.model.createTime = createTime;
+        self.model.picList = [NSMutableArray arrayWithArray:_picList];
+        [self refreshHeaderData];
+        [self.tableView reloadData];
         
         
-       
-        UILabel * label = [[UILabel alloc]init];
-        label.frame = CGRectMake(0, 0,[[UIScreen mainScreen]bounds].size.width, 44);
-        label.text = title;
-        label.numberOfLines = 0;
-        label.font = [UIFont boldSystemFontOfSize:16];
-        label.textAlignment = NSTextAlignmentCenter;
+        NSMutableArray * arrModelTemp = [NSKeyedUnarchiver unarchiveObjectWithFileName:self.model.ID];
+        if (arrModelTemp) {
+            [self.dataSource addObjectsFromArray:arrModelTemp];
+            [self.dataSource insertObject:@"" atIndex:0];
+            [self.tableView reloadData];
+            return;
+        }
+        [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:TAKL,self.contentId] andParamter:nil returnData:^(NSData *data, NSError *error) {
+            if (error) {
+                return;
+            }
+            NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
+            NSArray * results = result[@"results"];
+            NSArray * models = [NSArray modelArrayWithClass:[TalkModel class] json:results];
+            [self.dataSource addObject:@""];
+            [self.dataSource addObjectsFromArray:models];
+            [self.tableView reloadData];
+            NSLog(@"%@", [NSString stringWithFormat:@"%@" , result]);
+        }];
         
-        UILabel * label2 = [[UILabel alloc]init];
-        label2.frame = CGRectMake(10, 50,70, 30);
-        label2.text = nickname;
-        label2.font = [UIFont systemFontOfSize:12];
         
-        UILabel * label3 = [[UILabel alloc]init];
-        label3.frame = CGRectMake(70, 50,150, 30);
-        label3.text = createTime;
-        label3.font = [UIFont systemFontOfSize:11];
         
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width, 80)];
-        [view addSubview:label];
-        [view addSubview:label2];
-        [view addSubview:label3];
-        table.tableHeaderView = view;
-        [self.view addSubview:table];
-        self.tableView = table;
-        NSLog(@"%@", [NSString stringWithFormat:@"%@" , dict]);
     }];
     
     
@@ -200,9 +223,6 @@
             if ([str4 rangeOfString:@"<p"].location != NSNotFound) {
                 str4 = nil;
             }
-            
-            
-            
             BCell * cell = [tableView dequeueReusableCellWithIdentifier:@"B"];
            
             cell.descript.text = str4;
@@ -265,13 +285,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        BCell * cell = [self tableView:_tableView cellForRowAtIndexPath:indexPath];
+        BCell * cell = (BCell *)[self tableView:_tableView cellForRowAtIndexPath:indexPath];
          CGSize size = CGSizeMake(300, 1000);
          CGSize labelSize = [cell.descript.text sizeWithFont:cell.descript.font constrainedToSize:size lineBreakMode:NSLineBreakByClipping];
         
         return labelSize.height + 200;
     }
-    return 44;
+    return 60;
 }
 
 
@@ -292,6 +312,145 @@
         [SVProgressHUD showSuccessWithStatus:@"点赞成功"];
     }
 }
+- (TCSendTextView *)sendTextView{
+    if (!_sendTextView) {
+        _sendTextView = [[TCSendTextView alloc]init];
+        [_sendTextView setUp];
+        _sendTextView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 50);
+//        _sendTextView.bottom = (isOldHorizontalPhone ? self.view.height : self.view.height - 88);
+        [_sendTextView.textView addObserver:self
+                                 forKeyPath:@"frame"
+                                    options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                                    context:nil];
+        WEAKSELF
+        [_sendTextView setOnSendText:^(NSString * text) {
+            [weakSelf sendComment:text];
+            // 发送评论
+        }];
+        
+        
+        [self.view addSubview:_sendTextView];
+        [_sendTextView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.view);
+            make.height.equalTo(@50);
+            make.left.right.equalTo(self.view);
+        }];
+//        _sendTextView.bottom = (isOldHorizontalPhone ? self.view.height : self.view.height - 88);
+    }
+    return _sendTextView;
+}
+//发送评论
+- (void) sendComment:(NSString*)text{
+    [self.sendTextView.textView resignFirstResponder];
+    TalkModel * model = [TalkModel new];
+    model.nickname = @"用户3847892";
+    model.createTime = [self getCurrentTimes];
+    model.content = [GTMBase64 stringByEncodingData:[text dataUsingEncoding:NSUTF8StringEncoding]];
+    model.headImg = @"http";
+    [self.dataSource addObject:model];
+    [self.tableView reloadData];
+    self.sendTextView.textView.text = nil;
+    [self cunDang];
+}
+//获取当前的时间
 
+-(NSString*)getCurrentTimes{
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    [formatter setTimeZone:timeZone];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSDate *datenow = [NSDate date];
+    NSString *currentTimeString = [formatter stringFromDate:datenow];
+    NSLog(@"currentTimeString =  %@",currentTimeString);
+    return currentTimeString;
+}
+
+#pragma mark - keyboard
+- (void)myKeyboardWillShow:(NSNotification *)notif{
+//    self.keyboardShowing = YES;
+    NSDictionary * userInfo = notif.userInfo;
+//    NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGSize kbSize = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    //    CGSize kbEndSize = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    CGFloat sendViewHeight = self.sendTextView.height;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height + sendViewHeight, 0.0);
+    self.tableView.contentInset = contentInsets;
+    self.tableView.scrollIndicatorInsets = contentInsets;
+    
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height - sendViewHeight;
+    [self.sendTextView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom).offset(-kbSize.height);
+        make.height.equalTo(@50);
+        make.left.right.equalTo(self.view);
+    }];
+//    [UIView animateWithDuration:duration animations:^{
+////        CGRect frame = self.sendTextView.frame;
+////        frame.origin.y = self.view.height - self.sendTextView.height - kbSize.height;
+////
+////        self.sendTextView.frame = frame;
+//
+//    }];
+    
+}
+- (void)myKeyboardWillHide:(NSNotification *)notif{
+    
+//    self.keyboardShowing = NO;
+    
+    NSDictionary * userInfo = notif.userInfo;
+    NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0, 0, self.sendTextView.height - (isOldHorizontalPhone ? 10 : 20), 0);
+    self.tableView.contentInset = contentInsets;
+    self.tableView.scrollIndicatorInsets = contentInsets;
+    [UIView animateWithDuration:duration animations:^{
+        [self.sendTextView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.view);
+            make.height.equalTo(@50);
+            make.left.right.equalTo(self.view);
+        }];
+    }];
+    
+}
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"frame"]) {
+        
+        //获取之前的值和现在的值
+        CGRect frameNew = [change[NSKeyValueChangeNewKey] CGRectValue];
+        CGRect frameOld = [change[NSKeyValueChangeOldKey] CGRectValue];
+        CGFloat offset = frameNew.size.height - frameOld.size.height;
+        
+        //修改sendTextView的位置和高度
+        CGRect rect = self.sendTextView.frame;
+        rect.size.height = frameNew.size.height + 14;
+        rect.origin.y = rect.origin.y - offset;
+        self.sendTextView.frame = rect;
+        
+        //修改tableview的contentinset,并移动
+        UIEdgeInsets contentInset = self.tableView.contentInset;
+        contentInset.bottom += offset;
+        self.tableView.contentInset = contentInset;
+        //        [self.commentTabelView scrollToRowAtIndexPath:_indexPathLastVisible atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        
+    }
+    
+}
+- (void)cunDang {
+    
+    NSMutableArray *thirdArray = [self.dataSource mutableCopy];
+    [thirdArray removeObjectAtIndex:0];
+    NSString * key = [NSString stringWithFormat:@"%@",self.model.ID];
+//    [[NSUserDefaults standardUserDefaults] setValue:thirdArray forKey:key];
+    //存档
+    [NSKeyedArchiver archiveRootObject:thirdArray toFileName:key];
+    
+//    [[NSUserDefaults standardUserDefaults] setValue:self.dataSource forKey:self.model.ID];
+}
+- (BOOL)hidesBottomBarWhenPushed {
+    return YES;
+}
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TalkModel : NSObject
+@interface TalkModel : NSObject <NSCoding>
 /** content*/
 @property(nonatomic,copy)NSString * content;
 /** nickname*/

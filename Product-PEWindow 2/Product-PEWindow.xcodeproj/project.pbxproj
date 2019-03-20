@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		063B1F781CE0884A00BF7AC8 /* share.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 063B1F771CE0884A00BF7AC8 /* share.jpg */; };
 		0654ABF7223F90E600C87AD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0654ABF6223F90E600C87AD7 /* AppDelegate.m */; };
+		068D3E1A2241E4AD0045463A /* TCSendTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D3E172241E4AD0045463A /* TCSendTextView.xib */; };
+		068D3E1B2241E4AD0045463A /* TCSendTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D3E182241E4AD0045463A /* TCSendTextView.m */; };
+		068D3E1E2241E6930045463A /* TCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D3E1C2241E6930045463A /* TCTextView.m */; };
+		068D3E212241EB760045463A /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D3E202241EB760045463A /* UIView+Additions.m */; };
+		068D3E24224224090045463A /* NSKeyedArchiver+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D3E23224224080045463A /* NSKeyedArchiver+TCExtension.m */; };
 		0695B8E3223B82FF002AE010 /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0695B8E0223B82FE002AE010 /* search2.png */; };
 		0695B900223B84D3002AE010 /* reportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695B8E7223B84D3002AE010 /* reportViewController.m */; };
 		0695B901223B84D3002AE010 /* CommentDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695B8E8223B84D3002AE010 /* CommentDetailVC.m */; };
@@ -191,6 +196,15 @@
 /* Begin PBXFileReference section */
 		063B1F771CE0884A00BF7AC8 /* share.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share.jpg; sourceTree = "<group>"; };
 		0654ABF6223F90E600C87AD7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		068D3E172241E4AD0045463A /* TCSendTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCSendTextView.xib; sourceTree = "<group>"; };
+		068D3E182241E4AD0045463A /* TCSendTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSendTextView.m; sourceTree = "<group>"; };
+		068D3E192241E4AD0045463A /* TCSendTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSendTextView.h; sourceTree = "<group>"; };
+		068D3E1C2241E6930045463A /* TCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTextView.m; sourceTree = "<group>"; };
+		068D3E1D2241E6930045463A /* TCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTextView.h; sourceTree = "<group>"; };
+		068D3E1F2241EB760045463A /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		068D3E202241EB760045463A /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		068D3E22224224080045463A /* NSKeyedArchiver+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+TCExtension.h"; sourceTree = "<group>"; };
+		068D3E23224224080045463A /* NSKeyedArchiver+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+TCExtension.m"; sourceTree = "<group>"; };
 		0695B8E0223B82FE002AE010 /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
 		0695B8E7223B84D3002AE010 /* reportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reportViewController.m; sourceTree = "<group>"; };
 		0695B8E8223B84D3002AE010 /* CommentDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentDetailVC.m; sourceTree = "<group>"; };
@@ -613,6 +627,10 @@
 		BC32C3BC1CC31227004BC24B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				068D3E22224224080045463A /* NSKeyedArchiver+TCExtension.h */,
+				068D3E23224224080045463A /* NSKeyedArchiver+TCExtension.m */,
+				068D3E1F2241EB760045463A /* UIView+Additions.h */,
+				068D3E202241EB760045463A /* UIView+Additions.m */,
 				BC6ED4C11CC583E600059B20 /* PE.pch */,
 				BC32C3C01CC31227004BC24B /* AppDelegate.h */,
 				0654ABF6223F90E600C87AD7 /* AppDelegate.m */,
@@ -1074,6 +1092,11 @@
 		BCAC9DF01CC53F9F00315007 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				068D3E1D2241E6930045463A /* TCTextView.h */,
+				068D3E1C2241E6930045463A /* TCTextView.m */,
+				068D3E192241E4AD0045463A /* TCSendTextView.h */,
+				068D3E182241E4AD0045463A /* TCSendTextView.m */,
+				068D3E172241E4AD0045463A /* TCSendTextView.xib */,
 				BC6ED59C1CC5C62700059B20 /* YCHTwoTableViewCell.h */,
 				BC6ED59D1CC5C62700059B20 /* YCHTwoTableViewCell.m */,
 				BC6ED59E1CC5C62700059B20 /* YCHTwoTableViewCell.xib */,
@@ -1138,6 +1161,7 @@
 				BC32C3B51CC31227004BC24B /* Sources */,
 				BC32C3B61CC31227004BC24B /* Frameworks */,
 				BC32C3B71CC31227004BC24B /* Resources */,
+				A2B8B36383AE386777E88961 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1268,6 +1292,7 @@
 				BCCD66C21CCAEA7300AF4D52 /* leftUp.png in Resources */,
 				0695B90B223B84D3002AE010 /* MainCell.xib in Resources */,
 				BC6ED5A51CC5CD9B00059B20 /* YCHThreeTableViewCell.xib in Resources */,
+				068D3E1A2241E4AD0045463A /* TCSendTextView.xib in Resources */,
 				BC1B802F1CCB1913007ED61C /* h_good.png in Resources */,
 				BC6371761CCC2CD200D740E5 /* FootBallLogo.jpg in Resources */,
 				BC3AAB431CC6ED09006C0E3C /* nodata_wait.png in Resources */,
@@ -1305,6 +1330,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A2B8B36383AE386777E88961 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Product-PEWindow/Pods-Product-PEWindow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Product-PEWindow/Pods-Product-PEWindow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1329,6 +1376,7 @@
 				BC6ED5E51CC5E40300059B20 /* MJRefreshStateHeader.m in Sources */,
 				BC6ED5E81CC5E40300059B20 /* UIScrollView+MJExtension.m in Sources */,
 				BC6ED58D1CC5A69900059B20 /* AFURLConnectionOperation.m in Sources */,
+				068D3E1B2241E4AD0045463A /* TCSendTextView.m in Sources */,
 				BC6ED5E01CC5E40300059B20 /* MJRefreshBackGifFooter.m in Sources */,
 				BC6ED5DF1CC5E40300059B20 /* MJRefreshAutoStateFooter.m in Sources */,
 				BC6ED5911CC5A69900059B20 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1357,8 +1405,10 @@
 				BC6ED54C1CC5A2C200059B20 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BC6ED5981CC5A69900059B20 /* UIWebView+AFNetworking.m in Sources */,
 				BC6ED5D91CC5E40300059B20 /* MJRefreshBackFooter.m in Sources */,
+				068D3E24224224090045463A /* NSKeyedArchiver+TCExtension.m in Sources */,
 				BC1B80281CCB0D90007ED61C /* TalkModel.m in Sources */,
 				BCD2B1041CCEFAA000C92545 /* MineTableViewCell.m in Sources */,
+				068D3E1E2241E6930045463A /* TCTextView.m in Sources */,
 				BC2D4B291CCBDFF600A7F903 /* FootSenceTableViewCell.m in Sources */,
 				BC6ED55A1CC5A3E100059B20 /* GameViewController.m in Sources */,
 				BC3AAB411CC6E8D0006C0E3C /* GTMBase64.m in Sources */,
@@ -1382,6 +1432,7 @@
 				BC3B511F1CCF1A960081D7D4 /* FMDatabaseQueue.m in Sources */,
 				BC6ED5921CC5A69900059B20 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				BC6ED58A1CC5A69900059B20 /* AFHTTPSessionManager.m in Sources */,
+				068D3E212241EB760045463A /* UIView+Additions.m in Sources */,
 				BCCFBB301CC9841200E79D4A /* GameHotModel.m in Sources */,
 				BCD2B1161CCF094600C92545 /* MainDetailVC.m in Sources */,
 				BC6ED5E91CC5E40300059B20 /* UIScrollView+MJRefresh.m in Sources */,

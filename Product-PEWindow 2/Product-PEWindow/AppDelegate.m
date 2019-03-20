@@ -137,4 +137,17 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Required, For systems with less than or equal to iOS 6
     [JPUSHService handleRemoteNotification:userInfo];
 }
++ (NSString*) currentUserPath{
+    static NSString *usersPath = nil;
+    static dispatch_once_t onceToken = 0;
+    dispatch_once(&onceToken, ^{
+        NSString* docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+        usersPath = [docPath stringByAppendingPathComponent:@"Users"];
+    });
+    NSString *path = [usersPath stringByAppendingPathComponent:@"tiyuzhimen"];
+    [[NSFileManager defaultManager]createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+    return path;
+}
+
+
 @end

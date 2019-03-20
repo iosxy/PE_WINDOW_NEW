@@ -26,6 +26,8 @@
 /** 头像 */
 @property (nonatomic,strong) UIButton * photoImageView;
 
+@property (nonatomic,strong)UILabel * namelabel;
+
 
 @end
 
@@ -101,7 +103,10 @@
     //addsubview的方式加入到tableView上
     [_tableView addSubview:_topImageView];
     _photoImageView = [[UIButton alloc]init];
-   
+    _namelabel = [[UILabel alloc]init];
+    _namelabel.textColor = RGB(0x333333);
+    _namelabel.font = [UIFont systemFontOfSize:16];
+    
     NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
     if ([[user objectForKey:@"isLogin"]isEqualToString:@"isLogin"]) {
         _isLogin = YES;
@@ -111,11 +116,14 @@
     
     if (_isLogin == NO) {
          [_photoImageView setTitle:@"请先登录" forState:UIControlStateNormal];
+        _namelabel.hidden = YES;
         _photoImageView.enabled = YES;
     }else
     {
         [_photoImageView setTitle:@"" forState:UIControlStateNormal];
         _photoImageView.enabled = NO;
+        _namelabel.hidden = NO;
+        _namelabel.text = @"用户3847892";
         [_photoImageView setBackgroundImage:[UIImage imageNamed:@"head"] forState:UIControlStateNormal];
     }
    
@@ -127,7 +135,10 @@
     _photoImageView.clipsToBounds = YES;
     _photoImageView.size = CGSizeMake(80, 80);
     _photoImageView.center = _topImageView.center;
+    _photoImageView.centerX = _topImageView.centerX - 90;
     //[_topImageView addSubview:_photoImageView];
+    _namelabel.frame = CGRectMake(_photoImageView.right + 10, _photoImageView.y + 40 - 20, 120, 40);
+    [_tableView addSubview:_namelabel];
     [_tableView addSubview:_photoImageView];
     
 }

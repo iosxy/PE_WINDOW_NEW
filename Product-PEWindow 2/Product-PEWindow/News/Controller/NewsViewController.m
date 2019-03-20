@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
-      _currentNew = 0;
     [self refreshData];
   
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData)];
@@ -42,7 +41,9 @@
     //在网络数据未请求到的时候，提示正在加载中
     [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL,_currentNew] andParamter:nil returnData:^(NSData *data, NSError *error) {
         if (!error) {
-            [self.dataSource removeAllObjects];
+            if (_currentNew == 0) {
+                [self.dataSource removeAllObjects];
+            }
             //YCHNetworking 是基于AFNetworking进行二次封装的数据请求类
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
             //讲二进制数据转化为字典
@@ -57,10 +58,14 @@
             [_dataSource addObjectsFromArray:mutaleResult];
             //加载到数据源中
             [self.tableView reloadData];
+            [self.tableView.mj_footer endRefreshing];
+            [self.tableView.mj_header endRefreshing];
           [SVProgressHUD showSuccessWithStatus:@"加载成功"];
             //提示加载成功
         }else
         {
+            [self.tableView.mj_header endRefreshing];
+            [self.tableView.mj_footer endRefreshing];
             [SVProgressHUD showErrorWithStatus:@"加载失败"];
             //提示加载失败
         }
@@ -78,6 +83,7 @@
     self.tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self refreshData];
     }];
+    self.tableView.mj_footer = [MJRefreshBackFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     //
     [_tableView registerNib:[UINib nibWithNibName:@"YCHTwoTableViewCell" bundle:nil] forCellReuseIdentifier:@"TWO"];
     
@@ -108,26 +114,28 @@
  
     NewsModel * model = _dataSource[indexPath.row];
    //对Cell的类型进行判断，返回为不同的Cell
-    if ([model.displayMode isEqualToString:@"2"]) {
-        YCHTwoTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TWO" forIndexPath:indexPath];
-        cell.descriptLabel.text = model.descript;
-        cell.nameLabel.text = model.name;
-        cell.zanLabel.text =  @"";
-        cell.tieLabel.text = @"";
-        [cell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.coverUrl]];
-
-        return cell;
-        
-    }else{
+    if (indexPath.row % 5 == 1) {
         YCHFourTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"FOUR" forIndexPath:indexPath];
         cell.nameLabel.text = model.name;
         
         [cell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.coverUrl]];
         
-        cell.zanLabel.text = @"";
-        cell.tieLabel.text = @"";
+        return cell;
+    }else {
+        YCHTwoTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TWO" forIndexPath:indexPath];
+        cell.descriptLabel.text = model.descript;
+        cell.nameLabel.text = model.name;
+        
+        [cell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.coverUrl]];
+        
         return cell;
     }
+//    if ([model.displayMode isEqualToString:@"2"]) {
+//
+//
+//    }else{
+//
+//    }
     
    
 }
@@ -140,25 +148,20 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NewsModel * model = _dataSource[indexPath.row];
-    if ([model.displayMode isEqualToString:@"2"]) {
-        return 120;
-    }else if ([model.displayMode isEqualToString:@"3"]){
-        return 150;
+//    NewsModel * model = _dataSource[indexPath.row];
+    if (indexPath.row % 5 == 1) {
+        return 250;
     }
-    return 220;
+    return 140;
 }
 
 - (void)refreshData
 {
-    
-    
-    
     [self loadData];
     if ( _tableView.mj_header.isRefreshing) {
         [_tableView.mj_header endRefreshing];
     }
-      _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+//      _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 @end
