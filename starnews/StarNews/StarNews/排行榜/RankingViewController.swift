@@ -88,26 +88,9 @@ class RankingViewController: BaseViewController ,UICollectionViewDataSource ,Bas
     
     var addLabel : UILabel?
     @objc func contribute(button : UIButton) {
-//        if !self.isLogin() {
-//            self.login()
-//            return
-//        }
-//        let confirmVc = YWRankContributeConfirmView()
-//        confirmVc.show(parent: self, completion: {
-//        })
-//        let item = self.collectionView.dataSourceArr[button.tag] as! JSON
-//        confirmVc.setConfirmData(id: item["rankingId"].stringValue, name: "", type: "3")
-//        confirmVc.onDismiss = {[weak self] status -> Void in
-//            if status {
-//
-//                let cell = self?.collectionView.cellForItem(at: IndexPath.init(row: button.tag, section: 0)) as! YWRankkingListProductCollectionViewCell
-//                self?.collectionView.triggerRefresh()
-//                cell.showAddNumberAnimation {
-//
-//                }
-//
-//            }
-//        }
+
+        SVProgressHUD.showSuccess(withStatus: "贡献热度成功!")
+        button.isEnabled = false
     }
     
    
@@ -138,7 +121,7 @@ class RankingViewController: BaseViewController ,UICollectionViewDataSource ,Bas
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "YWRankkingListProductCollectionViewCell", for: indexPath) as! YWRankkingListProductCollectionViewCell
         cell.loadData(data : self.collectionView.dataSourceArr[indexPath.row] as! JSON  ,row : indexPath.row ,dataType : self.dataSourceType!)
         cell.contributeButton.tag = indexPath.row
-//        cell.contributeButton.addTarget(self, action: #selector(contribute(button:)), for: UIControlEvents.touchUpInside)
+        cell.contributeButton.addTarget(self, action: #selector(contribute(button:)), for: UIControl.Event.touchUpInside)
         return cell
         
     }
@@ -215,8 +198,8 @@ class YWRankkingListProductCollectionViewCell: UICollectionViewCell {
         progressView = YWRankProgressView.init(frame: CGRect.zero)
         
         contributeButton = UIButton()
-//        contributeButton.setBackgroundImage(#imageLiteral(resourceName: "rank_button_hot"), for: UIControl.State.normal)
-//        contributeButton.setBackgroundImage(#imageLiteral(resourceName: "rank_button_hot_pre"), for: UIControl.State.disabled)
+        contributeButton.setBackgroundImage(#imageLiteral(resourceName: "rank_button_hot"), for: UIControl.State.normal)
+        contributeButton.setBackgroundImage(#imageLiteral(resourceName: "rank_button_hot_pre"), for: UIControl.State.disabled)
 //
         elseRankView  = UIButton()
         elseRankView.setBackgroundImage(#imageLiteral(resourceName: "top_icon_else"), for: UIControl.State.normal)

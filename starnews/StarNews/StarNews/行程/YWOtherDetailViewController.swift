@@ -36,6 +36,7 @@ class YWOtherDetailViewController: BaseViewController, UITableViewDelegate, UITa
         tableView = YWBaseTableView.init(frame: CGRect.zero, style: UITableView.Style.plain)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.mj_header.isHidden = true
         self.view.addSubview(tableView)
         
         tableView.snp.makeConstraints { (make) in
@@ -50,6 +51,9 @@ class YWOtherDetailViewController: BaseViewController, UITableViewDelegate, UITa
         
         self.tableView.register(YWArticleDetailTableViewCell.self, forCellReuseIdentifier: "YWArticleDetailTableViewCell")
         self.tableView.reloadData()
+        
+        
+        
         
         if self.detailView as? MovieDetailView != nil {
             self.tableView.showLoadingView()

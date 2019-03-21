@@ -8,8 +8,8 @@
 
 import UIKit
 import SwiftyJSON
-
-
+import EventKit
+import SVProgressHUD
 class ScheduleDetailView: UIView, Shareable {
 
 
@@ -26,8 +26,9 @@ class ScheduleDetailView: UIView, Shareable {
     @IBOutlet weak var guestLabel: UILabel!
     @IBOutlet weak var goBtn: UIButton!
     @IBOutlet weak var joinAlert: UILabel!
+    var timerStr : String!
     var id: String? = nil;
-    
+    var item : JSON!
     let shadowLayer = CAShapeLayer()
     var calendar: JSON? = nil;
     
@@ -37,6 +38,8 @@ class ScheduleDetailView: UIView, Shareable {
         containerView.layer.cornerRadius = 6
         containerView.layer.insertSublayer(shadowLayer, at: 0)
         self.goBtn.addTarget(self, action: #selector(goBtnClick), for: UIControl.Event.touchUpInside)
+        self.goBtn.clip(corner: 22)
+        
     }
     
     override func layoutSubviews() {
@@ -53,17 +56,65 @@ class ScheduleDetailView: UIView, Shareable {
         shadowLayer.shadowRadius = 4
         
     }
-    
-
+    func addToCalendarClicked()
+    {
+        let eventStore = EKEventStore()
+        eventStore.requestAccess(to: .event) {(granted, error) in
+            
+            do {
+                if((error) != nil)
+                {
+                    //添加错误
+                }
+                else if(!granted)
+                {
+                    //无访问日历权限
+                }
+                else
+                {
+                    let event = EKEvent(eventStore: eventStore)
+                    event.title = self.item["detail"]["calendar"]["title"].stringValue
+                    event.location = self.item["detail"]["calendar"]["address"].stringValue
+                    //起止时间
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd"
+                    let startTime = formatter.date(from: self.timerStr)
+                    let endTime = formatter.date(from: self.timerStr)
+                    print("startTime:\(startTime)")
+                    //                    event.allDay = true
+                    event.startDate = startTime!
+                    event.endDate = endTime!
+                    //在事件前多少秒开始事件提醒
+                    let alarm = EKAlarm()
+                    alarm.relativeOffset = -60.0
+                    event.addAlarm(alarm)
+                    event.calendar = eventStore.defaultCalendarForNewEvents
+                    let result:()? = try eventStore.save(event, span: EKSpan.thisEvent)
+                    print("result:\(result)")
+                    if(result != nil)
+                    {
+                        SVProgressHUD.showSuccess(withStatus: "已成功将行程添加到日历,记得要去哦")
+                    }
+                }
+            }
+            catch {
+                print("error")
+            }
+            }
+            
+            
+    }
     @objc func goBtnClick(){
         
-//        let vc = ProductDetailViewController()
-//        vc.productID = self.calendar!["productId"].intValue
-//
-//        Utils.getNavigationController().pushViewController(vc, animated: true)
+
+        
+        addToCalendarClicked()
+        
+        
     }
     
     func loadItem(_ item: JSON) {
+        self.item = item
         let content = item["content"] != JSON.null ? item["content"] : item
         self.id = content["id"].stringValue
         let detail = content["detail"]
@@ -87,7 +138,7 @@ class ScheduleDetailView: UIView, Shareable {
         if joinLabel.text == "" {
             joinAlert.text = ""
         }
-        self.goBtn.isHidden = !calendar["join"].boolValue
+      //  self.goBtn.isHidden = !calendar["join"].boolValue
         var lastView: GuestView? = nil
         if calendar["guests"].arrayValue.count == 0 {
             self.guestLabel.text = ""

@@ -94,7 +94,9 @@ class YWClanderListItemView: UIView {
     @objc func tap(){
         
         let vc = YWOtherDetailViewController()
+        
         let detailView = ScheduleDetailView.loadFromNib()
+        detailView.timerStr =  self.item["dateStr"].stringValue
         vc.detailView = detailView
        
         var contentId = item!["id"].stringValue

@@ -76,12 +76,12 @@ class MineViewController: BaseViewController,UITableViewDataSource,UITableViewDe
         }else if indexPath.row == 2 {
             
             let web = BaseWebViewController()
-            web.loadUrl = YW_URL_SHARE +  "/disclaimer.html"
+            web.loadUrl = "https://js.7018999.com/app/sm.html"
             Utils.getNavigationController().pushViewController(web, animated: true)
         }else if indexPath.row == 3 {
             
             let web = BaseWebViewController()
-            web.loadUrl = YW_URL_SHARE +  "/privacy.html"
+            web.loadUrl = "https://js.7018999.com/app/ys.html"
             Utils.getNavigationController().pushViewController(web, animated: true)
         }else if indexPath.row == 4 {
             let vc = ConnectUsViewController()

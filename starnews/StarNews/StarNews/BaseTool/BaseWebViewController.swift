@@ -11,6 +11,7 @@ class BaseWebViewController: BaseViewController {
 
     var webView : UIWebView!
     var loadUrl : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
