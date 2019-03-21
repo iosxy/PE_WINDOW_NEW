@@ -512,6 +512,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0637D651224366C2001E6776 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0695B8E5223B84D3002AE010 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,8 +1018,8 @@
 		BCAC9DE51CC53F9F00315007 /* ME */ = {
 			isa = PBXGroup;
 			children = (
+				0637D651224366C2001E6776 /* Model */,
 				BCAC9DE61CC53F9F00315007 /* Controller */,
-				BCAC9DE71CC53F9F00315007 /* Model */,
 				BCAC9DE81CC53F9F00315007 /* View */,
 			);
 			path = ME;
@@ -1035,13 +1042,6 @@
 				BC892C341CD169D400354A8D /* MyFavoriteViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		BCAC9DE71CC53F9F00315007 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BCAC9DE81CC53F9F00315007 /* View */ = {

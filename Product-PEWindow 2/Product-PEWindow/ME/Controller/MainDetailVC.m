@@ -124,6 +124,7 @@
     NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
     [SVProgressHUD showSuccessWithStatus:@"退出成功!"];
     [user setObject:@"noLogin" forKey:@"isLogin"];
+    [user removeObjectForKey:@"currentUser"];
     [self.navigationController popViewControllerAnimated:true];
     
 }

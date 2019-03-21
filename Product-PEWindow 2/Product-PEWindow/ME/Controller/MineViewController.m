@@ -27,7 +27,8 @@
 @property (nonatomic,strong) UIButton * photoImageView;
 
 @property (nonatomic,strong)UILabel * namelabel;
-
+//更改昵称
+@property (nonatomic,strong) UIButton * updateName;
 
 @end
 
@@ -43,9 +44,13 @@
     }else{
         _isLogin = NO;
     }
-    
+    [self dealHeaderView];
+}
+- (void)dealHeaderView {
+    NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
     if (_isLogin == NO) {
         _namelabel.hidden = YES;
+        _updateName.hidden = YES;
         [_photoImageView setTitle:@"请先登录" forState:UIControlStateNormal];
         [_photoImageView setBackgroundImage:[[UIImage alloc]init] forState:UIControlStateNormal];
         _photoImageView.enabled = YES;
@@ -54,12 +59,16 @@
         [_photoImageView setTitle:@"" forState:UIControlStateNormal];
         _photoImageView.enabled = NO;
         _namelabel.hidden = NO;
+        _updateName.hidden = NO;
         _namelabel.text = @"用户3847892";
         [_photoImageView setBackgroundImage:[UIImage imageNamed:@"默认头像"] forState:UIControlStateNormal];
         _photoImageView.adjustsImageWhenDisabled = NO;
     }
+    NSString * nickName = [user objectForKey:@"currentUser"];
+    if (nickName) {
+        _namelabel.text = nickName;
+    }
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -109,6 +118,9 @@
     _namelabel = [[UILabel alloc]init];
     _namelabel.textColor = RGB(0x333333);
     _namelabel.font = [UIFont systemFontOfSize:16];
+    _updateName = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_updateName setImage:[UIImage imageNamed:@"更改昵称"] forState:UIControlStateNormal];
+    [_updateName addTarget:self action:@selector(updateNameClicked) forControlEvents:UIControlEventTouchUpInside];
     
     NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
     if ([[user objectForKey:@"isLogin"]isEqualToString:@"isLogin"]) {
@@ -117,19 +129,6 @@
         _isLogin = NO;
     }
     
-    if (_isLogin == NO) {
-         [_photoImageView setTitle:@"请先登录" forState:UIControlStateNormal];
-        _namelabel.hidden = YES;
-        _photoImageView.enabled = YES;
-    }else
-    {
-        [_photoImageView setTitle:@"" forState:UIControlStateNormal];
-        _photoImageView.enabled = NO;
-        _namelabel.hidden = NO;
-        _namelabel.text = @"用户3847892";
-        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"默认头像"] forState:UIControlStateNormal];
-    }
-   
     [_photoImageView setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_photoImageView addTarget:self action:@selector(loginClicked:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -139,17 +138,37 @@
     _photoImageView.size = CGSizeMake(80, 80);
     _photoImageView.center = _topImageView.center;
     _photoImageView.centerY = _topImageView.centerY - 40;
-    //[_topImageView addSubview:_photoImageView];
-//    _namelabel.frame = CGRectMake(_photoImageView.right + 10, _photoImageView.y + 40 - 20, 120, 40);
+
     _namelabel.size = CGSizeMake(120, 30);
     _namelabel.center = _topImageView.center;
     _namelabel.textAlignment = NSTextAlignmentCenter;
     _namelabel.centerY = _topImageView.centerY + 30;
+    _updateName.size = CGSizeMake(25, 25);
+    _updateName.centerY = _namelabel.centerY;
+    _updateName.left = _namelabel.right + 10;
+    [_tableView addSubview:_updateName];
     [_tableView addSubview:_namelabel];
     [_tableView addSubview:_photoImageView];
     
+    [self dealHeaderView];
+    
 }
-
+- (void)updateNameClicked {
+     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请输入昵称" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UITextField*userNameTextField = alertController.textFields.firstObject;
+        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+        NSString * nickName = [userDefaults objectForKey:@"currentUser"];
+        nickName = userNameTextField.text;
+        _namelabel.text = userNameTextField.text;
+        [userDefaults setObject:nickName forKey:@"currentUser"];
+    }]];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField*_Nonnull textField) {
+        textField.placeholder=@"请输入昵称";
+    }];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 - (void)loginClicked:(UIButton *)button
 {
     LoginViewController * vc = [[LoginViewController alloc]init];

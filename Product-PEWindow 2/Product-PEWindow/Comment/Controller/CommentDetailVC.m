@@ -357,6 +357,10 @@
     }
     TalkModel * model = [TalkModel new];
     model.nickname = @"用户3847892";
+    NSString * nickName = [user objectForKey:@"currentUser"];
+    if (nickName) {
+        model.nickname = nickName;
+    }
     model.createTime = [self getCurrentTimes];
     model.content = [GTMBase64 stringByEncodingData:[text dataUsingEncoding:NSUTF8StringEncoding]];
     model.headImg = @"http";
