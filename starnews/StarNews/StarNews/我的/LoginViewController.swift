@@ -87,19 +87,7 @@ class LoginViewController: BaseViewController {
                 SVProgressHUD.showInfo(withStatus: "手机号码或密码错误")
         }
         
-        
-//        YWAPI_NEW.post(YWNETNEW_newLogin, ["telephone": usernameField.text!, "password": passwordField.text!]).then { data -> Promise<JSON> in
-//            auth = data["accessToken"].stringValue
-//            return YWAPI.fetchUserInfo(auth!)
-//            }.then {[weak self] userInfo -> Void in
-//                SVProgressHUD.dismiss()
-//                YWAPI.setAuth(auth!, userInfo)
-//                self?.navigationController?.dismiss(animated: true, completion: nil)
-//            }.catch { error in
-//                SVProgressHUD.showInfo(withStatus: "手机号码或密码错误")
-//        }
-        
-        
+
         YWAPI_NEW.post(YWNETNEW_login, nil).then{item -> Void in
             YWAPI_NEW.setAuth(item["token"].stringValue)
         }

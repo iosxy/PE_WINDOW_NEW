@@ -32,8 +32,8 @@
 {
     NSArray * controllers = @[@"NewsViewController",@"GameBaseViewController",@"CommentViewController",@"MineViewController"];
     NSArray * titleArr = @[@"新闻",@"比赛",@"论坛",@"我的"];
-    NSArray * nomorlImage = @[@"home_news_a",@"home_game_a",@"home_guess_a",@"home_myhome_a"];
-    NSArray * selectImage = @[@"home_news_b",@"home_game_b",@"home_guess_b",@"home_myhome_b"];
+    NSArray * nomorlImage = @[@"xinwen",@"jiangbei",@"zuqiu",@"wode"];
+    NSArray * selectImage = @[@"xinwen_pre",@"jiangbei_pre",@"zuqiu_pre",@"wode_pre"];
     NSMutableArray * ViewControllers = [[NSMutableArray alloc]init];
     
     for (int i = 0; i < titleArr.count; i++) {
@@ -49,12 +49,12 @@
         
         UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:controller];
         nav.navigationBar.tintColor = [UIColor whiteColor];
-        nav.navigationBar.barTintColor = YCOLOR_REDCOLOR;
+        nav.navigationBar.barTintColor = RGB(0xffc000);
           nav.navigationBar.translucent = YES;
       
         [ViewControllers addObject:nav];
     }
-    self.tabBar.tintColor = YCOLOR_REDCOLOR;
+    self.tabBar.tintColor = RGB(0xffc000);
     
     self.viewControllers = ViewControllers;
     
