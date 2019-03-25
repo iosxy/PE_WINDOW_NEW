@@ -11,7 +11,7 @@
 #import "MineTableViewCell.h"
 #import "LoginViewController.h"
 #import "MyFavoriteViewController.h"
-@interface MineViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface MineViewController () <UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic,strong) UITableView * tableView;
 /**顶部图片 */
@@ -57,12 +57,14 @@
     }else
     {
         [_photoImageView setTitle:@"" forState:UIControlStateNormal];
-        _photoImageView.enabled = NO;
+      //  _photoImageView.enabled = NO;
         _namelabel.hidden = NO;
         _updateName.hidden = NO;
         _namelabel.text = @"用户3847892";
         [_photoImageView setBackgroundImage:[UIImage imageNamed:@"默认头像"] forState:UIControlStateNormal];
         _photoImageView.adjustsImageWhenDisabled = NO;
+        
+        
     }
     NSString * nickName = [user objectForKey:@"currentUser"];
     if (nickName) {
@@ -171,6 +173,9 @@
 }
 - (void)loginClicked:(UIButton *)button
 {
+    if (_isLogin) {
+        [self changeImage:_photoImageView];
+    }
     LoginViewController * vc = [[LoginViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
     
@@ -180,6 +185,93 @@
     _currentButton = button;
     [_currentButton setTintColor:[UIColor lightGrayColor]];
 }
+
+- (void)changeImage:(UIButton *)button {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请输入昵称" preferredStyle:UIAlertControllerStyleActionSheet];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"从相册获取" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self getFromLibrary];
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"从相机拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self getFromCamare];
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+
+- (void)getFromLibrary{
+    // 获取支持的媒体格式
+    
+    UIImagePickerController * _imagePickerController = [[UIImagePickerController alloc]init];
+    _imagePickerController.delegate = self;
+    NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    // 判断是否支持需要设置的sourceType
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        
+        // 1、设置图片拾取器上的sourceType
+        _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        // 2、设置支持的媒体格式
+        _imagePickerController.mediaTypes = @[mediaTypes[0]];
+        // 3、其他设置
+        _imagePickerController.allowsEditing = YES; // 如果设置为NO，当用户选择了图片之后不会进入图像编辑界面。
+        // 4、推送图片拾取器控制器
+        [self presentViewController:_imagePickerController animated:YES completion:nil];
+        
+    }
+
+
+    
+}
+- (void)getFromCamare{
+    // 获取支持的媒体格式
+    
+    UIImagePickerController * _imagePickerController = [[UIImagePickerController alloc]init];
+    _imagePickerController.delegate = self;
+    NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    // 判断是否支持需要设置的sourceType
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        // 1、设置图片拾取器上的sourceType
+        _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        // 2、设置支持的媒体格式
+        _imagePickerController.mediaTypes = @[mediaTypes[0]];
+        // 3、其他设置
+        _imagePickerController.allowsEditing = YES; // 如果设置为NO，当用户选择了图片之后不会进入图像编辑界面。
+        // 4、推送图片拾取器控制器
+        [self presentViewController:_imagePickerController animated:YES completion:nil];
+        
+    }
+    
+    
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<UIImagePickerControllerInfoKey, id> *)editingInfo NS_DEPRECATED_IOS(2_0, 3_0){
+    
+  
+ 
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info
+{
+    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+        if ([info[UIImagePickerControllerMediaType] isEqualToString:@"public.image"]) {
+            UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+       //     _photoImageView.image = originalImage;
+            [_photoImageView setBackgroundImage:originalImage forState:UIControlStateNormal];
+        }
+    }else if (picker.sourceType == UIImagePickerControllerSourceTypePhotoLibrary){
+        // UIImage *editedImage = info[@"UIImagePickerControllerEditedImage"];
+        // _headPortraitImageView.image = editedImage;
+        [_photoImageView setBackgroundImage:info[@"UIImagePickerControllerEditedImage"] forState:UIControlStateNormal];
+      //  _headPortraitImageView.image = info[UIImagePickerControllerEditedImage];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
+}
+
 - (void)loadData
 {
     
