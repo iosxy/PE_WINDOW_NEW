@@ -35,6 +35,12 @@
     if ([[user objectForKey:_phoneTf.text] isEqualToString:_mimaTf.text]) {
         [SVProgressHUD showSuccessWithStatus:@"登陆成功"];
         [user setObject:@"isLogin" forKey:@"isLogin"];
+       
+        NSString * nickName = [user objectForKey:@"currentUser"];
+        if (!nickName) {
+            nickName = @"用户3847892";
+        }
+        [user setObject:nickName forKey:@"currentUser"];
         [self.navigationController popViewControllerAnimated:YES];
     }else
     {
