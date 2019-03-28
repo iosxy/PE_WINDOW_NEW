@@ -11,6 +11,7 @@
 #import "MineTableViewCell.h"
 #import "LoginViewController.h"
 #import "MyFavoriteViewController.h"
+#import "UserModel.h"
 @interface MineViewController () <UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic,strong) UITableView * tableView;
@@ -29,7 +30,7 @@
 @property (nonatomic,strong)UILabel * namelabel;
 //更改昵称
 @property (nonatomic,strong) UIButton * updateName;
-
+@property (nonatomic,strong) UIImage * currentImage;
 @end
 
 @implementation MineViewController
@@ -61,9 +62,9 @@
         _namelabel.hidden = NO;
         _updateName.hidden = NO;
         _namelabel.text = @"用户3847892";
-        [_photoImageView setBackgroundImage:[UIImage imageNamed:@"默认头像"] forState:UIControlStateNormal];
+        [_photoImageView setBackgroundImage:_currentImage forState:UIControlStateNormal];
         _photoImageView.adjustsImageWhenDisabled = NO;
-        
+        [UserModel shared].headImage = _currentImage;
         
     }
     NSString * nickName = [user objectForKey:@"currentUser"];
@@ -73,7 +74,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _currentImage = [UIImage imageNamed:@"默认头像"];
     self.dataSource = [[NSMutableArray alloc]init];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self buildUI];
@@ -257,13 +258,15 @@
         if ([info[UIImagePickerControllerMediaType] isEqualToString:@"public.image"]) {
             UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
        //     _photoImageView.image = originalImage;
-            [_photoImageView setBackgroundImage:originalImage forState:UIControlStateNormal];
+//            [_photoImageView setBackgroundImage:originalImage forState:UIControlStateNormal];
+            _currentImage = originalImage;
         }
     }else if (picker.sourceType == UIImagePickerControllerSourceTypePhotoLibrary){
         // UIImage *editedImage = info[@"UIImagePickerControllerEditedImage"];
         // _headPortraitImageView.image = editedImage;
-        [_photoImageView setBackgroundImage:info[@"UIImagePickerControllerEditedImage"] forState:UIControlStateNormal];
+//        [_photoImageView setBackgroundImage:info[@"UIImagePickerControllerEditedImage"] forState:UIControlStateNormal];
       //  _headPortraitImageView.image = info[UIImagePickerControllerEditedImage];
+        _currentImage = info[@"UIImagePickerControllerEditedImage"];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

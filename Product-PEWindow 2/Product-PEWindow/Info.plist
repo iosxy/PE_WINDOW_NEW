@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>如果不允许,您将无法在娱丸中获取相册中的图片</string>
-	<key>NSCameraUsageDescription</key>
-	<string>如果不允许,您将无法在娱丸使用相机拍摄图片</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,7 +23,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -35,6 +31,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>添加赛程需要访问日历</string>
+	<key>NSCameraUsageDescription</key>
+	<string>如果不允许,您将无法在娱丸使用相机拍摄图片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>如果不允许,您将无法在娱丸中获取相册中的图片</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

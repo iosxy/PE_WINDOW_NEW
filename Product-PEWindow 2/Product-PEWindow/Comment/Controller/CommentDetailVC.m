@@ -12,7 +12,7 @@
 #import "BCell.h"
 #import "reportViewController.h"
 #import "TCSendTextView.h"
-
+#import "UserModel.h"
 
 #define NEWS_DETAIL @"http://u1.tiyufeng.com/v2/post/detail?id=%@&portalId=15&clientToken=7c98ddd1d8cb729bf66791a192b43748"
 #define TAKL @"http://u1.tiyufeng.com/v2/post/reply_list?postId=%@&sort=2&start=0&limit=18&portalId=15&clientToken=7c98ddd1d8cb729bf66791a192b43748"
@@ -275,7 +275,7 @@
         
     TalkCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TALK"];
     TalkModel * model = self.dataSource[indexPath.row];
-    [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"默认头像"]];
+    [cell.headimg sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UserModel shared].headImage];
     cell.nickname.text = model.nickname;
     cell.createTime.text = model.createTime;
    // NSLog(@"%@",model.createTime);

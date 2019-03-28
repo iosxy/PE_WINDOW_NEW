@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *homeName;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *addAlert;
 
 @property(nonatomic,copy)NSString * ID;
 @property(nonatomic,copy)NSString * gameName;
