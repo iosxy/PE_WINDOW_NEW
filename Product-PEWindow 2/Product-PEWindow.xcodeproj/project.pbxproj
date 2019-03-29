@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06366EB9224E096600B02D12 /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06366EB8224E096600B02D12 /* ADScrollView.m */; };
+		06366EBE224E16A200B02D12 /* 世界杯.png in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBA224E16A100B02D12 /* 世界杯.png */; };
+		06366EBF224E16A200B02D12 /* 中国足球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBB224E16A200B02D12 /* 中国足球.jpg */; };
+		06366EC0224E16A200B02D12 /* 篮球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBC224E16A200B02D12 /* 篮球.jpg */; };
+		06366EC1224E16A200B02D12 /* NBA.png in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBD224E16A200B02D12 /* NBA.png */; };
 		063B1F781CE0884A00BF7AC8 /* share.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 063B1F771CE0884A00BF7AC8 /* share.jpg */; };
 		0654ABF7223F90E600C87AD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0654ABF6223F90E600C87AD7 /* AppDelegate.m */; };
 		068D3E1A2241E4AD0045463A /* TCSendTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D3E172241E4AD0045463A /* TCSendTextView.xib */; };
@@ -193,6 +198,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06366EB7224E096600B02D12 /* ADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADScrollView.h; sourceTree = "<group>"; };
+		06366EB8224E096600B02D12 /* ADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADScrollView.m; sourceTree = "<group>"; };
+		06366EBA224E16A100B02D12 /* 世界杯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "世界杯.png"; sourceTree = "<group>"; };
+		06366EBB224E16A200B02D12 /* 中国足球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中国足球.jpg"; sourceTree = "<group>"; };
+		06366EBC224E16A200B02D12 /* 篮球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "篮球.jpg"; sourceTree = "<group>"; };
+		06366EBD224E16A200B02D12 /* NBA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NBA.png; sourceTree = "<group>"; };
 		063B1F771CE0884A00BF7AC8 /* share.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share.jpg; sourceTree = "<group>"; };
 		0654ABF6223F90E600C87AD7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		068D3E172241E4AD0045463A /* TCSendTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCSendTextView.xib; sourceTree = "<group>"; };
@@ -1075,6 +1086,8 @@
 		BCAC9DEE1CC53F9F00315007 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				06366EB7224E096600B02D12 /* ADScrollView.h */,
+				06366EB8224E096600B02D12 /* ADScrollView.m */,
 				BC6ED5551CC5A3CE00059B20 /* NewsViewController.h */,
 				BC6ED5561CC5A3CE00059B20 /* NewsViewController.m */,
 			);
@@ -1115,6 +1128,10 @@
 			isa = PBXGroup;
 			children = (
 				1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */,
+				06366EBC224E16A200B02D12 /* 篮球.jpg */,
+				06366EBA224E16A100B02D12 /* 世界杯.png */,
+				06366EBB224E16A200B02D12 /* 中国足球.jpg */,
+				06366EBD224E16A200B02D12 /* NBA.png */,
 				063B1F771CE0884A00BF7AC8 /* share.jpg */,
 				BCD2B1061CCF016D00C92545 /* backImg.jpg */,
 				BC3AAB531CC7341C006C0E3C /* selected2.png */,
@@ -1249,9 +1266,11 @@
 				BC3DCEB51CC85DC800CE9DB8 /* FootBallTableViewCell.xib in Resources */,
 				BCCD66C01CCAD8C900AF4D52 /* HotGameDetail.xib in Resources */,
 				BC6371841CCC3AB000D740E5 /* NBA.jpg in Resources */,
+				06366EC0224E16A200B02D12 /* 篮球.jpg in Resources */,
 				0695B904223B84D3002AE010 /* CommentDetailVC.xib in Resources */,
 				BC6ED5E61CC5E40300059B20 /* MJRefresh.bundle in Resources */,
 				BC651BED1CCFEC8C00B4A912 /* Images.xcassets in Resources */,
+				06366EBF224E16A200B02D12 /* 中国足球.jpg in Resources */,
 				BC6ED4CD1CC5A22500059B20 /* home_news_b@2x.png in Resources */,
 				0695B90F223B8926002AE010 /* kefu.png in Resources */,
 				BC6ED4D01CC5A22500059B20 /* home_game_b@2x.png in Resources */,
@@ -1266,6 +1285,7 @@
 				BCD2B10E1CCF079800C92545 /* tiezi.png in Resources */,
 				BC6ED5A01CC5C62700059B20 /* YCHTwoTableViewCell.xib in Resources */,
 				BC6371741CCC2CD200D740E5 /* NBALogo.jpg in Resources */,
+				06366EBE224E16A200B02D12 /* 世界杯.png in Resources */,
 				BC6ED5AA1CC5D41700059B20 /* YCHFourTableViewCell.xib in Resources */,
 				BC6371831CCC3AB000D740E5 /* FootBall.jpg in Resources */,
 				1F52B3AE223F86AE004B2D56 /* 隐私权政策.html in Resources */,
@@ -1285,6 +1305,7 @@
 				BCC418A71CD05EFE0006AF0F /* RegisteViewController.xib in Resources */,
 				BCCFBB351CC9843100E79D4A /* GameHotTableViewCell.xib in Resources */,
 				BC2D4B2A1CCBDFF600A7F903 /* FootSenceTableViewCell.xib in Resources */,
+				06366EC1224E16A200B02D12 /* NBA.png in Resources */,
 				BCD2B10F1CCF079800C92545 /* gengxin.png in Resources */,
 				BCCD66C21CCAEA7300AF4D52 /* leftUp.png in Resources */,
 				0695B90B223B84D3002AE010 /* MainCell.xib in Resources */,
@@ -1452,6 +1473,7 @@
 				BC6ED5F01CC5E44100059B20 /* NSObject+YYModel.m in Sources */,
 				BC6ED5E71CC5E40300059B20 /* MJRefreshConst.m in Sources */,
 				BC6ED5511CC5A2EE00059B20 /* YCHNetworking.m in Sources */,
+				06366EB9224E096600B02D12 /* ADScrollView.m in Sources */,
 				BC6ED5441CC5A2C200059B20 /* SDWebImageDecoder.m in Sources */,
 				BC6ED5E31CC5E40300059B20 /* MJRefreshGifHeader.m in Sources */,
 				BC6ED5DC1CC5E40300059B20 /* MJRefreshHeader.m in Sources */,

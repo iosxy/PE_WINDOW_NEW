@@ -12,11 +12,17 @@
 #import "YCHThreeTableViewCell.h"
 #import "YCHFourTableViewCell.h"
 #import "CommentDetailVC.h"
+#import "ADScrollView.h"
+#import "DetailVC.h"
+
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 /** 数据源*/
 @property(nonatomic,strong)NSMutableArray * dataSource;
+/** 数据源*/
+@property(nonatomic,strong)NSMutableArray * scrollSource;
 /** 表格视图*/
 @property(nonatomic,strong)UITableView * tableView;
+@property(nonatomic,strong)ADScrollView * adSC;
 /** 当前新闻*/
 @property(nonatomic,assign)int currentNew;
 @end
@@ -93,7 +99,40 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     
     AdjustsScrollViewInsetNever(self, self.tableView);
+    
+    ADScrollView * sc = [[ADScrollView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 220)];
+    self.adSC = sc;
+    UITapGestureRecognizer* single = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapRecognizer:)];
+    single.numberOfTapsRequired = 1;
+    [self.adSC addGestureRecognizer:single];
+    [self loadScrollData];
+    [self.adSC loadDataWithArray:@[@"NBA.png", @"世界杯.png", @"篮球.jpg", @"中国足球.jpg"]];
+    _tableView.tableHeaderView = sc;
+    
+    
 }
+- (void)loadScrollData{
+    self.scrollSource = [NSMutableArray new];
+    NSArray * titleArr = @[@"NBA",@"天下足球",@"中国篮球",@"中国足球"];
+    NSArray * logoArr = @[@"NBA.jpg",@"FootBall.jpg",@"chinaFoot.jpeg",@"china.png"];
+    NSArray * circleId = @[@"13",@"446",@"15",@"440"];
+    for (int i = 0; i < titleArr.count; i++) {
+        MainModel * model = [[MainModel alloc]init];
+        model.title = titleArr[i];
+        model.logo = logoArr[i];
+        model.circleId = circleId[i];
+        [self.scrollSource addObject:model];
+    }
+}
+- (void)singleTapRecognizer:(UIGestureRecognizer *)tap {
+    NSUInteger currentPage = self.adSC.pageControl.currentPage;
+    NSLog(@"%lu",(unsigned long)currentPage);
+    DetailVC * vc = [[DetailVC alloc]init];
+    vc.model = self.scrollSource[currentPage];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)loadMoreData
 {
     _currentNew += 20;

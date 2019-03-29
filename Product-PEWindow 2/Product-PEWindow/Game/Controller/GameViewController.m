@@ -36,9 +36,9 @@
     UIBarButtonItem * backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backItem;
 }
-- (BOOL)hidesBottomBarWhenPushed {
-    return YES;
-}
+//- (BOOL)hidesBottomBarWhenPushed {
+//    return YES;
+//}
 - (void)createCollectionView
 {
  
@@ -71,7 +71,6 @@
                    [_dataSource removeObject:model];
              }
         }
-       
         [_collectionView reloadData];
         
     }];
@@ -99,7 +98,7 @@
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     // 设定每一个元素的大小
-    return CGSizeMake(self.view.bounds.size.width / 4, self.view.bounds.size.width / 3);
+    return CGSizeMake(self.view.bounds.size.width /5.5, self.view.bounds.size.width / 4.0);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {

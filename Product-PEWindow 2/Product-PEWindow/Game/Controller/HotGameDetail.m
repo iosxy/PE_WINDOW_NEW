@@ -136,7 +136,7 @@
     _titles = @[@"现场"];
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
   
-    _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 250, SCREEN_SIZE.width, 40)];
+    _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 400, SCREEN_SIZE.width, 40)];
     for (int i = 0; i < 1; i++) {
         UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake( i * SCREEN_SIZE.width, 0, SCREEN_SIZE.width, 40)];
         [button setTitle:_titles[i] forState:UIControlStateNormal];
@@ -164,7 +164,7 @@
     
 }
 - (void)createScrollView {
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 250, [[UIScreen mainScreen] bounds].size.width, SCREEN_SIZE.height - 250)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 400, [[UIScreen mainScreen] bounds].size.width, SCREEN_SIZE.height - 400)];
     self.scrollView.contentSize = CGSizeMake(self.titles.count * self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
     
     self.scrollView.pagingEnabled = YES;
@@ -321,8 +321,8 @@
     [self.guessLogo sd_setImageWithURL:[NSURL URLWithString:_model.guestPicUrl]];
     self.gameSocre.text = _model.homeScore;
     self.guessSocre.text = _model.guestScore;
-    self.leftCount.text = _model.homeSupports;
-    self.rightCount.text = _model.guestSupports;
+    self.leftCount.text = [_model.homeSupports isEqualToString:@"0"] ? _model.homeScore:_model.homeSupports;
+    self.rightCount.text = [_model.guestSupports isEqualToString:@"0"] ? _model.guestScore:_model.guestSupports;
     self.leftUp.image = [UIImage imageNamed:@"leftUp"];
     self.rightUp.image = [UIImage imageNamed:@"rightUp"];
     self.progress.progress =  self.leftCount.text.floatValue/(self.rightCount.text.floatValue + self.leftCount.text.floatValue);

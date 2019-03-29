@@ -75,7 +75,7 @@
     table.dataSource = self;
     table.delegate = self;
     [table registerNib:[UINib nibWithNibName:@"GameHotTableViewCell" bundle:nil] forCellReuseIdentifier:@"HOT"];
-    table.rowHeight = 95;
+    table.rowHeight = 149;
     self.tableView = table;
     //添加下拉收拾
     MJRefreshHeader * header =[MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -335,7 +335,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 30.0;
+    return 35.0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
