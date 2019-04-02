@@ -12,6 +12,7 @@
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
+#import "UserModel.h"
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @end
@@ -64,6 +65,7 @@
     NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
     [user setObject:@"123" forKey:@"123"];
 
+    [UserModel shared].headImage = [UIImage imageNamed:@"默认头像"];
     return YES;
 }
 

@@ -133,12 +133,12 @@
 }
 - (void)createUI
 {
-    _titles = @[@"聊球",@"现场"];
+    _titles = @[@"现场"];
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
   
-    _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 250, SCREEN_SIZE.width, 40)];
-    for (int i = 0; i < _titles.count; i++) {
-        UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake( i * SCREEN_SIZE.width/2, 0, SCREEN_SIZE.width/2, 40)];
+    _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 400, SCREEN_SIZE.width, 40)];
+    for (int i = 0; i < 1; i++) {
+        UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake( i * SCREEN_SIZE.width, 0, SCREEN_SIZE.width, 40)];
         [button setTitle:_titles[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:YCOLOR_REDCOLOR forState:UIControlStateSelected];
@@ -147,13 +147,14 @@
             self.currentButton = button;
            // [self addSubViewsForIndex:i];
         }
-        button.tag = 5678 + i;
+        button.tag = 5678 + 1;
         
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchDown];
         [_headerView addSubview:button];
-        
+        [self buttonClicked:button];
     }
-    _indicatorView = [[UIView alloc]initWithFrame:CGRectMake( 0 , 37, SCREEN_SIZE.width/2, 3)];
+    _indicatorView = [[UIView alloc]initWithFrame:CGRectMake( 0 , 37, SCREEN_SIZE.width, 3)];
+    
     _indicatorView.backgroundColor = YCOLOR_REDCOLOR;
     [_headerView addSubview:_indicatorView];
     
@@ -163,7 +164,7 @@
     
 }
 - (void)createScrollView {
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 250, [[UIScreen mainScreen] bounds].size.width, SCREEN_SIZE.height - 250)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 400, [[UIScreen mainScreen] bounds].size.width, SCREEN_SIZE.height - 400)];
     self.scrollView.contentSize = CGSizeMake(self.titles.count * self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
     
     self.scrollView.pagingEnabled = YES;
@@ -211,12 +212,10 @@
     self.currentButton.selected = NO;
     button.selected = YES;
     self.currentButton = button;
-    //2.指示视图改变位置
-    [UIView animateWithDuration:0.25 animations:^{
-        self.indicatorView.frame = CGRectMake((button.tag - 5678) *SCREEN_SIZE.width/2, self.indicatorView.frame.origin.y, SCREEN_SIZE.width/2, self.indicatorView.frame.size.height);
-    }];
+    
+  
     //3.滚动视图的偏移量
-    [self.scrollView setContentOffset:CGPointMake((button.tag - 5678) * self.scrollView.bounds.size.width, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake((button.tag - 5678) * self.scrollView.bounds.size.width, 0) animated:NO];
     //4.填充子视图
     //[self addSubViewsForIndex:button.tag- 5678];
 }
@@ -262,7 +261,7 @@
       
         
         cell.descriptLabel.text = model.descript;
-        if (model.descript == nil) {
+        if (model.description == nil) {
             cell.descriptLabel.text = @"暂无比赛事件";
         }
            cell.timeLabel.text = [NSString stringWithFormat:@"%@'",model.minutes];
@@ -322,8 +321,8 @@
     [self.guessLogo sd_setImageWithURL:[NSURL URLWithString:_model.guestPicUrl]];
     self.gameSocre.text = _model.homeScore;
     self.guessSocre.text = _model.guestScore;
-    self.leftCount.text = _model.homeSupports;
-    self.rightCount.text = _model.guestSupports;
+    self.leftCount.text = [_model.homeSupports isEqualToString:@"0"] ? _model.homeScore:_model.homeSupports;
+    self.rightCount.text = [_model.guestSupports isEqualToString:@"0"] ? _model.guestScore:_model.guestSupports;
     self.leftUp.image = [UIImage imageNamed:@"leftUp"];
     self.rightUp.image = [UIImage imageNamed:@"rightUp"];
     self.progress.progress =  self.leftCount.text.floatValue/(self.rightCount.text.floatValue + self.leftCount.text.floatValue);

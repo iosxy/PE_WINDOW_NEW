@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06366EB9224E096600B02D12 /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06366EB8224E096600B02D12 /* ADScrollView.m */; };
+		06366EBE224E16A200B02D12 /* 世界杯.png in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBA224E16A100B02D12 /* 世界杯.png */; };
+		06366EBF224E16A200B02D12 /* 中国足球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBB224E16A200B02D12 /* 中国足球.jpg */; };
+		06366EC0224E16A200B02D12 /* 篮球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBC224E16A200B02D12 /* 篮球.jpg */; };
+		06366EC1224E16A200B02D12 /* NBA.png in Resources */ = {isa = PBXBuildFile; fileRef = 06366EBD224E16A200B02D12 /* NBA.png */; };
 		063B1F781CE0884A00BF7AC8 /* share.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 063B1F771CE0884A00BF7AC8 /* share.jpg */; };
 		0654ABF7223F90E600C87AD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0654ABF6223F90E600C87AD7 /* AppDelegate.m */; };
 		068D3E1A2241E4AD0045463A /* TCSendTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D3E172241E4AD0045463A /* TCSendTextView.xib */; };
@@ -32,6 +37,9 @@
 		0695B90F223B8926002AE010 /* kefu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0695B90E223B8926002AE010 /* kefu.png */; };
 		06C790E31CD7115C002BB0BF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C790E21CD7115C002BB0BF /* libsqlite3.tbd */; };
 		1F52B3AE223F86AE004B2D56 /* 隐私权政策.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */; };
+		1F65425C22490D0F008F1461 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65425B22490D0F008F1461 /* UserModel.m */; };
+		1FE229692250F82E001A0EC6 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE229682250F82E001A0EC6 /* VideoViewController.m */; };
+		1FE2296C2250F9FE001A0EC6 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE2296B2250F9FE001A0EC6 /* VideoCell.m */; };
 		3E0B83C70971A9610D5C78AA /* Pods_Product_PEWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1792EC31E085140B2A2103 /* Pods_Product_PEWindow.framework */; };
 		BC1B80281CCB0D90007ED61C /* TalkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B80271CCB0D90007ED61C /* TalkModel.m */; };
 		BC1B802C1CCB0EE0007ED61C /* TalkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B802A1CCB0EE0007ED61C /* TalkCell.m */; };
@@ -192,6 +200,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06366EB7224E096600B02D12 /* ADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADScrollView.h; sourceTree = "<group>"; };
+		06366EB8224E096600B02D12 /* ADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADScrollView.m; sourceTree = "<group>"; };
+		06366EBA224E16A100B02D12 /* 世界杯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "世界杯.png"; sourceTree = "<group>"; };
+		06366EBB224E16A200B02D12 /* 中国足球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中国足球.jpg"; sourceTree = "<group>"; };
+		06366EBC224E16A200B02D12 /* 篮球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "篮球.jpg"; sourceTree = "<group>"; };
+		06366EBD224E16A200B02D12 /* NBA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NBA.png; sourceTree = "<group>"; };
 		063B1F771CE0884A00BF7AC8 /* share.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share.jpg; sourceTree = "<group>"; };
 		0654ABF6223F90E600C87AD7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		068D3E172241E4AD0045463A /* TCSendTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCSendTextView.xib; sourceTree = "<group>"; };
@@ -232,6 +246,12 @@
 		1C1792EC31E085140B2A2103 /* Pods_Product_PEWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Product_PEWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F52B3A0223F4D28004B2D56 /* Product-PEWindow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Product-PEWindow.entitlements"; sourceTree = "<group>"; };
 		1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "隐私权政策.html"; sourceTree = "<group>"; };
+		1F65425A22490D0F008F1461 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		1F65425B22490D0F008F1461 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		1FE229672250F82E001A0EC6 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		1FE229682250F82E001A0EC6 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		1FE2296A2250F9FE001A0EC6 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		1FE2296B2250F9FE001A0EC6 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 		BC1B80261CCB0D90007ED61C /* TalkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkModel.h; sourceTree = "<group>"; };
 		BC1B80271CCB0D90007ED61C /* TalkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkModel.m; sourceTree = "<group>"; };
 		BC1B80291CCB0EE0007ED61C /* TalkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkCell.h; sourceTree = "<group>"; };
@@ -542,6 +562,8 @@
 				0695B8EB223B84D3002AE010 /* DetailVC.xib */,
 				0695B8E9223B84D3002AE010 /* CommentViewController.h */,
 				0695B8ED223B84D3002AE010 /* CommentViewController.m */,
+				1FE229672250F82E001A0EC6 /* VideoViewController.h */,
+				1FE229682250F82E001A0EC6 /* VideoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -569,6 +591,8 @@
 				0695B8F9223B84D3002AE010 /* CommentACell.h */,
 				0695B8FF223B84D3002AE010 /* CommentACell.m */,
 				0695B8FD223B84D3002AE010 /* CommentACell.xib */,
+				1FE2296A2250F9FE001A0EC6 /* VideoCell.h */,
+				1FE2296B2250F9FE001A0EC6 /* VideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -906,6 +930,8 @@
 				BC6ED5ED1CC5E44100059B20 /* NSObject+YYModel.m */,
 				BC6ED5EE1CC5E44100059B20 /* YYClassInfo.h */,
 				BC6ED5EF1CC5E44100059B20 /* YYClassInfo.m */,
+				1F65425A22490D0F008F1461 /* UserModel.h */,
+				1F65425B22490D0F008F1461 /* UserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1070,6 +1096,8 @@
 		BCAC9DEE1CC53F9F00315007 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				06366EB7224E096600B02D12 /* ADScrollView.h */,
+				06366EB8224E096600B02D12 /* ADScrollView.m */,
 				BC6ED5551CC5A3CE00059B20 /* NewsViewController.h */,
 				BC6ED5561CC5A3CE00059B20 /* NewsViewController.m */,
 			);
@@ -1110,6 +1138,10 @@
 			isa = PBXGroup;
 			children = (
 				1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */,
+				06366EBC224E16A200B02D12 /* 篮球.jpg */,
+				06366EBA224E16A100B02D12 /* 世界杯.png */,
+				06366EBB224E16A200B02D12 /* 中国足球.jpg */,
+				06366EBD224E16A200B02D12 /* NBA.png */,
 				063B1F771CE0884A00BF7AC8 /* share.jpg */,
 				BCD2B1061CCF016D00C92545 /* backImg.jpg */,
 				BC3AAB531CC7341C006C0E3C /* selected2.png */,
@@ -1244,9 +1276,11 @@
 				BC3DCEB51CC85DC800CE9DB8 /* FootBallTableViewCell.xib in Resources */,
 				BCCD66C01CCAD8C900AF4D52 /* HotGameDetail.xib in Resources */,
 				BC6371841CCC3AB000D740E5 /* NBA.jpg in Resources */,
+				06366EC0224E16A200B02D12 /* 篮球.jpg in Resources */,
 				0695B904223B84D3002AE010 /* CommentDetailVC.xib in Resources */,
 				BC6ED5E61CC5E40300059B20 /* MJRefresh.bundle in Resources */,
 				BC651BED1CCFEC8C00B4A912 /* Images.xcassets in Resources */,
+				06366EBF224E16A200B02D12 /* 中国足球.jpg in Resources */,
 				BC6ED4CD1CC5A22500059B20 /* home_news_b@2x.png in Resources */,
 				0695B90F223B8926002AE010 /* kefu.png in Resources */,
 				BC6ED4D01CC5A22500059B20 /* home_game_b@2x.png in Resources */,
@@ -1261,6 +1295,7 @@
 				BCD2B10E1CCF079800C92545 /* tiezi.png in Resources */,
 				BC6ED5A01CC5C62700059B20 /* YCHTwoTableViewCell.xib in Resources */,
 				BC6371741CCC2CD200D740E5 /* NBALogo.jpg in Resources */,
+				06366EBE224E16A200B02D12 /* 世界杯.png in Resources */,
 				BC6ED5AA1CC5D41700059B20 /* YCHFourTableViewCell.xib in Resources */,
 				BC6371831CCC3AB000D740E5 /* FootBall.jpg in Resources */,
 				1F52B3AE223F86AE004B2D56 /* 隐私权政策.html in Resources */,
@@ -1280,6 +1315,7 @@
 				BCC418A71CD05EFE0006AF0F /* RegisteViewController.xib in Resources */,
 				BCCFBB351CC9843100E79D4A /* GameHotTableViewCell.xib in Resources */,
 				BC2D4B2A1CCBDFF600A7F903 /* FootSenceTableViewCell.xib in Resources */,
+				06366EC1224E16A200B02D12 /* NBA.png in Resources */,
 				BCD2B10F1CCF079800C92545 /* gengxin.png in Resources */,
 				BCCD66C21CCAEA7300AF4D52 /* leftUp.png in Resources */,
 				0695B90B223B84D3002AE010 /* MainCell.xib in Resources */,
@@ -1387,6 +1423,7 @@
 				BC3B51241CCF1AA60081D7D4 /* YCHDataBaseManager.m in Sources */,
 				BC6ED5891CC5A69900059B20 /* AFHTTPRequestOperationManager.m in Sources */,
 				BC6ED5E11CC5E40300059B20 /* MJRefreshBackNormalFooter.m in Sources */,
+				1FE229692250F82E001A0EC6 /* VideoViewController.m in Sources */,
 				BCD2B0FE1CCEF84600C92545 /* MineViewController.m in Sources */,
 				BC6ED58F1CC5A69900059B20 /* AFURLResponseSerialization.m in Sources */,
 				BC3AAB5C1CC73880006C0E3C /* GameDetailModel.m in Sources */,
@@ -1417,6 +1454,7 @@
 				BC6ED5541CC5A3AC00059B20 /* YCHTabBarViewController.m in Sources */,
 				BC6ED59B1CC5B54400059B20 /* NewsModel.m in Sources */,
 				BC6ED5881CC5A69900059B20 /* AFHTTPRequestOperation.m in Sources */,
+				1F65425C22490D0F008F1461 /* UserModel.m in Sources */,
 				BC3B511F1CCF1A960081D7D4 /* FMDatabaseQueue.m in Sources */,
 				BC6ED5921CC5A69900059B20 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				BC6ED58A1CC5A69900059B20 /* AFHTTPSessionManager.m in Sources */,
@@ -1442,6 +1480,7 @@
 				BC6ED5F01CC5E44100059B20 /* NSObject+YYModel.m in Sources */,
 				BC6ED5E71CC5E40300059B20 /* MJRefreshConst.m in Sources */,
 				BC6ED5511CC5A2EE00059B20 /* YCHNetworking.m in Sources */,
+				06366EB9224E096600B02D12 /* ADScrollView.m in Sources */,
 				BC6ED5441CC5A2C200059B20 /* SDWebImageDecoder.m in Sources */,
 				BC6ED5E31CC5E40300059B20 /* MJRefreshGifHeader.m in Sources */,
 				BC6ED5DC1CC5E40300059B20 /* MJRefreshHeader.m in Sources */,
@@ -1453,6 +1492,7 @@
 				BC6ED5151CC5A29D00059B20 /* UIView+AdjustFrame.m in Sources */,
 				BC6ED5DD1CC5E40300059B20 /* MJRefreshAutoGifFooter.m in Sources */,
 				BC6ED5EA1CC5E40300059B20 /* UIView+MJExtension.m in Sources */,
+				1FE2296C2250F9FE001A0EC6 /* VideoCell.m in Sources */,
 				BC6ED5481CC5A2C200059B20 /* SDWebImagePrefetcher.m in Sources */,
 				BC6ED5D81CC5E40300059B20 /* MJRefreshAutoFooter.m in Sources */,
 				0695B906223B84D3002AE010 /* MainModel.m in Sources */,

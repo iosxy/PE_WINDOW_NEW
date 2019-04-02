@@ -92,16 +92,6 @@ class RegisterViewController: BaseViewController {
         //self.getVerifyCode()
     }
     
-//    func getVerifyCode() -> Void {
-//        SVProgressHUD.show(withStatus: "正在获取中...")
-//        verifyCodeButton.isEnabled = false
-//        YWAPI.post(YWNET_verifyCode, ["telephone": telephoneField.text!]).then { data -> Void in
-//            self.resetTimer()
-//            SVProgressHUD.dismiss()
-//            }.catch { error in
-//                SVProgressHUD.showInfo(withStatus: "获取失败，请稍后重试")
-//        }
-//    }
     
     private func resetTimer() {
         self.countDown = 60

@@ -89,6 +89,9 @@ class FeedItemNormalCell: UICollectionViewCell {
   //  normalImageView.yw_setImageWithUrlStr(with: model["cover"]["url"].stringValue)
     normalTitleView.text = model["title"].stringValue
     normalSourceView.text = model["source"].stringValue
+    if normalSourceView.text == "娱丸官方" {
+        normalSourceView.text = "官方"
+    }
     normalDateView.text = Utils.getDate(model["time"].int64Value * 1000, format: "yyyy/MM/dd")
     normalVideoImageView.isHidden = !(model["contentType"].stringValue == "VIDEO")
   }

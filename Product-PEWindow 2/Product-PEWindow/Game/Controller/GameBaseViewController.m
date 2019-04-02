@@ -34,12 +34,13 @@
 
     _hotVC = [[GameHotViewController alloc]init];
     self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height -64);
-    [self.view addSubview:_hotVC.view];
+    
     [self.view addSubview:_baseVC.view];
-    [self addChildViewController:_baseVC];
+    [self.view addSubview:_hotVC.view];
     [self addChildViewController:_hotVC];
+    [self addChildViewController:_baseVC];
 
-    UISegmentedControl * seg = [[UISegmentedControl alloc]initWithItems:@[@"比赛",@"热门"]];
+    UISegmentedControl * seg = [[UISegmentedControl alloc]initWithItems:@[@"热门",@"比赛"]];
     seg.frame = CGRectMake(0, 0, 160, 30);
     seg.selectedSegmentIndex = 0;
     seg.tintColor = YCOLOR_BROWNCOLOR;
@@ -69,9 +70,9 @@
     //调整_baseVc 与_hotVc
     if (seg.selectedSegmentIndex == 0) {
         //
-        [self.view bringSubviewToFront:_baseVC.view];
-    }else {
         [self.view bringSubviewToFront:_hotVC.view];
+    }else {
+        [self.view bringSubviewToFront:_baseVC.view];
     }
 }
 

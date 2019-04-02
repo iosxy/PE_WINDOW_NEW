@@ -92,6 +92,9 @@ class FeedItemBigCell: UICollectionViewCell {
    // bigImageView.yw_setImageWithUrlStr(with: model["cover"]["url"].stringValue)
     bigTitleView.text = model["title"].stringValue
     bigSourceView.text = model["source"].stringValue
+    if bigSourceView.text == "娱丸官方" {
+        bigSourceView.text = "官方"
+    }
     bigDateView.text = Utils.getDate(model["time"].int64Value * 1000, format: "yyyy/MM/dd")
     bigVideoImageView.isHidden = !(model["contentType"].stringValue == "VIDEO")
   
