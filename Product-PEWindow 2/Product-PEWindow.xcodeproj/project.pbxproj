@@ -38,6 +38,8 @@
 		06C790E31CD7115C002BB0BF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C790E21CD7115C002BB0BF /* libsqlite3.tbd */; };
 		1F52B3AE223F86AE004B2D56 /* 隐私权政策.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */; };
 		1F65425C22490D0F008F1461 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65425B22490D0F008F1461 /* UserModel.m */; };
+		1FE229692250F82E001A0EC6 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE229682250F82E001A0EC6 /* VideoViewController.m */; };
+		1FE2296C2250F9FE001A0EC6 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE2296B2250F9FE001A0EC6 /* VideoCell.m */; };
 		3E0B83C70971A9610D5C78AA /* Pods_Product_PEWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1792EC31E085140B2A2103 /* Pods_Product_PEWindow.framework */; };
 		BC1B80281CCB0D90007ED61C /* TalkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B80271CCB0D90007ED61C /* TalkModel.m */; };
 		BC1B802C1CCB0EE0007ED61C /* TalkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B802A1CCB0EE0007ED61C /* TalkCell.m */; };
@@ -246,6 +248,10 @@
 		1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "隐私权政策.html"; sourceTree = "<group>"; };
 		1F65425A22490D0F008F1461 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		1F65425B22490D0F008F1461 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		1FE229672250F82E001A0EC6 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		1FE229682250F82E001A0EC6 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		1FE2296A2250F9FE001A0EC6 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		1FE2296B2250F9FE001A0EC6 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 		BC1B80261CCB0D90007ED61C /* TalkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkModel.h; sourceTree = "<group>"; };
 		BC1B80271CCB0D90007ED61C /* TalkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkModel.m; sourceTree = "<group>"; };
 		BC1B80291CCB0EE0007ED61C /* TalkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkCell.h; sourceTree = "<group>"; };
@@ -556,6 +562,8 @@
 				0695B8EB223B84D3002AE010 /* DetailVC.xib */,
 				0695B8E9223B84D3002AE010 /* CommentViewController.h */,
 				0695B8ED223B84D3002AE010 /* CommentViewController.m */,
+				1FE229672250F82E001A0EC6 /* VideoViewController.h */,
+				1FE229682250F82E001A0EC6 /* VideoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -583,6 +591,8 @@
 				0695B8F9223B84D3002AE010 /* CommentACell.h */,
 				0695B8FF223B84D3002AE010 /* CommentACell.m */,
 				0695B8FD223B84D3002AE010 /* CommentACell.xib */,
+				1FE2296A2250F9FE001A0EC6 /* VideoCell.h */,
+				1FE2296B2250F9FE001A0EC6 /* VideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1417,6 +1427,7 @@
 				BC3B51241CCF1AA60081D7D4 /* YCHDataBaseManager.m in Sources */,
 				BC6ED5891CC5A69900059B20 /* AFHTTPRequestOperationManager.m in Sources */,
 				BC6ED5E11CC5E40300059B20 /* MJRefreshBackNormalFooter.m in Sources */,
+				1FE229692250F82E001A0EC6 /* VideoViewController.m in Sources */,
 				BCD2B0FE1CCEF84600C92545 /* MineViewController.m in Sources */,
 				BC6ED58F1CC5A69900059B20 /* AFURLResponseSerialization.m in Sources */,
 				BC3AAB5C1CC73880006C0E3C /* GameDetailModel.m in Sources */,
@@ -1485,6 +1496,7 @@
 				BC6ED5151CC5A29D00059B20 /* UIView+AdjustFrame.m in Sources */,
 				BC6ED5DD1CC5E40300059B20 /* MJRefreshAutoGifFooter.m in Sources */,
 				BC6ED5EA1CC5E40300059B20 /* UIView+MJExtension.m in Sources */,
+				1FE2296C2250F9FE001A0EC6 /* VideoCell.m in Sources */,
 				BC6ED5481CC5A2C200059B20 /* SDWebImagePrefetcher.m in Sources */,
 				BC6ED5D81CC5E40300059B20 /* MJRefreshAutoFooter.m in Sources */,
 				0695B906223B84D3002AE010 /* MainModel.m in Sources */,

@@ -14,7 +14,9 @@
 #import "CommentDetailVC.h"
 #import "ADScrollView.h"
 #import "DetailVC.h"
-
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 /** 数据源*/
 @property(nonatomic,strong)NSMutableArray * dataSource;
@@ -37,8 +39,10 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData)];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
  
-//    UIColor *color = [UIColor whiteColor];NSDictionary *dict = [NSDictionary dictionaryWithObject:color forKey:UITextAttributeTextColor];self.navigationController.navigationBar.titleTextAttributes = dict;
-    
+//    AVPlayerViewController * vc = [[AVPlayerViewController alloc]init];
+//    vc.player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:@"https://vod.ttplus.cn/product/act-ss-m3u8-hd/e859d3d3e82e4a5586ebc8d61932ac33/video_news_229316.m3u8"]];
+//    [self presentViewController:vc animated:true completion:nil];
+
 }
 - (void)loadData
 {

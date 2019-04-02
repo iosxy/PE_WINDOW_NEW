@@ -32,14 +32,14 @@
 }
 - (void)setTabBar
 {
-//    NSArray * controllers = @[@"NewsViewController",@"GameBaseViewController",@"CommentViewController",@"MineViewController"];
-//    NSArray * titleArr = @[@"新闻",@"比赛",@"论坛",@"我的"];
-//    NSArray * nomorlImage = @[@"xinwen",@"jiangbei",@"zuqiu",@"wode"];
-//    NSArray * selectImage = @[@"xinwen_pre",@"jiangbei_pre",@"zuqiu_pre",@"wode_pre"];
-    NSArray * controllers = @[@"NewsViewController",@"GameHotViewController",@"GameViewController",@"MineViewController"];
-    NSArray * titleArr = @[@"新闻",@"热门",@"比赛",@"我的"];
+    NSArray * controllers = @[@"NewsViewController",@"VideoViewController",@"GameBaseViewController",@"MineViewController"];
+    NSArray * titleArr = @[@"新闻",@"视频",@"比赛",@"我的"];
     NSArray * nomorlImage = @[@"xinwen",@"zuqiu",@"jiangbei",@"wode"];
     NSArray * selectImage = @[@"xinwen_pre",@"zuqiu_pre",@"jiangbei_pre",@"wode_pre"];
+//    NSArray * controllers = @[@"NewsViewController",@"GameHotViewController",@"GameViewController",@"MineViewController"];
+//    NSArray * titleArr = @[@"新闻",@"热门",@"比赛",@"我的"];
+//    NSArray * nomorlImage = @[@"xinwen",@"zuqiu",@"jiangbei",@"wode"];
+//    NSArray * selectImage = @[@"xinwen_pre",@"zuqiu_pre",@"jiangbei_pre",@"wode_pre"];
     NSMutableArray * ViewControllers = [[NSMutableArray alloc]init];
     
     for (int i = 0; i < titleArr.count; i++) {
