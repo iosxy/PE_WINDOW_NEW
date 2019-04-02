@@ -1195,7 +1195,7 @@
 				TargetAttributes = {
 					BC32C3B81CC31227004BC24B = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = K96S8R47AN;
+						DevelopmentTeam = DN2M2329RW;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1327,15 +1327,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Product-PEWindow/Pods-Product-PEWindow-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
@@ -1572,7 +1568,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Product-PEWindow/Product-PEWindow.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K96S8R47AN;
+				DEVELOPMENT_TEAM = DN2M2329RW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1604,7 +1600,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Product-PEWindow/Product-PEWindow.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K96S8R47AN;
+				DEVELOPMENT_TEAM = DN2M2329RW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
