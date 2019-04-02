@@ -41,6 +41,8 @@
 		1FE229692250F82E001A0EC6 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE229682250F82E001A0EC6 /* VideoViewController.m */; };
 		1FE2296C2250F9FE001A0EC6 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE2296B2250F9FE001A0EC6 /* VideoCell.m */; };
 		3E0B83C70971A9610D5C78AA /* Pods_Product_PEWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1792EC31E085140B2A2103 /* Pods_Product_PEWindow.framework */; };
+		932B5E122253A6DB004066ED /* fabuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932B5E112253A6DB004066ED /* fabuViewController.m */; };
+		932B5E152253B454004066ED /* VideoShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 932B5E142253B454004066ED /* VideoShared.m */; };
 		BC1B80281CCB0D90007ED61C /* TalkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B80271CCB0D90007ED61C /* TalkModel.m */; };
 		BC1B802C1CCB0EE0007ED61C /* TalkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1B802A1CCB0EE0007ED61C /* TalkCell.m */; };
 		BC1B802D1CCB0EE0007ED61C /* TalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1B802B1CCB0EE0007ED61C /* TalkCell.xib */; };
@@ -252,6 +254,10 @@
 		1FE229682250F82E001A0EC6 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		1FE2296A2250F9FE001A0EC6 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
 		1FE2296B2250F9FE001A0EC6 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		932B5E102253A6DB004066ED /* fabuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fabuViewController.h; sourceTree = "<group>"; };
+		932B5E112253A6DB004066ED /* fabuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fabuViewController.m; sourceTree = "<group>"; };
+		932B5E132253B454004066ED /* VideoShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoShared.h; sourceTree = "<group>"; };
+		932B5E142253B454004066ED /* VideoShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoShared.m; sourceTree = "<group>"; };
 		BC1B80261CCB0D90007ED61C /* TalkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkModel.h; sourceTree = "<group>"; };
 		BC1B80271CCB0D90007ED61C /* TalkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkModel.m; sourceTree = "<group>"; };
 		BC1B80291CCB0EE0007ED61C /* TalkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkCell.h; sourceTree = "<group>"; };
@@ -564,6 +570,8 @@
 				0695B8ED223B84D3002AE010 /* CommentViewController.m */,
 				1FE229672250F82E001A0EC6 /* VideoViewController.h */,
 				1FE229682250F82E001A0EC6 /* VideoViewController.m */,
+				932B5E102253A6DB004066ED /* fabuViewController.h */,
+				932B5E112253A6DB004066ED /* fabuViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -932,6 +940,8 @@
 				BC6ED5EF1CC5E44100059B20 /* YYClassInfo.m */,
 				1F65425A22490D0F008F1461 /* UserModel.h */,
 				1F65425B22490D0F008F1461 /* UserModel.m */,
+				932B5E132253B454004066ED /* VideoShared.h */,
+				932B5E142253B454004066ED /* VideoShared.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1227,7 +1237,7 @@
 				TargetAttributes = {
 					BC32C3B81CC31227004BC24B = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = DN2M2329RW;
+						DevelopmentTeam = BLQX9C33QF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1446,6 +1456,7 @@
 				0654ABF7223F90E600C87AD7 /* AppDelegate.m in Sources */,
 				BC6ED5461CC5A2C200059B20 /* SDWebImageDownloaderOperation.m in Sources */,
 				BC6ED5221CC5A2AD00059B20 /* SVProgressHUD.m in Sources */,
+				932B5E122253A6DB004066ED /* fabuViewController.m in Sources */,
 				BC3DCEBF1CC8844000CE9DB8 /* RedYellowModelTableViewCell.m in Sources */,
 				BC6ED5951CC5A69900059B20 /* UIImageView+AFNetworking.m in Sources */,
 				BC1B80661CCB2631007ED61C /* GameSenceModel.m in Sources */,
@@ -1464,6 +1475,7 @@
 				BC6ED5E91CC5E40300059B20 /* UIScrollView+MJRefresh.m in Sources */,
 				BC6ED59F1CC5C62700059B20 /* YCHTwoTableViewCell.m in Sources */,
 				BCC418A11CD05B280006AF0F /* LoginViewController.m in Sources */,
+				932B5E152253B454004066ED /* VideoShared.m in Sources */,
 				BC6ED5411CC5A2C200059B20 /* NSData+ImageContentType.m in Sources */,
 				0695B90A223B84D3002AE010 /* MainCell.m in Sources */,
 				BC6ED5571CC5A3CE00059B20 /* NewsViewController.m in Sources */,
@@ -1608,7 +1620,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Product-PEWindow/Product-PEWindow.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DN2M2329RW;
+				DEVELOPMENT_TEAM = BLQX9C33QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1623,7 +1635,7 @@
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pewindow.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timen.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1640,7 +1652,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Product-PEWindow/Product-PEWindow.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DN2M2329RW;
+				DEVELOPMENT_TEAM = BLQX9C33QF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1655,7 +1667,7 @@
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pewindow.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timen.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

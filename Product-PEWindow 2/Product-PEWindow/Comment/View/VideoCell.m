@@ -50,8 +50,20 @@
 }
 - (void)loadData:(NSDictionary *)data{
     self.data = data;
-    [self.contentImage sd_setImageWithURL:[NSURL URLWithString:data[@"imgurl"]]];
-    self.titleLabel.text = data[@"shorttitle"];
+    
+    if (data[@"type"] == @"10086"){
+        
+        self.contentImage.image = data[@"cover"];
+        self.titleLabel.text = data[@"title"];
+        
+        
+    }else {
+        
+        [self.contentImage sd_setImageWithURL:[NSURL URLWithString:data[@"imgurl"]]];
+        self.titleLabel.text = data[@"shorttitle"];
+    }
+    
+   
     
     
     

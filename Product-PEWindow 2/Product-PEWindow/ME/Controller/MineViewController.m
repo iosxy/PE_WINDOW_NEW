@@ -107,7 +107,8 @@
     _tableView.rowHeight = UITableViewAutomaticDimension;
     //设置预计行高
     _tableView.rowHeight = 60.0;
-   
+    AdjustsScrollViewInsetNever(self, self.tableView);
+
     [_tableView registerNib:[UINib nibWithNibName:@"MineTableViewCell" bundle:nil] forCellReuseIdentifier:@"MINE"];
     
     [self.view addSubview:_tableView];
@@ -247,12 +248,12 @@
     
     
 }
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<UIImagePickerControllerInfoKey, id> *)editingInfo NS_DEPRECATED_IOS(2_0, 3_0){
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<UIImagePickerController *, id> *)editingInfo NS_DEPRECATED_IOS(2_0, 3_0){
     
   
  
 }
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerController *, id> *)info
 {
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
         if ([info[UIImagePickerControllerMediaType] isEqualToString:@"public.image"]) {
