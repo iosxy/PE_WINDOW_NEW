@@ -73,7 +73,7 @@
     // 添加子视图
     for (int i = 0; i < dataInfo.count + 1; i++) {
         UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(i * self.bounds.size.width, 0, self.bounds.size.width, self.bounds.size.height)];
-        
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
         if (i == dataInfo.count) {
             // 最后一项的特殊处理
             NSString * imagePath = [[NSBundle mainBundle] pathForResource:dataInfo[0] ofType:nil];

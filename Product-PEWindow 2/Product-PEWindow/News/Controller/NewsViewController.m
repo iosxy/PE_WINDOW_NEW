@@ -104,13 +104,13 @@
     
     AdjustsScrollViewInsetNever(self, self.tableView);
     
-    ADScrollView * sc = [[ADScrollView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 220)];
+    ADScrollView * sc = [[ADScrollView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 180)];
     self.adSC = sc;
     UITapGestureRecognizer* single = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapRecognizer:)];
     single.numberOfTapsRequired = 1;
     [self.adSC addGestureRecognizer:single];
     [self loadScrollData];
-    [self.adSC loadDataWithArray:@[@"NBA.png", @"世界杯.png", @"篮球.jpg", @"中国足球.jpg"]];
+    [self.adSC loadDataWithArray:@[@"NBA.jpg", @"世界杯.png", @"篮球.png", @"中国足球.png"]];
     _tableView.tableHeaderView = sc;
     
     
