@@ -26,7 +26,10 @@
 - (void)viewDidLoad{
     
     [super viewDidLoad];
-    
+   // [SVProgressHUD showProgress:0.8 status:@"123"];
+    //[SVProgressHUD showWithStatus:@"正在上传..."];
+
+    CGFloat height = [UIApplication sharedApplication].statusBarFrame.size.height + 44 ;
     self.title = @"发布视频";
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -37,7 +40,7 @@
     _textField.placeholder = @"请输入视频标题";
     [self.view addSubview:_textField];
     [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view).offset(isOldHorizontalPhone ? 100 : 30);
+        make.top.mas_equalTo(self.view).offset(height + 20);
         make.left.mas_equalTo(self.view).offset(15);
         make.height.mas_equalTo(40);
         make.right.mas_equalTo(self.view).offset(-15);
@@ -218,6 +221,7 @@
 }
 - (void)timerGo{
     _count += 0.1;
+    NSLog(@"%f",_count);
     if (_count >= 1) {
         [SVProgressHUD showSuccessWithStatus:@"上传成功!"];
         [_timer setFireDate:[NSDate distantFuture]];
@@ -225,7 +229,8 @@
         _timer = nil;
          [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }else {
-        [SVProgressHUD showProgress:_count status:@"正在上传..."];
+       // [SVProgressHUD showProgress:_count status:@"正在上传..."];
+        [SVProgressHUD showWithStatus:@"正在上传..."];
     }
     
     
