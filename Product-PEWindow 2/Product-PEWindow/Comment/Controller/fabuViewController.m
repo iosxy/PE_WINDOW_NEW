@@ -204,9 +204,11 @@
     
     if([_textField.text isEqualToString:@""]) {
         [SVProgressHUD showErrorWithStatus:@"请输入视频标题!"];
+        return;
     }
     if (self.filevideoUrl == nil) {
         [SVProgressHUD showErrorWithStatus:@"请选择需要上传的视频"];
+        return;
     }
     NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
     [dic setObject:_textField.text forKey:@"title"];

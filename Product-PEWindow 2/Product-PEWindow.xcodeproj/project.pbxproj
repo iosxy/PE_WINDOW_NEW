@@ -1234,7 +1234,7 @@
 				TargetAttributes = {
 					BC32C3B81CC31227004BC24B = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = BLQX9C33QF;
+						DevelopmentTeam = K96S8R47AN;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1615,7 +1615,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BLQX9C33QF;
+				DEVELOPMENT_TEAM = K96S8R47AN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1630,7 +1630,7 @@
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.timen.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.penews.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1646,7 +1646,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BLQX9C33QF;
+				DEVELOPMENT_TEAM = K96S8R47AN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1661,7 +1661,7 @@
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Product-PEWindow/Library/UMSocial_Sdk_4.4/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.timen.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.penews.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
