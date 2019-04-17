@@ -43,7 +43,7 @@
     UISegmentedControl * seg = [[UISegmentedControl alloc]initWithItems:@[@"热门",@"比赛"]];
     seg.frame = CGRectMake(0, 0, 160, 30);
     seg.selectedSegmentIndex = 0;
-    seg.tintColor = YCOLOR_BROWNCOLOR;
+    seg.tintColor = [UIColor whiteColor];
     seg.layer.cornerRadius = 15;
     seg.clipsToBounds = YES;
     seg.layer.borderWidth = 1;

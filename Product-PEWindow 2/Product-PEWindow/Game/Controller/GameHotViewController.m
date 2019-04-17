@@ -312,7 +312,7 @@
     GameHotModel * model = self.mainDataSource[section][0];
     NSString * date = model.startTime;
     NSString * newDate = [date substringToIndex:10];
-    UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
+    UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(0, 5, self.view.bounds.size.width, 30)];
     label.backgroundColor = [UIColor clearColor];
     
     label.text = newDate;
@@ -321,7 +321,7 @@
 
     UIView * view = [[UIView alloc]init];
    [view addSubview:label];
-    view.backgroundColor = YCOLOR_REDCOLOR;
+    view.backgroundColor = RGB(0x64d3d8);
     view.alpha = 0.7;
     return view;
 }

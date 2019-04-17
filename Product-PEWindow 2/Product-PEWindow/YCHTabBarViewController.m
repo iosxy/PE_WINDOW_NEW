@@ -55,12 +55,12 @@
         
         UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:controller];
         nav.navigationBar.tintColor = [UIColor whiteColor];
-        nav.navigationBar.barTintColor = RGB(0xffc000);
+        nav.navigationBar.barTintColor = RGB(0x64d3d8);
           nav.navigationBar.translucent = YES;
       
         [ViewControllers addObject:nav];
     }
-    self.tabBar.tintColor = RGB(0xffc000);
+    self.tabBar.tintColor = RGB(0x64d3d8);
     
     self.viewControllers = ViewControllers;
     
