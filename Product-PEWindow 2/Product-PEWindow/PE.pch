@@ -15,6 +15,7 @@
 #define YCOLOR_BROWNCOLOR [UIColor colorWithRed:(223/255.0) green:(118/255.0) blue:(69/255.0) alpha:1]
 #define YCOLOR_YELLOWCOLOR [UIColor colorWithRed:(209/255.0) green:(184/255.0) blue:(39/255.0) alpha:1]
 #define YCOLOR_BANANACOLOR [UIColor colorWithRed:(245/255.0) green:(224/255.0) blue:(133/255.0) alpha:1]
+
 #define YCOLOR_REDCOLOR RGB(0XFF9800)
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
