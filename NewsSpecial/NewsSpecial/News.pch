@@ -1,0 +1,49 @@
+//
+//  News.pch
+//  NewsSpecial
+//
+//  Created by 游成虎 on 2019/4/17.
+//  Copyright © 2019年 GetOn. All rights reserved.
+//
+
+#ifndef News_pch
+#define News_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define RGB(rgb) [UIColor colorWithRed:(rgb/0x10000)/255.0f green:((rgb/0x100)&0xFF)/255.0f blue:(rgb&0xFF)/255.0f alpha:1]
+
+//背景色
+#define kColorControllerBackGround RGB(0xf5f7fb)
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f \
+alpha:(a)]
+
+//ScreenWidth
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define isOldHorizontalPhone ((iPhone6 || iPhone6Plus || iPhone5) ? YES : NO)
+#define SafeAreaTopHeight ((iPhone6 || iPhone6Plus || iPhone5) ? 64 : 88)
+//通过屏幕尺寸判断手机型号
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhoneX (SCREEN_HEIGHT == 812.0 ? YES : NO)
+
+/// 第一个参数是当下的控制器适配iOS11 一下的，第二个参数表示scrollview或子类
+#define AdjustsScrollViewInsetNever(controller,view) if(@available(iOS 11.0, *)) {view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;} else if([controller isKindOfClass:[UIViewController class]]) {controller.automaticallyAdjustsScrollViewInsets = false;}
+
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "UIView+MBProgressHUD.h"
+#import "SDRefreshHeaderView.h"
+#import "UIView+Additions.h"
+#import "YCHNetworking.h"
+
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define WHITECOLOR(w) [UIColor colorWithWhite:(w)/255.0 alpha:1]
+
+
+
+#endif /* News_pch */
