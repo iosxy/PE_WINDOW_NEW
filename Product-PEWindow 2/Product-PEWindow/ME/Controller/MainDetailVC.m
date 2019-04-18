@@ -100,7 +100,7 @@
     [button setTitle:@"清空缓存" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-    button.backgroundColor = YCOLOR_BROWNCOLOR;
+    button.backgroundColor = RGB(0xf6f6f6);
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     _sizeLabel = [[UILabel alloc]init];
     _sizeLabel.frame = CGRectMake(button.origin.x, CGRectGetMaxY(button.frame) + 20, 100, 40);
@@ -108,16 +108,16 @@
     _sizeLabel.text = [NSString stringWithFormat:@"%0.2fM",[self folderSizeAtPath:[NSString stringWithFormat:@"%@/Library/Caches/default",NSHomeDirectory()]]];
     NSLog(@"%@",NSHomeDirectory());
     _sizeLabel.textColor = [UIColor blackColor];
-    _sizeLabel.backgroundColor = [UIColor redColor];
+    _sizeLabel.backgroundColor = RGB(0xf6f6f6);
     _sizeLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_sizeLabel];
     [self.view addSubview:button];
     
-    UIButton * outButton = [[UIButton alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_sizeLabel.frame) + 30, self.view.frame.size.width, 40)];
+    UIButton * outButton = [[UIButton alloc]initWithFrame:CGRectMake(20, CGRectGetMaxY(_sizeLabel.frame) + 30, self.view.frame.size.width - 40, 40)];
     [outButton setTitle:@"退出登录" forState:UIControlStateNormal];
     [self.view addSubview:outButton];
     [outButton addTarget:self action:@selector(outClick) forControlEvents:UIControlEventTouchUpInside];
-    [outButton setBackgroundColor:[UIColor orangeColor]];
+    [outButton setBackgroundColor:RGB(0x64d3d8)];
     
 }
 - (void)outClick{
