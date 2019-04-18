@@ -47,10 +47,9 @@
 //    _titleLabel.textColor = [UIColor colorWithWhite:0.8 alpha:0.9];
     
     _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(self.bounds.size.width - 100, self.bounds.size.height - 30, 100, 30)];
-    // 选中小圆点的颜色
-    _pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.7 alpha:0.9];
-    // 未选中的
-    _pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.1 alpha:0.8];
+   
+    _pageControl.pageIndicatorTintColor = RGB(0xffffff); //设置未激活的指示点颜色
+    _pageControl.currentPageIndicatorTintColor =RGB(0x64d3d8);
     // 绑定方法
     [_pageControl addTarget:self action:@selector(pagging:) forControlEvents:UIControlEventTouchUpInside];
     

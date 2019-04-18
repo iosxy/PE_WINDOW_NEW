@@ -10,9 +10,6 @@
 		06366EB9224E096600B02D12 /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06366EB8224E096600B02D12 /* ADScrollView.m */; };
 		063B1F781CE0884A00BF7AC8 /* share.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 063B1F771CE0884A00BF7AC8 /* share.jpg */; };
 		0654ABF7223F90E600C87AD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0654ABF6223F90E600C87AD7 /* AppDelegate.m */; };
-		067229B52255E76C008BB5B6 /* 世界杯.png in Resources */ = {isa = PBXBuildFile; fileRef = 067229B42255E76C008BB5B6 /* 世界杯.png */; };
-		067229B92255E910008BB5B6 /* 篮球.png in Resources */ = {isa = PBXBuildFile; fileRef = 067229B82255E910008BB5B6 /* 篮球.png */; };
-		067229BB2255EA21008BB5B6 /* 中国足球.png in Resources */ = {isa = PBXBuildFile; fileRef = 067229BA2255EA21008BB5B6 /* 中国足球.png */; };
 		068D3E1A2241E4AD0045463A /* TCSendTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D3E172241E4AD0045463A /* TCSendTextView.xib */; };
 		068D3E1B2241E4AD0045463A /* TCSendTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D3E182241E4AD0045463A /* TCSendTextView.m */; };
 		068D3E1E2241E6930045463A /* TCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D3E1C2241E6930045463A /* TCTextView.m */; };
@@ -34,6 +31,16 @@
 		0695B90C223B84D3002AE010 /* CommentACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0695B8FD223B84D3002AE010 /* CommentACell.xib */; };
 		0695B90D223B84D3002AE010 /* CommentACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0695B8FF223B84D3002AE010 /* CommentACell.m */; };
 		0695B90F223B8926002AE010 /* kefu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0695B90E223B8926002AE010 /* kefu.png */; };
+		06A65C1F2268563600CB8C60 /* YPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A65C1E2268563600CB8C60 /* YPhotoViewController.m */; };
+		06A65C22226857A600CB8C60 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A65C21226857A600CB8C60 /* YPhotoTableViewCell.m */; };
+		06A65C25226869A400CB8C60 /* YPhotoCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A65C24226869A400CB8C60 /* YPhotoCommentViewController.m */; };
+		06A65C28226870D800CB8C60 /* TCHorizontalScrollViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A65C26226870D800CB8C60 /* TCHorizontalScrollViewTool.m */; };
+		06A65C2C2268711100CB8C60 /* TCHorizontalScrollview.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A65C292268711100CB8C60 /* TCHorizontalScrollview.m */; };
+		06A65C2D2268711100CB8C60 /* TCHorizontalScrollview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A65C2A2268711100CB8C60 /* TCHorizontalScrollview.xib */; };
+		06A65C302268712200CB8C60 /* TCImageDownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A65C2E2268712100CB8C60 /* TCImageDownloadView.m */; };
+		06A65C342268839400CB8C60 /* 中国足球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06A65C312268839300CB8C60 /* 中国足球.jpg */; };
+		06A65C352268839400CB8C60 /* 世界杯.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06A65C322268839400CB8C60 /* 世界杯.jpg */; };
+		06A65C362268839400CB8C60 /* 篮球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06A65C332268839400CB8C60 /* 篮球.jpg */; };
 		06C790E31CD7115C002BB0BF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C790E21CD7115C002BB0BF /* libsqlite3.tbd */; };
 		1F52B3AE223F86AE004B2D56 /* 隐私权政策.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */; };
 		1F65425C22490D0F008F1461 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F65425B22490D0F008F1461 /* UserModel.m */; };
@@ -89,14 +96,6 @@
 		BC6371851CCC3AB000D740E5 /* chinaFoot.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC6371811CCC3AB000D740E5 /* chinaFoot.jpeg */; };
 		BC6371861CCC3AB000D740E5 /* china.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6371821CCC3AB000D740E5 /* china.png */; };
 		BC651BED1CCFEC8C00B4A912 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC651BEC1CCFEC8C00B4A912 /* Images.xcassets */; };
-		BC6ED4CA1CC5A22500059B20 /* home_myhome_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C21CC5A22500059B20 /* home_myhome_b@2x.png */; };
-		BC6ED4CB1CC5A22500059B20 /* home_news_a@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C31CC5A22500059B20 /* home_news_a@2x.png */; };
-		BC6ED4CC1CC5A22500059B20 /* home_guess_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C41CC5A22500059B20 /* home_guess_b@2x.png */; };
-		BC6ED4CD1CC5A22500059B20 /* home_news_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C51CC5A22500059B20 /* home_news_b@2x.png */; };
-		BC6ED4CE1CC5A22500059B20 /* home_myhome_a@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C61CC5A22500059B20 /* home_myhome_a@2x.png */; };
-		BC6ED4CF1CC5A22500059B20 /* home_game_a@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C71CC5A22500059B20 /* home_game_a@2x.png */; };
-		BC6ED4D01CC5A22500059B20 /* home_game_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C81CC5A22500059B20 /* home_game_b@2x.png */; };
-		BC6ED4D11CC5A22500059B20 /* home_guess_a@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED4C91CC5A22500059B20 /* home_guess_a@2x.png */; };
 		BC6ED5151CC5A29D00059B20 /* UIView+AdjustFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6ED5141CC5A29D00059B20 /* UIView+AdjustFrame.m */; };
 		BC6ED5211CC5A2AD00059B20 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC6ED51E1CC5A2AD00059B20 /* SVProgressHUD.bundle */; };
 		BC6ED5221CC5A2AD00059B20 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6ED5201CC5A2AD00059B20 /* SVProgressHUD.m */; };
@@ -205,9 +204,6 @@
 		06366EB8224E096600B02D12 /* ADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADScrollView.m; sourceTree = "<group>"; };
 		063B1F771CE0884A00BF7AC8 /* share.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share.jpg; sourceTree = "<group>"; };
 		0654ABF6223F90E600C87AD7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		067229B42255E76C008BB5B6 /* 世界杯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "世界杯.png"; sourceTree = "<group>"; };
-		067229B82255E910008BB5B6 /* 篮球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "篮球.png"; sourceTree = "<group>"; };
-		067229BA2255EA21008BB5B6 /* 中国足球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中国足球.png"; sourceTree = "<group>"; };
 		068D3E172241E4AD0045463A /* TCSendTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCSendTextView.xib; sourceTree = "<group>"; };
 		068D3E182241E4AD0045463A /* TCSendTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSendTextView.m; sourceTree = "<group>"; };
 		068D3E192241E4AD0045463A /* TCSendTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSendTextView.h; sourceTree = "<group>"; };
@@ -242,6 +238,22 @@
 		0695B8FE223B84D3002AE010 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
 		0695B8FF223B84D3002AE010 /* CommentACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentACell.m; sourceTree = "<group>"; };
 		0695B90E223B8926002AE010 /* kefu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kefu.png; sourceTree = "<group>"; };
+		06A65C1D2268563600CB8C60 /* YPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPhotoViewController.h; sourceTree = "<group>"; };
+		06A65C1E2268563600CB8C60 /* YPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPhotoViewController.m; sourceTree = "<group>"; };
+		06A65C20226857A600CB8C60 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
+		06A65C21226857A600CB8C60 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
+		06A65C23226869A400CB8C60 /* YPhotoCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPhotoCommentViewController.h; sourceTree = "<group>"; };
+		06A65C24226869A400CB8C60 /* YPhotoCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPhotoCommentViewController.m; sourceTree = "<group>"; };
+		06A65C26226870D800CB8C60 /* TCHorizontalScrollViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCHorizontalScrollViewTool.m; sourceTree = "<group>"; };
+		06A65C27226870D800CB8C60 /* TCHorizontalScrollViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCHorizontalScrollViewTool.h; sourceTree = "<group>"; };
+		06A65C292268711100CB8C60 /* TCHorizontalScrollview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCHorizontalScrollview.m; sourceTree = "<group>"; };
+		06A65C2A2268711100CB8C60 /* TCHorizontalScrollview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCHorizontalScrollview.xib; sourceTree = "<group>"; };
+		06A65C2B2268711100CB8C60 /* TCHorizontalScrollview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCHorizontalScrollview.h; sourceTree = "<group>"; };
+		06A65C2E2268712100CB8C60 /* TCImageDownloadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCImageDownloadView.m; sourceTree = "<group>"; };
+		06A65C2F2268712200CB8C60 /* TCImageDownloadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCImageDownloadView.h; sourceTree = "<group>"; };
+		06A65C312268839300CB8C60 /* 中国足球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中国足球.jpg"; sourceTree = "<group>"; };
+		06A65C322268839400CB8C60 /* 世界杯.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "世界杯.jpg"; sourceTree = "<group>"; };
+		06A65C332268839400CB8C60 /* 篮球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "篮球.jpg"; sourceTree = "<group>"; };
 		06C790E21CD7115C002BB0BF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1C1792EC31E085140B2A2103 /* Pods_Product_PEWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Product_PEWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F52B3A0223F4D28004B2D56 /* Product-PEWindow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Product-PEWindow.entitlements"; sourceTree = "<group>"; };
@@ -336,14 +348,6 @@
 		BC6371821CCC3AB000D740E5 /* china.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = china.png; sourceTree = "<group>"; };
 		BC651BEC1CCFEC8C00B4A912 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BC6ED4C11CC583E600059B20 /* PE.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PE.pch; sourceTree = "<group>"; };
-		BC6ED4C21CC5A22500059B20 /* home_myhome_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_myhome_b@2x.png"; sourceTree = "<group>"; };
-		BC6ED4C31CC5A22500059B20 /* home_news_a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_news_a@2x.png"; sourceTree = "<group>"; };
-		BC6ED4C41CC5A22500059B20 /* home_guess_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_guess_b@2x.png"; sourceTree = "<group>"; };
-		BC6ED4C51CC5A22500059B20 /* home_news_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_news_b@2x.png"; sourceTree = "<group>"; };
-		BC6ED4C61CC5A22500059B20 /* home_myhome_a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_myhome_a@2x.png"; sourceTree = "<group>"; };
-		BC6ED4C71CC5A22500059B20 /* home_game_a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_game_a@2x.png"; sourceTree = "<group>"; };
-		BC6ED4C81CC5A22500059B20 /* home_game_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_game_b@2x.png"; sourceTree = "<group>"; };
-		BC6ED4C91CC5A22500059B20 /* home_guess_a@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_guess_a@2x.png"; sourceTree = "<group>"; };
 		BC6ED5131CC5A29D00059B20 /* UIView+AdjustFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustFrame.h"; sourceTree = "<group>"; };
 		BC6ED5141CC5A29D00059B20 /* UIView+AdjustFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustFrame.m"; sourceTree = "<group>"; };
 		BC6ED51E1CC5A2AD00059B20 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -970,6 +974,10 @@
 				BCCD66BC1CCAD8C900AF4D52 /* HotGameDetail.h */,
 				BCCD66BD1CCAD8C900AF4D52 /* HotGameDetail.m */,
 				BCCD66BE1CCAD8C900AF4D52 /* HotGameDetail.xib */,
+				06A65C1D2268563600CB8C60 /* YPhotoViewController.h */,
+				06A65C1E2268563600CB8C60 /* YPhotoViewController.m */,
+				06A65C23226869A400CB8C60 /* YPhotoCommentViewController.h */,
+				06A65C24226869A400CB8C60 /* YPhotoCommentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -998,6 +1006,15 @@
 		BCAC9DE31CC53F9F00315007 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06A65C27226870D800CB8C60 /* TCHorizontalScrollViewTool.h */,
+				06A65C26226870D800CB8C60 /* TCHorizontalScrollViewTool.m */,
+				06A65C2B2268711100CB8C60 /* TCHorizontalScrollview.h */,
+				06A65C292268711100CB8C60 /* TCHorizontalScrollview.m */,
+				06A65C2A2268711100CB8C60 /* TCHorizontalScrollview.xib */,
+				06A65C2F2268712200CB8C60 /* TCImageDownloadView.h */,
+				06A65C2E2268712100CB8C60 /* TCImageDownloadView.m */,
+				06A65C20226857A600CB8C60 /* YPhotoTableViewCell.h */,
+				06A65C21226857A600CB8C60 /* YPhotoTableViewCell.m */,
 				BC3AAB471CC6F9E1006C0E3C /* GameCollectionViewCell.h */,
 				BC3AAB481CC6F9E1006C0E3C /* GameCollectionViewCell.m */,
 				BC3AAB491CC6F9E1006C0E3C /* GameCollectionViewCell.xib */,
@@ -1146,22 +1163,14 @@
 			isa = PBXGroup;
 			children = (
 				1F52B3AD223F86AE004B2D56 /* 隐私权政策.html */,
-				067229BA2255EA21008BB5B6 /* 中国足球.png */,
-				067229B82255E910008BB5B6 /* 篮球.png */,
-				067229B42255E76C008BB5B6 /* 世界杯.png */,
+				06A65C332268839400CB8C60 /* 篮球.jpg */,
+				06A65C322268839400CB8C60 /* 世界杯.jpg */,
+				06A65C312268839300CB8C60 /* 中国足球.jpg */,
 				063B1F771CE0884A00BF7AC8 /* share.jpg */,
 				BCD2B1061CCF016D00C92545 /* backImg.jpg */,
 				BC3AAB531CC7341C006C0E3C /* selected2.png */,
 				BC3AAB511CC73110006C0E3C /* selected.png */,
 				BC3AAB421CC6ED09006C0E3C /* nodata_wait.png */,
-				BC6ED4C21CC5A22500059B20 /* home_myhome_b@2x.png */,
-				BC6ED4C31CC5A22500059B20 /* home_news_a@2x.png */,
-				BC6ED4C41CC5A22500059B20 /* home_guess_b@2x.png */,
-				BC6ED4C51CC5A22500059B20 /* home_news_b@2x.png */,
-				BC6ED4C61CC5A22500059B20 /* home_myhome_a@2x.png */,
-				BC6ED4C71CC5A22500059B20 /* home_game_a@2x.png */,
-				BC6ED4C81CC5A22500059B20 /* home_game_b@2x.png */,
-				BC6ED4C91CC5A22500059B20 /* home_guess_a@2x.png */,
 				BCCD66C11CCAEA7300AF4D52 /* leftUp.png */,
 				BCCD66C31CCAEA7700AF4D52 /* rightUp.png */,
 				BC1B802E1CCB1913007ED61C /* h_good.png */,
@@ -1273,29 +1282,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6ED4D11CC5A22500059B20 /* home_guess_a@2x.png in Resources */,
 				BCD2B1051CCEFAA000C92545 /* MineTableViewCell.xib in Resources */,
 				BCD2B1121CCF079800C92545 /* pengyou.png in Resources */,
-				067229B52255E76C008BB5B6 /* 世界杯.png in Resources */,
-				BC6ED4CC1CC5A22500059B20 /* home_guess_b@2x.png in Resources */,
 				BC3DCEC01CC8844000CE9DB8 /* RedYellowModelTableViewCell.xib in Resources */,
 				BC3AAB541CC7341C006C0E3C /* selected2.png in Resources */,
+				06A65C362268839400CB8C60 /* 篮球.jpg in Resources */,
 				BCD2B1071CCF016D00C92545 /* backImg.jpg in Resources */,
 				BC3DCEB51CC85DC800CE9DB8 /* FootBallTableViewCell.xib in Resources */,
 				BCCD66C01CCAD8C900AF4D52 /* HotGameDetail.xib in Resources */,
+				06A65C352268839400CB8C60 /* 世界杯.jpg in Resources */,
 				BC6371841CCC3AB000D740E5 /* NBA.jpg in Resources */,
 				0695B904223B84D3002AE010 /* CommentDetailVC.xib in Resources */,
 				BC6ED5E61CC5E40300059B20 /* MJRefresh.bundle in Resources */,
 				BC651BED1CCFEC8C00B4A912 /* Images.xcassets in Resources */,
-				BC6ED4CD1CC5A22500059B20 /* home_news_b@2x.png in Resources */,
 				0695B90F223B8926002AE010 /* kefu.png in Resources */,
-				BC6ED4D01CC5A22500059B20 /* home_game_b@2x.png in Resources */,
 				0695B909223B84D3002AE010 /* BCell.xib in Resources */,
 				063B1F781CE0884A00BF7AC8 /* share.jpg in Resources */,
 				0695B90C223B84D3002AE010 /* CommentACell.xib in Resources */,
 				BC1B806B1CCB2723007ED61C /* GameSenceCell.xib in Resources */,
 				BC3AAB591CC736BC006C0E3C /* GameDetailCell.xib in Resources */,
-				BC6ED4CE1CC5A22500059B20 /* home_myhome_a@2x.png in Resources */,
 				BC892C3A1CD16C4600354A8D /* MyFavoriteCell.xib in Resources */,
 				BC3AAB4B1CC6F9E1006C0E3C /* GameCollectionViewCell.xib in Resources */,
 				BCD2B10E1CCF079800C92545 /* tiezi.png in Resources */,
@@ -1305,6 +1310,7 @@
 				BC6371831CCC3AB000D740E5 /* FootBall.jpg in Resources */,
 				1F52B3AE223F86AE004B2D56 /* 隐私权政策.html in Resources */,
 				BC6371851CCC3AB000D740E5 /* chinaFoot.jpeg in Resources */,
+				06A65C2D2268711100CB8C60 /* TCHorizontalScrollview.xib in Resources */,
 				BC6371861CCC3AB000D740E5 /* china.png in Resources */,
 				0695B902223B84D3002AE010 /* DetailVC.xib in Resources */,
 				BC6371751CCC2CD200D740E5 /* ChinaFootBall.jpg in Resources */,
@@ -1313,9 +1319,6 @@
 				BCC418A21CD05B280006AF0F /* LoginViewController.xib in Resources */,
 				BCCD66C41CCAEA7700AF4D52 /* rightUp.png in Resources */,
 				BC1B802D1CCB0EE0007ED61C /* TalkCell.xib in Resources */,
-				067229BB2255EA21008BB5B6 /* 中国足球.png in Resources */,
-				BC6ED4CF1CC5A22500059B20 /* home_game_a@2x.png in Resources */,
-				BC6ED4CB1CC5A22500059B20 /* home_news_a@2x.png in Resources */,
 				0695B8E3223B82FF002AE010 /* search2.png in Resources */,
 				BC3DCEAD1CC842DC00CE9DB8 /* GameWebTableViewCell.xib in Resources */,
 				BCC418A71CD05EFE0006AF0F /* RegisteViewController.xib in Resources */,
@@ -1323,14 +1326,13 @@
 				BC2D4B2A1CCBDFF600A7F903 /* FootSenceTableViewCell.xib in Resources */,
 				BCD2B10F1CCF079800C92545 /* gengxin.png in Resources */,
 				BCCD66C21CCAEA7300AF4D52 /* leftUp.png in Resources */,
-				067229B92255E910008BB5B6 /* 篮球.png in Resources */,
 				0695B90B223B84D3002AE010 /* MainCell.xib in Resources */,
 				BC6ED5A51CC5CD9B00059B20 /* YCHThreeTableViewCell.xib in Resources */,
 				068D3E1A2241E4AD0045463A /* TCSendTextView.xib in Resources */,
 				BC1B802F1CCB1913007ED61C /* h_good.png in Resources */,
+				06A65C342268839400CB8C60 /* 中国足球.jpg in Resources */,
 				BC6371761CCC2CD200D740E5 /* FootBallLogo.jpg in Resources */,
 				BC3AAB431CC6ED09006C0E3C /* nodata_wait.png in Resources */,
-				BC6ED4CA1CC5A22500059B20 /* home_myhome_b@2x.png in Resources */,
 				BC6ED5211CC5A2AD00059B20 /* SVProgressHUD.bundle in Resources */,
 				BCC418991CD0568B0006AF0F /* tableBack.jpg in Resources */,
 			);
@@ -1371,10 +1373,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Product-PEWindow/Pods-Product-PEWindow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1402,6 +1406,7 @@
 				BC6ED5491CC5A2C200059B20 /* UIButton+WebCache.m in Sources */,
 				BC3B51201CCF1A960081D7D4 /* FMResultSet.m in Sources */,
 				BC6ED5E41CC5E40300059B20 /* MJRefreshNormalHeader.m in Sources */,
+				06A65C302268712200CB8C60 /* TCImageDownloadView.m in Sources */,
 				BC6ED5471CC5A2C200059B20 /* SDWebImageManager.m in Sources */,
 				BC6ED5E51CC5E40300059B20 /* MJRefreshStateHeader.m in Sources */,
 				BC6ED5E81CC5E40300059B20 /* UIScrollView+MJExtension.m in Sources */,
@@ -1417,6 +1422,7 @@
 				BC3DCEB81CC8723100CE9DB8 /* FootBallModel.m in Sources */,
 				BC892C391CD16C4600354A8D /* MyFavoriteCell.m in Sources */,
 				BC3AAB4A1CC6F9E1006C0E3C /* GameCollectionViewCell.m in Sources */,
+				06A65C25226869A400CB8C60 /* YPhotoCommentViewController.m in Sources */,
 				BCCFBB2A1CC97AF200E79D4A /* GameBaseViewController.m in Sources */,
 				BC6ED5DA1CC5E40300059B20 /* MJRefreshComponent.m in Sources */,
 				BC6ED5431CC5A2C200059B20 /* SDWebImageCompat.m in Sources */,
@@ -1467,6 +1473,7 @@
 				BC6ED58A1CC5A69900059B20 /* AFHTTPSessionManager.m in Sources */,
 				068D3E212241EB760045463A /* UIView+Additions.m in Sources */,
 				BCCFBB301CC9841200E79D4A /* GameHotModel.m in Sources */,
+				06A65C22226857A600CB8C60 /* YPhotoTableViewCell.m in Sources */,
 				BCD2B1161CCF094600C92545 /* MainDetailVC.m in Sources */,
 				BC6ED5E91CC5E40300059B20 /* UIScrollView+MJRefresh.m in Sources */,
 				BC6ED59F1CC5C62700059B20 /* YCHTwoTableViewCell.m in Sources */,
@@ -1487,12 +1494,15 @@
 				BC6ED5961CC5A69900059B20 /* UIProgressView+AFNetworking.m in Sources */,
 				BC6ED5F01CC5E44100059B20 /* NSObject+YYModel.m in Sources */,
 				BC6ED5E71CC5E40300059B20 /* MJRefreshConst.m in Sources */,
+				06A65C28226870D800CB8C60 /* TCHorizontalScrollViewTool.m in Sources */,
 				BC6ED5511CC5A2EE00059B20 /* YCHNetworking.m in Sources */,
 				06366EB9224E096600B02D12 /* ADScrollView.m in Sources */,
 				BC6ED5441CC5A2C200059B20 /* SDWebImageDecoder.m in Sources */,
+				06A65C1F2268563600CB8C60 /* YPhotoViewController.m in Sources */,
 				BC6ED5E31CC5E40300059B20 /* MJRefreshGifHeader.m in Sources */,
 				BC6ED5DC1CC5E40300059B20 /* MJRefreshHeader.m in Sources */,
 				BC3AAB581CC736BC006C0E3C /* GameDetailCell.m in Sources */,
+				06A65C2C2268711100CB8C60 /* TCHorizontalScrollview.m in Sources */,
 				BCCD66BF1CCAD8C900AF4D52 /* HotGameDetail.m in Sources */,
 				BC3DCEB41CC85DC800CE9DB8 /* FootBallTableViewCell.m in Sources */,
 				0695B90D223B84D3002AE010 /* CommentACell.m in Sources */,

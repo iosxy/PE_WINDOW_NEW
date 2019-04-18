@@ -110,7 +110,7 @@
     single.numberOfTapsRequired = 1;
     [self.adSC addGestureRecognizer:single];
     [self loadScrollData];
-    [self.adSC loadDataWithArray:@[@"NBA.jpg", @"世界杯.png", @"篮球.png", @"中国足球.png"]];
+    [self.adSC loadDataWithArray:@[@"NBA.jpg", @"世界杯.jpg", @"篮球.jpg", @"中国足球.jpg"]];
     _tableView.tableHeaderView = sc;
     
     

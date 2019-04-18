@@ -64,7 +64,6 @@
         [SVProgressHUD showSuccessWithStatus:@"加载成功"];
     }];
     
-    
 }
 - (void)loadMoreData{
     NSString * lastId = [self.dataSource lastObject][@"pid"];

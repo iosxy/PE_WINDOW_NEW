@@ -282,7 +282,9 @@
     NSData * data = [GTMBase64 decodeString:model.content];
     NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     cell.content.text = str;
-        return cell;}
+        return cell;
+        
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
