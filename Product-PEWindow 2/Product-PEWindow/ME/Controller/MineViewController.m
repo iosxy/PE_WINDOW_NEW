@@ -92,8 +92,13 @@
 
 - (void)buildUI
 {
+    
+    
+    
     CGFloat height = [UIApplication sharedApplication].statusBarFrame.size.height + 44 ;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, height, SCREEN_WIDTH, SCREEN_HEIGHT - height) style:UITableViewStyleGrouped];
     
     //去除间隔线
