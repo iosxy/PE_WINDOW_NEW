@@ -98,8 +98,8 @@
     button.clipsToBounds = YES;
     
     [button setTitle:@"清空缓存" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    [button setTitleColor:RGB(0x333333) forState:UIControlStateNormal];
+    [button setTitleColor:RGB(0x999999) forState:UIControlStateHighlighted];
     button.backgroundColor = RGB(0xf6f6f6);
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     _sizeLabel = [[UILabel alloc]init];
@@ -107,7 +107,7 @@
    
     _sizeLabel.text = [NSString stringWithFormat:@"%0.2fM",[self folderSizeAtPath:[NSString stringWithFormat:@"%@/Library/Caches/default",NSHomeDirectory()]]];
     NSLog(@"%@",NSHomeDirectory());
-    _sizeLabel.textColor = [UIColor blackColor];
+    _sizeLabel.textColor = RGB(0x333333);
     _sizeLabel.backgroundColor = RGB(0xf6f6f6);
     _sizeLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_sizeLabel];
