@@ -10,4 +10,6 @@
 
 @interface YCHNetworking : NSObject
 + (void)startRequestFromUrl:(NSString *)url andParamter:(NSDictionary * )paramter returnData:(void (^)(NSData * data,NSError * error))returnBlock;
++ (void)postStartRequestFromUrl:(NSString *)url andParamter:(NSDictionary * )paramter returnData:(void (^)(NSData * data,NSError * error))returnBlock;
+
 @end

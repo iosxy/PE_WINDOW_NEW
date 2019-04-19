@@ -50,7 +50,7 @@
     
 }
 - (void)setupDefaultAppearance{
-    self.contentMode = UIViewContentModeScaleAspectFill;
+    self.contentMode = UIViewContentModeScaleAspectFit;
     self.clipsToBounds = YES;
 }
 

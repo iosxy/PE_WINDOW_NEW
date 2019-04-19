@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063B213F2269AC2E00F3EDFB /* chargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21222269AC2D00F3EDFB /* chargeVC.m */; };
+		063B21402269AC2E00F3EDFB /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21252269AC2D00F3EDFB /* UIView+ViewController.m */; };
+		063B21412269AC2E00F3EDFB /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21262269AC2D00F3EDFB /* NinaPagerView.m */; };
+		063B21422269AC2E00F3EDFB /* NinaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21272269AC2D00F3EDFB /* NinaBaseView.m */; };
+		063B21432269AC2E00F3EDFB /* DataCel1l.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B212D2269AC2E00F3EDFB /* DataCel1l.m */; };
+		063B21442269AC2E00F3EDFB /* EditSignatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21302269AC2E00F3EDFB /* EditSignatureVC.m */; };
+		063B21452269AC2E00F3EDFB /* MineTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21312269AC2E00F3EDFB /* MineTableViewCell2.m */; };
+		063B21462269AC2E00F3EDFB /* MineTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B21322269AC2E00F3EDFB /* MineTableViewCell1.xib */; };
+		063B21472269AC2E00F3EDFB /* ChangeNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21332269AC2E00F3EDFB /* ChangeNameVC.m */; };
+		063B21482269AC2E00F3EDFB /* MineTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B21342269AC2E00F3EDFB /* MineTableViewCell2.xib */; };
+		063B21492269AC2E00F3EDFB /* MineTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21352269AC2E00F3EDFB /* MineTableViewCell1.m */; };
+		063B214A2269AC2E00F3EDFB /* EditDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21362269AC2E00F3EDFB /* EditDataVC.m */; };
+		063B214B2269AC2E00F3EDFB /* UploadHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21372269AC2E00F3EDFB /* UploadHeaderCell.m */; };
+		063B214C2269AC2E00F3EDFB /* DataCel1l.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B21392269AC2E00F3EDFB /* DataCel1l.xib */; };
+		063B214D2269AC2E00F3EDFB /* UploadHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B213A2269AC2E00F3EDFB /* UploadHeaderCell.xib */; };
 		06811F1C22672FBE00E857E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F1B22672FBE00E857E2 /* AppDelegate.m */; };
 		06811F2222672FBE00E857E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06811F2022672FBE00E857E2 /* Main.storyboard */; };
 		06811F2422672FC000E857E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06811F2322672FC000E857E2 /* Assets.xcassets */; };
@@ -29,25 +44,37 @@
 		06811F682267325300E857E2 /* YLGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F542267325300E857E2 /* YLGIFImage.m */; };
 		06811F692267325300E857E2 /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F552267325300E857E2 /* YLImageView.m */; };
 		06811F6A2267325300E857E2 /* YCHNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F582267325300E857E2 /* YCHNetworking.m */; };
-		06811F892267326600E857E2 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F6C2267326500E857E2 /* UIView+ViewController.m */; };
-		06811F8A2267326600E857E2 /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F6D2267326500E857E2 /* NinaPagerView.m */; };
-		06811F8B2267326600E857E2 /* NinaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F6E2267326500E857E2 /* NinaBaseView.m */; };
-		06811F8C2267326600E857E2 /* DataCel1l.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F742267326600E857E2 /* DataCel1l.m */; };
-		06811F8D2267326600E857E2 /* EditSignatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F772267326600E857E2 /* EditSignatureVC.m */; };
-		06811F8E2267326600E857E2 /* MineTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F782267326600E857E2 /* MineTableViewCell2.m */; };
-		06811F8F2267326600E857E2 /* MineTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06811F792267326600E857E2 /* MineTableViewCell1.xib */; };
-		06811F902267326600E857E2 /* ChangeNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F7A2267326600E857E2 /* ChangeNameVC.m */; };
-		06811F912267326600E857E2 /* MineTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06811F7B2267326600E857E2 /* MineTableViewCell2.xib */; };
-		06811F922267326600E857E2 /* MineTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F7C2267326600E857E2 /* MineTableViewCell1.m */; };
-		06811F932267326600E857E2 /* EditDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F7D2267326600E857E2 /* EditDataVC.m */; };
-		06811F942267326600E857E2 /* UploadHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F7E2267326600E857E2 /* UploadHeaderCell.m */; };
-		06811F952267326600E857E2 /* DataCel1l.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06811F802267326600E857E2 /* DataCel1l.xib */; };
-		06811F962267326600E857E2 /* UploadHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06811F812267326600E857E2 /* UploadHeaderCell.xib */; };
-		06811F972267326600E857E2 /* chargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F872267326600E857E2 /* chargeVC.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		063B21222269AC2D00F3EDFB /* chargeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chargeVC.m; sourceTree = "<group>"; };
+		063B21232269AC2D00F3EDFB /* chargeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chargeVC.h; sourceTree = "<group>"; };
+		063B21252269AC2D00F3EDFB /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		063B21262269AC2D00F3EDFB /* NinaPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaPagerView.m; sourceTree = "<group>"; };
+		063B21272269AC2D00F3EDFB /* NinaBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaBaseView.m; sourceTree = "<group>"; };
+		063B21282269AC2D00F3EDFB /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		063B21292269AC2D00F3EDFB /* NinaPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaPagerView.h; sourceTree = "<group>"; };
+		063B212A2269AC2D00F3EDFB /* UIParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIParameter.h; sourceTree = "<group>"; };
+		063B212B2269AC2D00F3EDFB /* NinaBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaBaseView.h; sourceTree = "<group>"; };
+		063B212D2269AC2E00F3EDFB /* DataCel1l.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCel1l.m; sourceTree = "<group>"; };
+		063B212E2269AC2E00F3EDFB /* UploadHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadHeaderCell.h; sourceTree = "<group>"; };
+		063B212F2269AC2E00F3EDFB /* EditDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDataVC.h; sourceTree = "<group>"; };
+		063B21302269AC2E00F3EDFB /* EditSignatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSignatureVC.m; sourceTree = "<group>"; };
+		063B21312269AC2E00F3EDFB /* MineTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell2.m; sourceTree = "<group>"; };
+		063B21322269AC2E00F3EDFB /* MineTableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell1.xib; sourceTree = "<group>"; };
+		063B21332269AC2E00F3EDFB /* ChangeNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeNameVC.m; sourceTree = "<group>"; };
+		063B21342269AC2E00F3EDFB /* MineTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell2.xib; sourceTree = "<group>"; };
+		063B21352269AC2E00F3EDFB /* MineTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell1.m; sourceTree = "<group>"; };
+		063B21362269AC2E00F3EDFB /* EditDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDataVC.m; sourceTree = "<group>"; };
+		063B21372269AC2E00F3EDFB /* UploadHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadHeaderCell.m; sourceTree = "<group>"; };
+		063B21382269AC2E00F3EDFB /* DataCel1l.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCel1l.h; sourceTree = "<group>"; };
+		063B21392269AC2E00F3EDFB /* DataCel1l.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataCel1l.xib; sourceTree = "<group>"; };
+		063B213A2269AC2E00F3EDFB /* UploadHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadHeaderCell.xib; sourceTree = "<group>"; };
+		063B213B2269AC2E00F3EDFB /* MineTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell2.h; sourceTree = "<group>"; };
+		063B213C2269AC2E00F3EDFB /* EditSignatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSignatureVC.h; sourceTree = "<group>"; };
+		063B213D2269AC2E00F3EDFB /* ChangeNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeNameVC.h; sourceTree = "<group>"; };
+		063B213E2269AC2E00F3EDFB /* MineTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell1.h; sourceTree = "<group>"; };
 		06811F1722672FBE00E857E2 /* NewsSpecial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsSpecial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06811F1A22672FBE00E857E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06811F1B22672FBE00E857E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,33 +116,6 @@
 		06811F562267325300E857E2 /* YLGIFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLGIFImage.h; sourceTree = "<group>"; };
 		06811F572267325300E857E2 /* YLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageView.h; sourceTree = "<group>"; };
 		06811F582267325300E857E2 /* YCHNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHNetworking.m; sourceTree = "<group>"; };
-		06811F6C2267326500E857E2 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
-		06811F6D2267326500E857E2 /* NinaPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaPagerView.m; sourceTree = "<group>"; };
-		06811F6E2267326500E857E2 /* NinaBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaBaseView.m; sourceTree = "<group>"; };
-		06811F6F2267326500E857E2 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
-		06811F702267326500E857E2 /* NinaPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaPagerView.h; sourceTree = "<group>"; };
-		06811F712267326500E857E2 /* UIParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIParameter.h; sourceTree = "<group>"; };
-		06811F722267326500E857E2 /* NinaBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaBaseView.h; sourceTree = "<group>"; };
-		06811F742267326600E857E2 /* DataCel1l.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCel1l.m; sourceTree = "<group>"; };
-		06811F752267326600E857E2 /* UploadHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadHeaderCell.h; sourceTree = "<group>"; };
-		06811F762267326600E857E2 /* EditDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDataVC.h; sourceTree = "<group>"; };
-		06811F772267326600E857E2 /* EditSignatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSignatureVC.m; sourceTree = "<group>"; };
-		06811F782267326600E857E2 /* MineTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell2.m; sourceTree = "<group>"; };
-		06811F792267326600E857E2 /* MineTableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell1.xib; sourceTree = "<group>"; };
-		06811F7A2267326600E857E2 /* ChangeNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeNameVC.m; sourceTree = "<group>"; };
-		06811F7B2267326600E857E2 /* MineTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTableViewCell2.xib; sourceTree = "<group>"; };
-		06811F7C2267326600E857E2 /* MineTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell1.m; sourceTree = "<group>"; };
-		06811F7D2267326600E857E2 /* EditDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDataVC.m; sourceTree = "<group>"; };
-		06811F7E2267326600E857E2 /* UploadHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadHeaderCell.m; sourceTree = "<group>"; };
-		06811F7F2267326600E857E2 /* DataCel1l.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCel1l.h; sourceTree = "<group>"; };
-		06811F802267326600E857E2 /* DataCel1l.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataCel1l.xib; sourceTree = "<group>"; };
-		06811F812267326600E857E2 /* UploadHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadHeaderCell.xib; sourceTree = "<group>"; };
-		06811F822267326600E857E2 /* MineTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell2.h; sourceTree = "<group>"; };
-		06811F832267326600E857E2 /* EditSignatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSignatureVC.h; sourceTree = "<group>"; };
-		06811F842267326600E857E2 /* ChangeNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeNameVC.h; sourceTree = "<group>"; };
-		06811F852267326600E857E2 /* MineTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell1.h; sourceTree = "<group>"; };
-		06811F872267326600E857E2 /* chargeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chargeVC.m; sourceTree = "<group>"; };
-		06811F882267326600E857E2 /* chargeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chargeVC.h; sourceTree = "<group>"; };
 		06811F982267329A00E857E2 /* News.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.pch; sourceTree = "<group>"; };
 		A23B081A4EC4593C81526C36 /* Pods-NewsSpecial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsSpecial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsSpecial/Pods-NewsSpecial.debug.xcconfig"; sourceTree = "<group>"; };
 		AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsSpecial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +134,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063B21212269AC2D00F3EDFB /* recharge */ = {
+			isa = PBXGroup;
+			children = (
+				063B21222269AC2D00F3EDFB /* chargeVC.m */,
+				063B21232269AC2D00F3EDFB /* chargeVC.h */,
+			);
+			path = recharge;
+			sourceTree = "<group>";
+		};
+		063B21242269AC2D00F3EDFB /* NinaPagerView */ = {
+			isa = PBXGroup;
+			children = (
+				063B21252269AC2D00F3EDFB /* UIView+ViewController.m */,
+				063B21262269AC2D00F3EDFB /* NinaPagerView.m */,
+				063B21272269AC2D00F3EDFB /* NinaBaseView.m */,
+				063B21282269AC2D00F3EDFB /* UIView+ViewController.h */,
+				063B21292269AC2D00F3EDFB /* NinaPagerView.h */,
+				063B212A2269AC2D00F3EDFB /* UIParameter.h */,
+				063B212B2269AC2D00F3EDFB /* NinaBaseView.h */,
+			);
+			path = NinaPagerView;
+			sourceTree = "<group>";
+		};
+		063B212C2269AC2E00F3EDFB /* personInformation */ = {
+			isa = PBXGroup;
+			children = (
+				063B212D2269AC2E00F3EDFB /* DataCel1l.m */,
+				063B212E2269AC2E00F3EDFB /* UploadHeaderCell.h */,
+				063B212F2269AC2E00F3EDFB /* EditDataVC.h */,
+				063B21302269AC2E00F3EDFB /* EditSignatureVC.m */,
+				063B21312269AC2E00F3EDFB /* MineTableViewCell2.m */,
+				063B21322269AC2E00F3EDFB /* MineTableViewCell1.xib */,
+				063B21332269AC2E00F3EDFB /* ChangeNameVC.m */,
+				063B21342269AC2E00F3EDFB /* MineTableViewCell2.xib */,
+				063B21352269AC2E00F3EDFB /* MineTableViewCell1.m */,
+				063B21362269AC2E00F3EDFB /* EditDataVC.m */,
+				063B21372269AC2E00F3EDFB /* UploadHeaderCell.m */,
+				063B21382269AC2E00F3EDFB /* DataCel1l.h */,
+				063B21392269AC2E00F3EDFB /* DataCel1l.xib */,
+				063B213A2269AC2E00F3EDFB /* UploadHeaderCell.xib */,
+				063B213B2269AC2E00F3EDFB /* MineTableViewCell2.h */,
+				063B213C2269AC2E00F3EDFB /* EditSignatureVC.h */,
+				063B213D2269AC2E00F3EDFB /* ChangeNameVC.h */,
+				063B213E2269AC2E00F3EDFB /* MineTableViewCell1.h */,
+			);
+			path = personInformation;
+			sourceTree = "<group>";
+		};
 		06811F0E22672FBE00E857E2 = {
 			isa = PBXGroup;
 			children = (
@@ -155,10 +203,10 @@
 		06811F1922672FBE00E857E2 /* NewsSpecial */ = {
 			isa = PBXGroup;
 			children = (
+				063B21242269AC2D00F3EDFB /* NinaPagerView */,
+				063B212C2269AC2E00F3EDFB /* personInformation */,
+				063B21212269AC2D00F3EDFB /* recharge */,
 				06811F982267329A00E857E2 /* News.pch */,
-				06811F6B2267326500E857E2 /* NinaPagerView */,
-				06811F862267326600E857E2 /* recharge */,
-				06811F732267326600E857E2 /* personInformation */,
 				06811F1A22672FBE00E857E2 /* AppDelegate.h */,
 				06811F1B22672FBE00E857E2 /* AppDelegate.m */,
 				06811F332267324F00E857E2 /* CartViewController.h */,
@@ -225,57 +273,6 @@
 				06811F572267325300E857E2 /* YLImageView.h */,
 			);
 			path = YLGIFImage;
-			sourceTree = "<group>";
-		};
-		06811F6B2267326500E857E2 /* NinaPagerView */ = {
-			isa = PBXGroup;
-			children = (
-				06811F6C2267326500E857E2 /* UIView+ViewController.m */,
-				06811F6D2267326500E857E2 /* NinaPagerView.m */,
-				06811F6E2267326500E857E2 /* NinaBaseView.m */,
-				06811F6F2267326500E857E2 /* UIView+ViewController.h */,
-				06811F702267326500E857E2 /* NinaPagerView.h */,
-				06811F712267326500E857E2 /* UIParameter.h */,
-				06811F722267326500E857E2 /* NinaBaseView.h */,
-			);
-			name = NinaPagerView;
-			path = ../../weiliao/weiliao/NinaPagerView;
-			sourceTree = "<group>";
-		};
-		06811F732267326600E857E2 /* personInformation */ = {
-			isa = PBXGroup;
-			children = (
-				06811F742267326600E857E2 /* DataCel1l.m */,
-				06811F752267326600E857E2 /* UploadHeaderCell.h */,
-				06811F762267326600E857E2 /* EditDataVC.h */,
-				06811F772267326600E857E2 /* EditSignatureVC.m */,
-				06811F782267326600E857E2 /* MineTableViewCell2.m */,
-				06811F792267326600E857E2 /* MineTableViewCell1.xib */,
-				06811F7A2267326600E857E2 /* ChangeNameVC.m */,
-				06811F7B2267326600E857E2 /* MineTableViewCell2.xib */,
-				06811F7C2267326600E857E2 /* MineTableViewCell1.m */,
-				06811F7D2267326600E857E2 /* EditDataVC.m */,
-				06811F7E2267326600E857E2 /* UploadHeaderCell.m */,
-				06811F7F2267326600E857E2 /* DataCel1l.h */,
-				06811F802267326600E857E2 /* DataCel1l.xib */,
-				06811F812267326600E857E2 /* UploadHeaderCell.xib */,
-				06811F822267326600E857E2 /* MineTableViewCell2.h */,
-				06811F832267326600E857E2 /* EditSignatureVC.h */,
-				06811F842267326600E857E2 /* ChangeNameVC.h */,
-				06811F852267326600E857E2 /* MineTableViewCell1.h */,
-			);
-			name = personInformation;
-			path = ../../weiliao/weiliao/personInformation;
-			sourceTree = "<group>";
-		};
-		06811F862267326600E857E2 /* recharge */ = {
-			isa = PBXGroup;
-			children = (
-				06811F872267326600E857E2 /* chargeVC.m */,
-				06811F882267326600E857E2 /* chargeVC.h */,
-			);
-			name = recharge;
-			path = ../../weiliao/weiliao/recharge;
 			sourceTree = "<group>";
 		};
 		3088970076661D2330C5335F /* Frameworks */ = {
@@ -354,13 +351,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06811F8F2267326600E857E2 /* MineTableViewCell1.xib in Resources */,
-				06811F952267326600E857E2 /* DataCel1l.xib in Resources */,
+				063B21462269AC2E00F3EDFB /* MineTableViewCell1.xib in Resources */,
+				063B214C2269AC2E00F3EDFB /* DataCel1l.xib in Resources */,
 				06811F2722672FC000E857E2 /* LaunchScreen.storyboard in Resources */,
 				06811F2422672FC000E857E2 /* Assets.xcassets in Resources */,
 				06811F2222672FBE00E857E2 /* Main.storyboard in Resources */,
-				06811F962267326600E857E2 /* UploadHeaderCell.xib in Resources */,
-				06811F912267326600E857E2 /* MineTableViewCell2.xib in Resources */,
+				063B214D2269AC2E00F3EDFB /* UploadHeaderCell.xib in Resources */,
+				063B21482269AC2E00F3EDFB /* MineTableViewCell2.xib in Resources */,
 				06811F632267325300E857E2 /* sdRefeshView_arrow@2x.png in Resources */,
 				06811F672267325300E857E2 /* 下拉刷新动态.gif in Resources */,
 			);
@@ -420,33 +417,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063B21442269AC2E00F3EDFB /* EditSignatureVC.m in Sources */,
 				06811F5D2267325300E857E2 /* UIView+Additions.m in Sources */,
-				06811F902267326600E857E2 /* ChangeNameVC.m in Sources */,
-				06811F8B2267326600E857E2 /* NinaBaseView.m in Sources */,
 				06811F622267325300E857E2 /* SDRefreshHeaderView.m in Sources */,
+				063B214B2269AC2E00F3EDFB /* UploadHeaderCell.m in Sources */,
+				063B21402269AC2E00F3EDFB /* UIView+ViewController.m in Sources */,
 				06811F5F2267325300E857E2 /* ClassViewController.m in Sources */,
+				063B21452269AC2E00F3EDFB /* MineTableViewCell2.m in Sources */,
 				06811F5E2267325300E857E2 /* FirstViewController.m in Sources */,
-				06811F8D2267326600E857E2 /* EditSignatureVC.m in Sources */,
 				06811F6A2267325300E857E2 /* YCHNetworking.m in Sources */,
-				06811F942267326600E857E2 /* UploadHeaderCell.m in Sources */,
 				06811F5B2267325300E857E2 /* UIView+MBProgressHUD.m in Sources */,
-				06811F972267326600E857E2 /* chargeVC.m in Sources */,
+				063B21422269AC2E00F3EDFB /* NinaBaseView.m in Sources */,
 				06811F612267325300E857E2 /* CartViewController.m in Sources */,
 				06811F692267325300E857E2 /* YLImageView.m in Sources */,
-				06811F932267326600E857E2 /* EditDataVC.m in Sources */,
 				06811F682267325300E857E2 /* YLGIFImage.m in Sources */,
+				063B214A2269AC2E00F3EDFB /* EditDataVC.m in Sources */,
+				063B21472269AC2E00F3EDFB /* ChangeNameVC.m in Sources */,
+				063B21412269AC2E00F3EDFB /* NinaPagerView.m in Sources */,
 				06811F642267325300E857E2 /* UIView+SDExtension.m in Sources */,
+				063B21492269AC2E00F3EDFB /* MineTableViewCell1.m in Sources */,
 				06811F2A22672FC000E857E2 /* main.m in Sources */,
 				06811F652267325300E857E2 /* SDRefreshFooterView.m in Sources */,
-				06811F8C2267326600E857E2 /* DataCel1l.m in Sources */,
-				06811F892267326600E857E2 /* UIView+ViewController.m in Sources */,
 				06811F5A2267325300E857E2 /* MineViewController.m in Sources */,
 				06811F662267325300E857E2 /* SDRefreshView.m in Sources */,
+				063B21432269AC2E00F3EDFB /* DataCel1l.m in Sources */,
 				06811F602267325300E857E2 /* YBaseViewController.m in Sources */,
-				06811F8E2267326600E857E2 /* MineTableViewCell2.m in Sources */,
-				06811F8A2267326600E857E2 /* NinaPagerView.m in Sources */,
-				06811F922267326600E857E2 /* MineTableViewCell1.m in Sources */,
 				06811F592267325300E857E2 /* YXYTabbarController.m in Sources */,
+				063B213F2269AC2E00F3EDFB /* chargeVC.m in Sources */,
 				06811F1C22672FBE00E857E2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

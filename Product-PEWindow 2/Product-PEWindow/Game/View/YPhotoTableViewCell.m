@@ -35,7 +35,8 @@
     
     UIImageView * imageView = [[UIImageView alloc]init];
     _contentImage = imageView;
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.layer.masksToBounds = YES;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
     [bjView addSubview:imageView];
 
     UILabel * titleLabel = [[UILabel alloc]init];

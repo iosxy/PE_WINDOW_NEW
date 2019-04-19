@@ -21,7 +21,7 @@
 }
 
 - (instancetype)init{
-    return [self initWithImageViewSize:CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH)];
+    return [self initWithImageViewSize:CGSizeMake(SCREEN_WIDTH, 230)];
 }
 
 - (void)removeAllImagesM{
@@ -52,7 +52,7 @@
         
         TCImageDownloadView *imageView = [[TCImageDownloadView alloc]init];
         
-        CGRect frame = CGRectMake(idx * size.width, 0, size.width, size.width);
+        CGRect frame = CGRectMake(idx * size.width, 0, size.width, size.height);
         [imageView setFrame:frame];
         [self.horizontalScrollView.scrollView addSubview:imageView];
         [imageView setHiddenHUDImageUrl:obj];

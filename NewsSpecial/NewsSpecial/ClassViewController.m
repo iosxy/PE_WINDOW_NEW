@@ -8,10 +8,10 @@
 
 #import "ClassViewController.h"
 
-#define YNEWS_RUL @"http://u1.tiyufeng.com/section/content_list?portalId=15&start=%d&id=351&limit=20&clientToken=7c98ddd1d8cb729bf66791a192b43748"
+#define YNEWS_RUL @"http://ywapp.hryouxi.com/yuwanapi/app/listEveryDayStarNews"
 @interface ClassViewController ()
 /** 当前新闻*/
-@property(nonatomic,assign)int currentNew;
+@property(nonatomic,assign)NSString * currentNew;
 @end
 
 @implementation ClassViewController
@@ -25,10 +25,11 @@
 - (void)loadData
 {
     [self.view gifShowLoadingMeg:@"加载中"];
+    _currentNew = @"1";
     //在网络数据未请求到的时候，提示正在加载中
-    [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL,_currentNew] andParamter:nil returnData:^(NSData *data, NSError *error) {
+    [YCHNetworking postStartRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL] andParamter:@{@"pageSize":@"15",@"pageNo":_currentNew} returnData:^(NSData *data, NSError *error) {
         if (!error) {
-            if (_currentNew == 0) {
+            if ([_currentNew isEqualToString:@"1"]) {
                 [self.dataList removeAllObjects];
             }
             //YCHNetworking 是基于AFNetworking进行二次封装的数据请求类
