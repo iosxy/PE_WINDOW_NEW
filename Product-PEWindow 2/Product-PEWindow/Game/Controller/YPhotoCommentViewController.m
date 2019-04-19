@@ -76,7 +76,7 @@
         make.top.equalTo(self).offset(14);
         make.left.mas_equalTo(self.mas_left).offset(0);
         make.right.mas_equalTo(self.mas_right).offset(0);
-        make.height.equalTo(@230);
+        make.height.equalTo(@260);
     }];
     [self.scrollBJView addSubview:self.scrollViewTool.horizontalScrollView];
     [self.feedLoc mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -99,9 +99,9 @@
 - (TCHorizontalScrollViewTool *)scrollViewTool{
     if (!_scrollViewTool) {
         _scrollViewTool = [[TCHorizontalScrollViewTool alloc]init];
-        _scrollViewTool.horizontalScrollView.frame = CGRectMake(0., 0., SCREEN_WIDTH, 230);
-        _scrollViewTool.horizontalScrollView.layer.borderWidth = 0.5;
-        _scrollViewTool.horizontalScrollView.layer.borderColor = RGB(0x999999).CGColor;
+        _scrollViewTool.horizontalScrollView.frame = CGRectMake(0., 0., SCREEN_WIDTH, 260);
+        _scrollViewTool.horizontalScrollView.layer.borderWidth = 1;
+        _scrollViewTool.horizontalScrollView.layer.borderColor = RGB(0xf6f6f6).CGColor;
     }
     return _scrollViewTool;
 }
@@ -160,9 +160,29 @@
     [self setReplay];
 }
 - (void)jubao {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showSuccessWithStatus:@"举报成功!"];
-    });
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"请选择举报内容" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    UIAlertAction *skipAction = [UIAlertAction actionWithTitle:@"色情相关" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+    }];
+    UIAlertAction *skipAction2 = [UIAlertAction actionWithTitle:@"资料不当" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+    }];
+    UIAlertAction *skipAction3 = [UIAlertAction actionWithTitle:@"违法内容" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+    }];
+    UIAlertAction *skipAction4 = [UIAlertAction actionWithTitle:@"其他" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+    }];
+    [alertController addAction:cancelAction];
+    [alertController addAction:skipAction];
+    [alertController addAction:skipAction2];
+    [alertController addAction:skipAction3];
+    [alertController addAction:skipAction4];
+    [self presentViewController:alertController animated:YES completion:nil];
+ 
+    
 }
 - (void)loadData
 {
@@ -203,7 +223,7 @@
 }
 - (YPhotoHeader *)header {
     if (!_header) {
-        _header = [[YPhotoHeader alloc]initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 290 + 25)];
+        _header = [[YPhotoHeader alloc]initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 290 + 25 + 30)];
     }
     return _header;
 }
