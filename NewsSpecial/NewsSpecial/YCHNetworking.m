@@ -32,9 +32,14 @@
 {
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     //设置默认返回数据类型为二进制
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes =[NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html",@"text/plain",nil];
+    manager.requestSerializer.timeoutInterval = 15.f;
     
-    [manager POST:url parameters:paramter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSDictionary * newPara = @{@"token" : @"" , @"map" : paramter};
+    NSLog([NSString stringWithFormat:@"%@" ,newPara]);
+    [manager POST:url parameters:newPara success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //请求数据成功,不报错 ,回传数据
         if (responseObject) {
             returnBlock(responseObject,nil);

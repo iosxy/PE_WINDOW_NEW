@@ -27,7 +27,7 @@
     [self.view gifShowLoadingMeg:@"加载中"];
     _currentNew = @"1";
     //在网络数据未请求到的时候，提示正在加载中
-    [YCHNetworking postStartRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL] andParamter:@{@"pageSize":@"15",@"pageNo":_currentNew} returnData:^(NSData *data, NSError *error) {
+    [YCHNetworking postStartRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL] andParamter:@{@"pageSize":@"15",@"pageNo":_currentNew , @"userId" : @""} returnData:^(NSData *data, NSError *error) {
         if (!error) {
             if ([_currentNew isEqualToString:@"1"]) {
                 [self.dataList removeAllObjects];
