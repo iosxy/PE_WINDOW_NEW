@@ -12,6 +12,8 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#define YW_URL_IMAGE  @"http://ywimage.hryouxi.com/"
+
 #define RGB(rgb) [UIColor colorWithRed:(rgb/0x10000)/255.0f green:((rgb/0x100)&0xFF)/255.0f blue:(rgb&0xFF)/255.0f alpha:1]
 
 //背景色
@@ -40,10 +42,14 @@ alpha:(a)]
 #import "SDRefreshHeaderView.h"
 #import "UIView+Additions.h"
 #import "YCHNetworking.h"
+#import "Masonry.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "MJRefresh.h"
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 #define WHITECOLOR(w) [UIColor colorWithWhite:(w)/255.0 alpha:1]
 
+#define MainColor  RGB(0xA788D8)//淡紫色
 
 
 #endif /* News_pch */

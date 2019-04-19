@@ -13,6 +13,7 @@
 - (void)creatUI{
     self.contentView.backgroundColor = RGB(0xf5f7fb);
     UIView * bjView = [[UIView alloc]init];
+    self.bjView = bjView;
     bjView.backgroundColor = [UIColor whiteColor];
 //    [bjView mas_makeConstraints:^(MASConstraintMaker *make) {
 //
@@ -45,6 +46,7 @@
     titleLabel.font = [UIFont systemFontOfSize:15];
     _titleLabel = titleLabel;
     titleLabel.textColor = RGB(0x333333);
+    titleLabel.numberOfLines = 0;
     [bjView addSubview:titleLabel];
     
     UILabel * authorLabel = [[UILabel alloc]init];
@@ -61,43 +63,46 @@
     timeLabel.textColor = RGB(0x999999);
     [bjView addSubview:timeLabel];
     
-    UILabel * photoNumLabel = [[UILabel alloc]init];
-    photoNumLabel.textAlignment = NSTextAlignmentCenter;
-    photoNumLabel.text = @"8张";
-    photoNumLabel.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.80];
-    photoNumLabel.font = [UIFont systemFontOfSize:14];
-    self.photoNumLabel = photoNumLabel;
-    photoNumLabel.textColor = [UIColor whiteColor];
-    [bjView addSubview:photoNumLabel];
+//    UILabel * photoNumLabel = [[UILabel alloc]init];
+//    photoNumLabel.textAlignment = NSTextAlignmentCenter;
+//    photoNumLabel.text = @"8张";
+//    photoNumLabel.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.80];
+//    photoNumLabel.font = [UIFont systemFontOfSize:14];
+//    self.photoNumLabel = photoNumLabel;
+//    photoNumLabel.textColor = [UIColor whiteColor];
+//    [bjView addSubview:photoNumLabel];
     
-    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(bjView);
-        make.left.equalTo(bjView.mas_left);
-        make.right.equalTo(bjView.mas_right);
+//    [photoNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.equalTo(imageView.mas_bottom).offset(-20);
+//        make.height.equalTo(@20);
+//        make.width.equalTo(@35);
+//        make.right.equalTo(imageView.mas_right).offset(-15);
+//    }];
+//    photoNumLabel.layer.masksToBounds = YES;
+//    photoNumLabel.layer.cornerRadius = 4.0;
+    [self setUpConstrains];
+}
+- (void)setUpConstrains {
+    [_contentImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.bjView);
+        make.left.equalTo(self.bjView.mas_left);
+        make.right.equalTo(self.bjView.mas_right);
         make.height.equalTo(@180);
     }];
-    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(imageView.mas_bottom).offset(10);
-        make.left.equalTo(imageView.mas_left).offset(8);
-        make.right.equalTo(imageView.mas_right).offset(-8);
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.contentImage.mas_bottom).offset(10);
+        make.left.equalTo(self.contentImage.mas_left).offset(8);
+        make.right.equalTo(self.contentImage.mas_right).offset(-8);
     }];
-    [authorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(titleLabel.mas_bottom).offset(8);
-        make.left.equalTo(titleLabel.mas_left);
+    [self.authorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(8);
+        make.left.equalTo(self.titleLabel.mas_left);
+        make.bottom.equalTo(self.bjView.mas_bottom).offset(-10);
     }];
-    [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(authorLabel.mas_centerY);
-        make.left.equalTo(authorLabel.mas_right).offset(8);
+    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.authorLabel.mas_centerY);
+        make.left.equalTo(self.authorLabel.mas_right).offset(8);
     }];
-    [photoNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(imageView.mas_bottom).offset(-20);
-        make.height.equalTo(@20);
-        make.width.equalTo(@35);
-        make.right.equalTo(imageView.mas_right).offset(-15);
-    }];
-    photoNumLabel.layer.masksToBounds = YES;
-    photoNumLabel.layer.cornerRadius = 4.0;
-    
 }
 /// 添加四边阴影效果
 - (void)addShadowToView:(UIView *)theView withColor:(UIColor *)theColor {
@@ -121,14 +126,15 @@
 }
 - (void)loadData:(NSDictionary *)data{
     self.data = data;
-    [self.contentImage sd_setImageWithURL:[NSURL URLWithString:data[@"imgurl"]]];
-    self.titleLabel.text = data[@"shorttitle"];
-    NSArray * photoArr = data[@"imgList"];
-    self.photoNumLabel.text = [NSString stringWithFormat:@"%lu张",(unsigned long)photoArr.count];
-    self.authorLabel.text = data[@"authorName"];
-    NSString * timeStr = data[@"newstime"];
+    [self.contentImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",YW_URL_IMAGE,data[@"cover"][@"url"]]]];
+    self.titleLabel.text = data[@"title"];
+    self.authorLabel.text = data[@"source"];
+    if ([self.authorLabel.text isEqualToString:@"娱丸官方"]) {
+        self.authorLabel.text = @"官方";
+    }
+    NSString * timeStr = data[@"time"];
     self.timeLabel.text = [self getTimeFromTimestamp:timeStr.doubleValue];
-
+    
 }
 #pragma mark ---- 将时间戳转换成时间
 

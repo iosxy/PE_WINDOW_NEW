@@ -7,6 +7,9 @@
 //
 
 #import "ClassViewController.h"
+#import "YPhotoTableViewCell.h"
+#import "YLittlePhotoTableViewCell.h"
+#import "MJRefresh.h"
 
 #define YNEWS_RUL @"http://ywapp.hryouxi.com/yuwanapi/app/listEveryDayStarNews"
 @interface ClassViewController ()
@@ -21,36 +24,70 @@
     // Do any additional setup after loading the view.
     
     [self loadData];
+    [self.tableView registerClass:[YPhotoTableViewCell class] forCellReuseIdentifier:@"YPhotoTableViewCell"];
+    [self.tableView registerClass:[YLittlePhotoTableViewCell class] forCellReuseIdentifier:@"YLittlePhotoTableViewCell"];
+    self.tableView.estimatedRowHeight = 260;
+    self.tableView.header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        [self loadData];
+    }];
+    self.tableView.footer = [MJRefreshBackGifFooter footerWithRefreshingBlock:^{
+        [self loadMoreData];
+    }];
+}
+- (void)loadMoreData {
+    self.currentNew = [NSString stringWithFormat:@"%d",self.currentNew.intValue + 1];
+    [YCHNetworking postStartRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL] andParamter:@{@"pageSize":@"10",@"pageNo":self.currentNew, @"userId" : @""} returnData:^(NSData *data, NSError *error) {
+        if (!error) {
+            NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
+            NSArray * dataArr = dic[@"data"][@"starNewsList"][@"list"];
+            [self.dataList addObjectsFromArray:dataArr];
+            [self.tableView reloadData];
+            [self.tableView.footer endRefreshing];
+        }else{
+            [self.tableView.footer endRefreshing];
+        }
+    }];
 }
 - (void)loadData
 {
-    [self.view gifShowLoadingMeg:@"加载中"];
     _currentNew = @"1";
-    //在网络数据未请求到的时候，提示正在加载中
-    [YCHNetworking postStartRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL] andParamter:@{@"pageSize":@"15",@"pageNo":_currentNew , @"userId" : @""} returnData:^(NSData *data, NSError *error) {
+    [YCHNetworking postStartRequestFromUrl:[NSString stringWithFormat:YNEWS_RUL] andParamter:@{@"pageSize":@"10",@"pageNo":self.currentNew, @"userId" : @""} returnData:^(NSData *data, NSError *error) {
         if (!error) {
-            if ([_currentNew isEqualToString:@"1"]) {
-                [self.dataList removeAllObjects];
-            }
-            //YCHNetworking 是基于AFNetworking进行二次封装的数据请求类
+            [self.dataList removeAllObjects];
             NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
-            //讲二进制数据转化为字典
-            NSArray * dataArr = dic[@"results"];
-//            NSArray * result = [NSArray modelArrayWithClass:[NewsModel class] json:dataArr];
-            //通过YYModel对模型进行整体赋值
-//            NSMutableArray * mutaleResult = [NSMutableArray arrayWithArray:result];
-//            for (int i = 0; i < mutaleResult.count; i++) {
-////                NewsModel * model =[[NewsModel alloc]init];
-////                model = mutaleResult[i];
-//            }
-//            [self.dataList addObjectsFromArray:mutaleResult];
-            //加载到数据源中
+            NSArray * dataArr = dic[@"data"][@"starNewsList"][@"list"];
+            [self.dataList addObjectsFromArray:dataArr];
             [self.tableView reloadData];
-            [self.view hideLoading];
+            [self.tableView.header endRefreshing];
         }else{
-            [self.view hideLoading];
+            [self.tableView.header endRefreshing];
         }
     }];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return  self.dataList.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *data = self.dataList[indexPath.row];
+    if ([data[@"cardType"] isEqualToString:@"BIG"]) {
+        YPhotoTableViewCell  * cell = [tableView dequeueReusableCellWithIdentifier:@"YPhotoTableViewCell"];
+        [cell loadData:data];
+        return  cell;
+    }else {
+         YLittlePhotoTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"YLittlePhotoTableViewCell"];
+        [cell loadData:data];
+        return  cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    NSDictionary * data = self.dataList[indexPath.row];
+//    YPhotoCommentViewController * comment = [[YPhotoCommentViewController alloc]init];
+//    comment.hidesBottomBarWhenPushed = YES;
+//    comment.data = data;
+//    [self.navigationController pushViewController:comment animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

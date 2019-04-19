@@ -32,10 +32,10 @@
     MineViewController * mine = [[MineViewController alloc]init];
     NSMutableArray * array = [NSMutableArray arrayWithObjects:home,class,cart,mine, nil];
     //标题
-    NSArray * titlesArr = @[@"首页", @"分类", @"购物车",@"我的"];
+    NSArray * titlesArr = @[@"首页", @"星闻 ", @"星程",@"我的"];
     //图片
-    NSArray * normalImages = @[@"tab_home~iphone", @"tab_search~iphone", @"tab_store~iphone",@"tab_me~iphone"];
-    NSArray * selectImages = @[@"tab_home_h~iphone", @"tab_search_h~iphone", @"tab_store_h~iphone",@"tab_me_h~iphone"];
+    NSArray * normalImages = @[@"首页", @"爱豆星闻", @"行程",@"我的"];
+    NSArray * selectImages = @[@"首页-1", @"爱豆星闻-1", @"行程-1",@"我的-1"];
     
     for (int i = 0; i < titlesArr.count; i++) {
         
@@ -47,6 +47,8 @@
         [array replaceObjectAtIndex:i withObject:nav];
         //标题
         vc.title = titlesArr[i];
+        nav.navigationBar.tintColor = [UIColor whiteColor];
+        nav.navigationBar.barTintColor = MainColor;
         
         //渲染模式
         UIImage * normalImage = [UIImage imageNamed:normalImages[i]];
@@ -56,6 +58,7 @@
         
     }
     self.viewControllers = array;
+    self.tabBar.tintColor = MainColor;
 }
 
 

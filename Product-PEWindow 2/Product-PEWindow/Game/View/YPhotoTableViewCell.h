@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UILabel * timeLabel;
 @property(nonatomic,strong)UILabel * photoNumLabel;
 @property(nonatomic,strong)NSDictionary * data;
+@property (nonatomic,strong)UIView * bjView;
 
 - (void)loadData:(NSDictionary *)data;
 @end

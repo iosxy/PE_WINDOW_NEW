@@ -22,6 +22,9 @@
 		063B214B2269AC2E00F3EDFB /* UploadHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21372269AC2E00F3EDFB /* UploadHeaderCell.m */; };
 		063B214C2269AC2E00F3EDFB /* DataCel1l.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B21392269AC2E00F3EDFB /* DataCel1l.xib */; };
 		063B214D2269AC2E00F3EDFB /* UploadHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B213A2269AC2E00F3EDFB /* UploadHeaderCell.xib */; };
+		063B21522269B54B00F3EDFB /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21502269B54B00F3EDFB /* YPhotoTableViewCell.m */; };
+		063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21542269BE0200F3EDFB /* YLittlePhotoTableViewCell.m */; };
+		063B215A2269CFE500F3EDFB /* YSchedulingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21592269CFE500F3EDFB /* YSchedulingTableViewCell.m */; };
 		06811F1C22672FBE00E857E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F1B22672FBE00E857E2 /* AppDelegate.m */; };
 		06811F2222672FBE00E857E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06811F2022672FBE00E857E2 /* Main.storyboard */; };
 		06811F2422672FC000E857E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06811F2322672FC000E857E2 /* Assets.xcassets */; };
@@ -75,6 +78,12 @@
 		063B213C2269AC2E00F3EDFB /* EditSignatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSignatureVC.h; sourceTree = "<group>"; };
 		063B213D2269AC2E00F3EDFB /* ChangeNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeNameVC.h; sourceTree = "<group>"; };
 		063B213E2269AC2E00F3EDFB /* MineTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell1.h; sourceTree = "<group>"; };
+		063B21502269B54B00F3EDFB /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPhotoTableViewCell.m; path = "../../../../Product-PEWindow 2/Product-PEWindow/Game/View/YPhotoTableViewCell.m"; sourceTree = "<group>"; };
+		063B21512269B54B00F3EDFB /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPhotoTableViewCell.h; path = "../../../../Product-PEWindow 2/Product-PEWindow/Game/View/YPhotoTableViewCell.h"; sourceTree = "<group>"; };
+		063B21532269BE0200F3EDFB /* YLittlePhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLittlePhotoTableViewCell.h; sourceTree = "<group>"; };
+		063B21542269BE0200F3EDFB /* YLittlePhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLittlePhotoTableViewCell.m; sourceTree = "<group>"; };
+		063B21582269CFE500F3EDFB /* YSchedulingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSchedulingTableViewCell.h; sourceTree = "<group>"; };
+		063B21592269CFE500F3EDFB /* YSchedulingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSchedulingTableViewCell.m; sourceTree = "<group>"; };
 		06811F1722672FBE00E857E2 /* NewsSpecial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsSpecial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06811F1A22672FBE00E857E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06811F1B22672FBE00E857E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -182,6 +191,42 @@
 			path = personInformation;
 			sourceTree = "<group>";
 		};
+		063B214E2269B52800F3EDFB /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				063B214F2269B53B00F3EDFB /* View */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		063B214F2269B53B00F3EDFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				063B21512269B54B00F3EDFB /* YPhotoTableViewCell.h */,
+				063B21502269B54B00F3EDFB /* YPhotoTableViewCell.m */,
+				063B21532269BE0200F3EDFB /* YLittlePhotoTableViewCell.h */,
+				063B21542269BE0200F3EDFB /* YLittlePhotoTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		063B21562269CFA500F3EDFB /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				063B21572269CFB300F3EDFB /* View */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		063B21572269CFB300F3EDFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				063B21582269CFE500F3EDFB /* YSchedulingTableViewCell.h */,
+				063B21592269CFE500F3EDFB /* YSchedulingTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		06811F0E22672FBE00E857E2 = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +248,12 @@
 		06811F1922672FBE00E857E2 /* NewsSpecial */ = {
 			isa = PBXGroup;
 			children = (
+				063B21562269CFA500F3EDFB /* Cart */,
+				06811F982267329A00E857E2 /* News.pch */,
+				063B214E2269B52800F3EDFB /* Class */,
 				063B21242269AC2D00F3EDFB /* NinaPagerView */,
 				063B212C2269AC2E00F3EDFB /* personInformation */,
 				063B21212269AC2D00F3EDFB /* recharge */,
-				06811F982267329A00E857E2 /* News.pch */,
 				06811F1A22672FBE00E857E2 /* AppDelegate.h */,
 				06811F1B22672FBE00E857E2 /* AppDelegate.m */,
 				06811F332267324F00E857E2 /* CartViewController.h */,
@@ -441,8 +488,11 @@
 				06811F5A2267325300E857E2 /* MineViewController.m in Sources */,
 				06811F662267325300E857E2 /* SDRefreshView.m in Sources */,
 				063B21432269AC2E00F3EDFB /* DataCel1l.m in Sources */,
+				063B21522269B54B00F3EDFB /* YPhotoTableViewCell.m in Sources */,
 				06811F602267325300E857E2 /* YBaseViewController.m in Sources */,
+				063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */,
 				06811F592267325300E857E2 /* YXYTabbarController.m in Sources */,
+				063B215A2269CFE500F3EDFB /* YSchedulingTableViewCell.m in Sources */,
 				063B213F2269AC2E00F3EDFB /* chargeVC.m in Sources */,
 				06811F1C22672FBE00E857E2 /* AppDelegate.m in Sources */,
 			);
