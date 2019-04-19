@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UploadHeaderCell" id="KGk-i7-Jjw" customClass="UploadHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="287" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BjC-oK-BJi">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tx-P1-uhZ">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="7MC-VH-sa7"/>
+                            <constraint firstAttribute="width" constant="80" id="oma-ww-FU5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_bj" translatesAutoresizingMaskIntoConstraints="NO" id="SKP-J9-Xcr" userLabel="HeaderImageView">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="38T-tq-1al"/>
+                            <constraint firstAttribute="height" constant="36" id="uzC-hN-bUw"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                <color key="value" red="0.32156862749999998" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SKP-J9-Xcr" secondAttribute="trailing" constant="13" id="1fb-wU-r3c"/>
+                    <constraint firstItem="BjC-oK-BJi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3t9-zI-9hg"/>
+                    <constraint firstItem="BjC-oK-BJi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AEr-3X-kFI"/>
+                    <constraint firstItem="3Tx-P1-uhZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="IcG-da-sG9"/>
+                    <constraint firstAttribute="bottom" secondItem="BjC-oK-BJi" secondAttribute="bottom" id="gjz-yB-5BQ"/>
+                    <constraint firstItem="SKP-J9-Xcr" firstAttribute="centerY" secondItem="3Tx-P1-uhZ" secondAttribute="centerY" id="iq4-HQ-8S3"/>
+                    <constraint firstItem="SKP-J9-Xcr" firstAttribute="centerY" secondItem="BjC-oK-BJi" secondAttribute="centerY" id="nad-N3-k5K"/>
+                    <constraint firstAttribute="trailing" secondItem="BjC-oK-BJi" secondAttribute="trailing" id="q7e-vY-4tn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerView1" destination="SKP-J9-Xcr" id="86f-OJ-ET1"/>
+                <outlet property="photoLab" destination="3Tx-P1-uhZ" id="7qF-W3-E9P"/>
+            </connections>
+            <point key="canvasLocation" x="277" y="300"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="header_bj" width="35" height="35"/>
+    </resources>
+</document>
