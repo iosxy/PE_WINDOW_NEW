@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VideoCell : UITableViewCell
 - (void)loadData:(NSDictionary *)data;
+@property(nonatomic,strong)UIButton * reportButton;
+@property(nonatomic,strong)UIButton * deleteButton;
 
 @end
 

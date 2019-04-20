@@ -126,7 +126,8 @@
 }
 - (void)loadData:(NSDictionary *)data{
     self.data = data;
-    [self.contentImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",YW_URL_IMAGE,data[@"cover"][@"url"]]]];
+    [self.contentImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",data[@"imgurl"]]]];
+    
     self.titleLabel.text = data[@"title"];
     self.authorLabel.text = data[@"source"];
     if ([self.authorLabel.text isEqualToString:@"娱丸官方"]) {

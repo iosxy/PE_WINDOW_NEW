@@ -164,16 +164,16 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }];
     UIAlertAction *skipAction = [UIAlertAction actionWithTitle:@"色情相关" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会24小时内核实并处理!"];
     }];
     UIAlertAction *skipAction2 = [UIAlertAction actionWithTitle:@"资料不当" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会24小时内核实并处理!"];
     }];
     UIAlertAction *skipAction3 = [UIAlertAction actionWithTitle:@"违法内容" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会24小时内核实并处理!"];
     }];
     UIAlertAction *skipAction4 = [UIAlertAction actionWithTitle:@"其他" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会尽快核实并处理!"];
+        [SVProgressHUD showSuccessWithStatus:@"举报成功!我们会24小时内核实并处理!"];
     }];
     [alertController addAction:cancelAction];
     [alertController addAction:skipAction];

@@ -38,7 +38,41 @@
         make.center.mas_equalTo(self);
     }];
     self.contentView.backgroundColor = UIColor.orangeColor;
+    
+    UIView * reportView = [[UIView alloc]init];
+    reportView.backgroundColor = [UIColor whiteColor];
+    [self.contentView addSubview:reportView];
+    [reportView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.mas_equalTo(self);
+        make.height.mas_equalTo(40);
+    }];
+    
+    _reportButton = [[UIButton alloc]init];
+    [_reportButton setTitle:@"举报" forState:UIControlStateNormal];
+    [_reportButton setImage:[UIImage imageNamed:@"jubao-2"] forState:UIControlStateNormal];
+    [_reportButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [reportView addSubview:_reportButton];
+    
+    _deleteButton = [[UIButton alloc]init];
+    [_deleteButton setTitle:@"屏蔽" forState:UIControlStateNormal];
+    [_deleteButton setImage:[UIImage imageNamed:@"blacklist"] forState:UIControlStateNormal];
+    [_deleteButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [reportView addSubview:_deleteButton];
+    
+    [_reportButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(reportView);
+        make.left.mas_equalTo(12);
+        make.height.mas_equalTo(40);
+     //   make.width.mas_equalTo(100);
+    }];
+    [_deleteButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(reportView);
+        make.right.mas_equalTo(-12);
+        
+    }];
+    
 }
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
