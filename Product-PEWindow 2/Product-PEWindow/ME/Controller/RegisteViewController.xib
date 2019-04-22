@@ -51,6 +51,16 @@
                         <action selector="sendNum:" destination="-1" eventType="touchUpInside" id="JBH-ED-fQb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGc-vq-hfS">
+                    <rect key="frame" x="101.5" y="380" width="172" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="点击注册表示同意《用户协议》">
+                        <color key="titleColor" red="0.98039215686274506" green="0.76470588235294112" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="userAgreement:" destination="-1" eventType="touchUpInside" id="dPs-Z8-uRt"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.86918008207070707" green="0.86918008207070707" blue="0.86918008207070707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -60,8 +70,10 @@
                 <constraint firstItem="Okb-gM-HSN" firstAttribute="top" secondItem="VD5-uV-uwT" secondAttribute="bottom" constant="50" id="TvJ-2N-Fjs"/>
                 <constraint firstItem="CEk-hc-Fc5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="YYY-54-iBw"/>
                 <constraint firstAttribute="trailing" secondItem="VD5-uV-uwT" secondAttribute="trailing" constant="40" id="eQh-9E-Sdi"/>
+                <constraint firstItem="aGc-vq-hfS" firstAttribute="top" secondItem="Okb-gM-HSN" secondAttribute="bottom" constant="40" id="ezq-28-BrM"/>
                 <constraint firstItem="VD5-uV-uwT" firstAttribute="top" secondItem="CEk-hc-Fc5" secondAttribute="bottom" constant="30" id="jKC-dg-LR7"/>
                 <constraint firstAttribute="trailing" secondItem="Okb-gM-HSN" secondAttribute="trailing" constant="40" id="jbD-91-CDj"/>
+                <constraint firstItem="aGc-vq-hfS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l0K-uI-zkP"/>
                 <constraint firstItem="Okb-gM-HSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="rpb-DP-nP5"/>
             </constraints>
             <point key="canvasLocation" x="410.5" y="227.5"/>

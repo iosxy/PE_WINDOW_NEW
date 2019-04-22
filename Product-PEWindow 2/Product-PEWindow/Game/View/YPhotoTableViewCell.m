@@ -63,23 +63,23 @@
     timeLabel.textColor = RGB(0x999999);
     [bjView addSubview:timeLabel];
     
-//    UILabel * photoNumLabel = [[UILabel alloc]init];
-//    photoNumLabel.textAlignment = NSTextAlignmentCenter;
-//    photoNumLabel.text = @"8张";
-//    photoNumLabel.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.80];
-//    photoNumLabel.font = [UIFont systemFontOfSize:14];
-//    self.photoNumLabel = photoNumLabel;
-//    photoNumLabel.textColor = [UIColor whiteColor];
-//    [bjView addSubview:photoNumLabel];
+    UILabel * photoNumLabel = [[UILabel alloc]init];
+    photoNumLabel.textAlignment = NSTextAlignmentCenter;
+    photoNumLabel.text = @"8张";
+    photoNumLabel.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.80];
+    photoNumLabel.font = [UIFont systemFontOfSize:14];
+    self.photoNumLabel = photoNumLabel;
+    photoNumLabel.textColor = [UIColor whiteColor];
+    [bjView addSubview:photoNumLabel];
     
-//    [photoNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.equalTo(imageView.mas_bottom).offset(-20);
-//        make.height.equalTo(@20);
-//        make.width.equalTo(@35);
-//        make.right.equalTo(imageView.mas_right).offset(-15);
-//    }];
-//    photoNumLabel.layer.masksToBounds = YES;
-//    photoNumLabel.layer.cornerRadius = 4.0;
+    [photoNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(imageView.mas_bottom).offset(-20);
+        make.height.equalTo(@20);
+        make.width.equalTo(@35);
+        make.right.equalTo(imageView.mas_right).offset(-15);
+    }];
+    photoNumLabel.layer.masksToBounds = YES;
+    photoNumLabel.layer.cornerRadius = 4.0;
     [self setUpConstrains];
 }
 - (void)setUpConstrains {
@@ -127,12 +127,10 @@
 - (void)loadData:(NSDictionary *)data{
     self.data = data;
     [self.contentImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",data[@"imgurl"]]]];
-    
+    NSArray * numArr = data[@"imgList"];
+    self.photoNumLabel.text = [NSString stringWithFormat:@"%ld张",numArr.count];
     self.titleLabel.text = data[@"title"];
-    self.authorLabel.text = data[@"source"];
-    if ([self.authorLabel.text isEqualToString:@"娱丸官方"]) {
-        self.authorLabel.text = @"官方";
-    }
+    self.authorLabel.text = data[@"authorName"];
     NSString * timeStr = data[@"time"];
     self.timeLabel.text = [self getTimeFromTimestamp:timeStr.doubleValue];
     

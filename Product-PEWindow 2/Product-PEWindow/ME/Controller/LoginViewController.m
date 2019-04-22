@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.title = @"登录";
     self.navigationController.navigationBar.tintColor =[UIColor blackColor];
     self.login.layer.cornerRadius = 5;
     self.login.clipsToBounds = YES;
