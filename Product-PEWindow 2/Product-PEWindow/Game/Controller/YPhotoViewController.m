@@ -52,7 +52,7 @@
         NSMutableArray * deleArr = [NSMutableArray arrayWithArray:self.dataSource];
         for (NSDictionary * obj in deleArr) {
             NSString * title = obj[@"title"];
-            if ([title containsString:@"女"] ||[title containsString:@"超模"] ||[title containsString:@"美"]){
+            if ([title containsString:@"女"] ||[title containsString:@"模"] ||[title containsString:@"美"]){
                 if  ([self.dataSource containsObject:obj]) {
                     [self.dataSource removeObject:obj];
                 }
@@ -74,7 +74,7 @@
         NSMutableArray * deleArr = [NSMutableArray arrayWithArray:dataArr];
         for (NSDictionary * obj in deleArr) {
             NSString * title = obj[@"title"];
-            if ([title containsString:@"女"] ||[title containsString:@"超模"] ||[title containsString:@"美"]){
+            if ([title containsString:@"女"] ||[title containsString:@"模"] ||[title containsString:@"美"]){
                 if  ([dataArr containsObject:obj]) {
                     [dataArr removeObject:obj];
                 }
