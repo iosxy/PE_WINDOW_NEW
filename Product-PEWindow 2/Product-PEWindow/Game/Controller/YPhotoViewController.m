@@ -49,6 +49,15 @@
         NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
         [self.dataSource removeAllObjects];
         [self.dataSource addObjectsFromArray:result[@"content"][@"list"]];
+        NSMutableArray * deleArr = [NSMutableArray arrayWithArray:self.dataSource];
+        for (NSDictionary * obj in deleArr) {
+            NSString * title = obj[@"title"];
+            if ([title containsString:@"女"] ||[title containsString:@"模"] ||[title containsString:@"美"]){
+                if  ([self.dataSource containsObject:obj]) {
+                    [self.dataSource removeObject:obj];
+                }
+            }
+        }
         [self.tableView reloadData];
         [SVProgressHUD showSuccessWithStatus:@"加载成功"];
     }];
@@ -60,7 +69,18 @@
     [YCHNetworking startRequestFromUrl:[NSString stringWithFormat:@"http://api.ttplus.cn/list/pics?lastid=%@",lastId] andParamter:nil returnData:^(NSData *data, NSError *error) {
         [self.tableView.mj_footer endRefreshing];
         NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
-        [self.dataSource addObjectsFromArray:result[@"content"][@"list"]];
+        NSMutableArray * dataArr = [[NSMutableArray alloc]init];
+        [dataArr addObjectsFromArray:result[@"content"][@"list"]];
+        NSMutableArray * deleArr = [NSMutableArray arrayWithArray:dataArr];
+        for (NSDictionary * obj in deleArr) {
+            NSString * title = obj[@"title"];
+            if ([title containsString:@"女"] ||[title containsString:@"模"] ||[title containsString:@"美"]){
+                if  ([dataArr containsObject:obj]) {
+                    [dataArr removeObject:obj];
+                }
+            }
+        }
+        [self.dataSource addObjectsFromArray:dataArr];
         [self.tableView reloadData];
         [SVProgressHUD showSuccessWithStatus:@"加载成功"];
     }];
