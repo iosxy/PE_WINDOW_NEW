@@ -7,6 +7,7 @@
 //
 
 #import "RegisteViewController.h"
+#import "MainDetailVC.h"
 #define NUMPIC @"http://u1.tiyufeng.com/captcha?clientToken=7c98ddd1d8cb729bf66791a192b43748&randomParam=1461671598194"
 @interface RegisteViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTf;
@@ -30,10 +31,18 @@
     [SVProgressHUD showSuccessWithStatus:@"注册成功"];
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)userAgreement:(UIButton *)sender {
+    //用户协议
+
+    MainDetailVC * vc = [[MainDetailVC alloc]init];
+    vc.name = @"用户协议";
+    [self.navigationController pushViewController:vc animated:NO];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    self.title = @"注册";
     
     
 }
