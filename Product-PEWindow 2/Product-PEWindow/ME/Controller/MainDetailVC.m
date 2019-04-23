@@ -45,16 +45,17 @@
     self.title = @"用户协议";
     UIWebView * webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:webView];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"隐私权政策" ofType:@"html"];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"隐私权政策" ofType:@"html"];
+//
+//    NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+//
+//    NSString *basePath = [[NSBundle mainBundle] bundlePath];
+//
+//    NSURL *baseURL = [NSURL fileURLWithPath:basePath];
+//
+//    [webView loadHTMLString:htmlString baseURL:baseURL];
     
-    NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    
-    NSString *basePath = [[NSBundle mainBundle] bundlePath];
-    
-    NSURL *baseURL = [NSURL fileURLWithPath:basePath];
-    
-    [webView loadHTMLString:htmlString baseURL:baseURL];
-    
+    [webView loadRequest: [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"https://js.7018999.com/2019/ys2019.html"]]];
     
     
 }
