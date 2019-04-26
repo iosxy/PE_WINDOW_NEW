@@ -17,6 +17,20 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
+
+#define YNEWS_RUL @"http://api.ttplus.cn/list/newest_v2?refresh=true&lastid="
+#define YNEWS_RUL_LOADMORE@ "http://api.ttplus.cn/list/newest_v2?refresh=false&lastid="
+#define YNEWS_DETAIL @"http://resource.ttplus.cn/publish/app/data/2019/04/25/235683/detail.json?=detail"
+#define YNEWS_FOOTBALL @"http://api.ttplus.cn/list/innerfb?list_type=1&lastid="
+#define YNEWS_NBA @"http://api.ttplus.cn/list/nba?list_type=1&lastid="
+
+#define YNEWS_CBA @"http://api.ttplus.cn/list/cba?list_type=1&lastid="
+
+#define YNEWS_ALL_FOOTBALL @"http://api.ttplus.cn/list/interfb?list_type=1&lastid="
+
+
+
+
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 /** 数据源*/
 @property(nonatomic,strong)NSMutableArray * dataSource;
@@ -88,7 +102,7 @@
     _tableView.delegate =self;
     _tableView.dataSource = self;
     //上拉加载
-    
+    _tableView.separatorColor = [UIColor clearColor];
     
     self.tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self refreshData];

@@ -34,7 +34,7 @@
 #define AdjustsScrollViewInsetNever(controller,view) if(@available(iOS 11.0, *)) {view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;} else if([controller isKindOfClass:[UIViewController class]]) {controller.automaticallyAdjustsScrollViewInsets = false;}
 
 #import "AFNetworking.h"
-#define YNEWS_RUL @"http://u1.tiyufeng.com/section/content_list?portalId=15&start=%d&id=351&limit=20&clientToken=7c98ddd1d8cb729bf66791a192b43748"
+
 #import "NSObject+YYModel.h"
 #import "YCHNetworking.h"
 #import "UIImageView+WebCache.h"
