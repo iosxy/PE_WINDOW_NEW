@@ -467,7 +467,6 @@
     //存档
     [NSKeyedArchiver archiveRootObject:thirdArray toFileName:key];
     
-//    [[NSUserDefaults standardUserDefaults] setValue:self.dataSource forKey:self.model.ID];
 }
 - (BOOL)hidesBottomBarWhenPushed {
     return YES;
